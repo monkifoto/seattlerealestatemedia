@@ -1,0 +1,211 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;0,600;0,700;1,500;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,600;0,900;1,200&display=swap');
+
+app-root{
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+ 
+    /* colors */
+    --clr-dark: 217 10% 25%; /*#393E46*/
+    --clr-light: 0 0% 97%; /*#F7F7F7*/
+    --clr-white: 0 0% 100%;
+    --clr-green: 155 17% 51%; /*#6D9886*/
+    --clr-tan: 37 53% 89%; /*#F2E7D5*/
+
+
+    --foreground:  hsl( var(--clr-dark));
+    --background:  hsl( var(--clr-light));
+    --shadow: hsl( var(--clr-dark)/ 0.20);
+    
+    /* font-sizes */
+    --fs-900: clamp(5rem, 10vw + 1rem, 9.375rem);
+    --fs-800: 3.5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.5rem;
+    --fs-400: 1rem;
+    --fs-300: 0.9375rem;
+    --fs-200: 0.875rem;
+    
+    /* font-families */
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
+    --ff-source-sans-pro: "Source Sans Pro", sans-serif;
+    --ff-Montserrat: 'Montserrat', sans-serif;
+}
+
+
+
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-family: var(--ff-Montserrat);
+}
+
+.italic{
+    font-family: var( --ff-source-sans-pro);
+    font-style: italic;
+    font-weight: 200;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    margin-inline: auto;
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-400);
+    background: var(--background);
+    color:  var(--foreground);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+
+}
+
+.darkmode {
+    --clr-dark: 217 10% 25%; /*#393E46*/
+    --clr-light: 0 0% 97%; /*#F7F7F7*/
+    --clr-primary: #202302;
+    --clr-secondary: #00100d;
+    --clr-accent: #ff7750;
+  
+    --foreground:  hsl( var(--clr-light));
+    --background:  hsl( var(--clr-dark));
+    --shadow: hsl( var(--clr-light)/ 0.30);
+    
+  }
+
+/* make images easier to work with */
+// img,
+// picture {
+//     max-width: 100%;
+//     display: block;
+// }
+
+.section-title{
+    font-size: 2.25rem;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+
+.sr-only {
+    position: absolute; 
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px; 
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+  }
+
+  /* colors */
+
+.bg-dark { background-color: hsl( var(--clr-dark) );}
+.bg-accent { background-color: hsl( var(--clr-light) );}
+.bg-white { background-color: hsl( var(--clr-white) );}
+
+.text-dark { color: hsl( var(--clr-dark) );}
+.text-accent { color: hsl( var(--clr-light) );}
+.text-white { color: hsl( var(--clr-white) );}
+
+/* typography */
+
+.ff-serif { font-family: var(--ff-serif); } 
+.ff-sans-cond { font-family: var(--ff-sans-cond); } 
+.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+.letter-spacing-4 { letter-spacing: .5px; } 
+.letter-spacing-5 { letter-spacing: 1.1px; } 
+
+.uppercase { text-transform: uppercase; }
+
+.fs-900 { font-size: var(--fs-900); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
+}
+  
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.content {
+    /* your styles for the main content here */
+    flex-grow: 1;
+  }
+
+  .banner{
+    width: calc(100% - 10rem);
+    box-shadow: 2.5rem 3rem 3rem -3rem var(--shadow);
+}
+
+.banner_content{
+    display: flex;
+    position: relative;
+    background-color: white;
+    height: fit-content;
+    min-height: 30vh; 
+    border-radius: 10px;
+    margin-inline: auto;
+    margin-bottom:4rem;
+    /* z-index: -1; */
+    padding: 5rem;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.dark-bg{
+    text-align: center;
+    background-color: hsl(var(--clr-dark));
+    color: hsl(var(--clr-light));
+}
+
+
+@media screen and  (max-width: 35rem) 
+{  
+  
+
+  }
