@@ -1,44 +1,44 @@
+.mobile-nav-toggle {
+  display: none;
+}
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    background-color: aquamarine;
-    margin-left: 5px;
-    margin-right: 10px;
-    margin-top: 1%;
-    margin-bottom: .9%;
-    padding-left: 10px;
-    // min-height: 105px;
-    white-space: nowrap;
-    font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: space-around;
+  white-space: nowrap;
+  width: 100%;
+  box-shadow: 5px 5px 3px #333;
+  background-color: hsl(var(--clr-light));
+}
 
-  }
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  font-weight: bold;
+  gap:1rem;
+}
 
-  .navbar-nav{
-    display: flex;
-    list-style: none;
+.logo {
+  padding: 0px 20px;
+}
 
-  }
+.active {
+  color: #000;
+}
 
-  .navbar-brand {
+.navbar-toggle {
+  /* (60px - button height 34px) / 2 = 23px */
+  margin-top: 4px;
+  padding: 1px 1px !important;
+}
 
-    padding: 0px 20px;
-
-  }
-
- 
-  .active {
-    color: #000;
-  }
-
-  .navbar-toggle {
-    /* (60px - button height 34px) / 2 = 23px */
-    margin-top: 4px;
-    padding: 1px 1px !important;
-  }
-
- li{
-     margin-left: 8px;
+li {
+  margin-left: 8px;
   margin-right: 8px;
 }
 
@@ -61,4 +61,16 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+.mobileMediaText {
+  display: none;
+}
+
+.nav-link img {
+  height: 1.5rem;
+}
+@media (max-width: 35rem) {
+  .mobileMediaText {
+    display: inline;
+  }
 }

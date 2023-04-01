@@ -1,22 +1,40 @@
-.page1 {
-    /*ABOUT*/
+.hero {
+    padding-top: 6rem;
+    color: white;
     min-height: 800px;
     width: 100%;
     background: #0f1626;
     vertical-align: middle;
-    background-image: url(https://1.bp.blogspot.com/-lQgJpZP9Gyo/XzsLuteFRNI/AAAAAAADnrM/xBBepCELa0s98bmvNdzU4OCCWG6jjrWlQCPcBGAsYHg/s2048/_MKY2867-HDR.jpg);
+    background-image: url('https://1.bp.blogspot.com/-lQgJpZP9Gyo/XzsLuteFRNI/AAAAAAADnrM/xBBepCELa0s98bmvNdzU4OCCWG6jjrWlQCPcBGAsYHg/s2048/_MKY2867-HDR.jpg');
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    /*  animation: slide 10s infinite;*/
+
   }
 
 
-  .page1::before {
+  .hero::before {
          background-color: rgba(0, 0, 0, 0.1);
 
   }
 
 .hero_heading{
-    font-size: var(--fs-900);
+    font-size: var(--fs-850);
 }
+
+.text-block {
+    margin-inline: auto;
+    bottom: 0;
+    /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0);
+    /* Fallback color */
+    background: rgba(0, 0, 0, 0.5);
+    /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    /* Grey text */
+    width: calc(100% - 20vw);
+    /* Full width */
+    padding: 2rem;
+    /* Some padding */
+    font-size: 1.1em;
+  }
