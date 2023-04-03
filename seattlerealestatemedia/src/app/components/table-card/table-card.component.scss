@@ -1,6 +1,6 @@
 .tableCard_container{
     flex-grow: 1;
-    width: 35rem;
+    width: 25rem;
     display: grid;
     position: relative;
     background-color: hsl(var(--clr-light));
@@ -32,23 +32,8 @@
 
 .tableCard_title{
     padding: 0;
-    //  position: absolute;
-    //  top:0;
-    //  align-self:flex-start;
-    // right: -6rem;
-    // transform-origin: 0 0;
-    // writing-mode: vertical-lr;
-    // transform: rotate(-180deg); 
-    // color: hsl(var(--clr-dark));
 }
 
-// .gradient {
-//     position: absolute;
-//     background-image: linear-gradient(0deg, #ccc , transparent);
-//     height: 100%;
-//     width: 100%;
-//     bottom: 0;
-// }
 
 .tableCard_subtitle{
     padding-inline: 2rem;

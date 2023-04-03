@@ -1,8 +1,8 @@
 .carousel{
     position: relative;
-    height: 50vh;
+    height: 70vh;
     width: 100%;
-    margin: 0 auto;
+    // margin: 0 auto;
     scroll-snap-type: x mandatory;
     
 }
@@ -95,7 +95,7 @@
 @media screen and  (max-width: 35rem) 
 {
     .carousel_nav{
-        width: 100%;
+        width: 80%;
     }
     .carousel{
         position: relative;
@@ -103,18 +103,36 @@
         width: 100%;
         margin: 0 auto;
     }
-
+    .carousel_nav{
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+        align-content: center;
+        justify-content: center;
+        padding: 5px 0;
+        bottom:0;
+        /* width: calc(100% - 10rem); */
+        width: 100%;
+        margin-inline: auto ;
+        z-index: 97;
+    }
     .carousel__indicator{
+        
         border: 0;
-        border-radius: 15px;
-        width: 15px;
-        height: 15px;
+        border-radius: 5px;
+        width: 10px;
+        height: 10px;
         background: rgba(255,255,255,.50);
-        margin: 0 12px;
+        // margin: 0 1px;
         cursor: pointer;
     }
 
     .carousel__image{
         object-position: -50px 0px ;
+    }
+
+    .carousel__button img{
+        width: 15vw;
     }
 }
