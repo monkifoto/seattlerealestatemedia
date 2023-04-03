@@ -14,6 +14,7 @@ import { StagingComponent } from './components/sections/staging/staging.componen
 import { HeadshotsComponent } from './components/sections/headshots/headshots.component';
 import { AerialComponent } from './components/sections/aerial/aerial.component';
 import { CalculatorComponent } from './components/sections/calculator/calculator.component';
+import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CalculatorComponent } from './components/sections/calculator/calculator
     StagingComponent,
     HeadshotsComponent,
     AerialComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    ImageCarouselComponent
 
   ],
   imports: [

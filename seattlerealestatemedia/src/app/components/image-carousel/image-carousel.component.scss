@@ -1,0 +1,120 @@
+.carousel{
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    margin: 0 auto;
+    scroll-snap-type: x mandatory;
+    
+}
+.carousel__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0px 0px ;
+    scroll-snap-align: start;
+}
+
+.carousel__track-container{
+    position: relative;
+    /* background-color: aquamarine; */
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+
+.carousel__track{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    
+}
+
+.carousel__slide{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel__button{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.carousel__button--left{
+    left: 30px;
+    z-index: 99;
+}
+.carousel__button--right{
+    right: 30px;
+    z-index: 98;
+}
+
+.carousel__button img{
+    width: 5vw;
+}
+
+.carousel_nav{
+    position: absolute;
+    display: flex;
+    gap: 1rem;
+    align-content: center;
+    justify-content: center;
+    padding: 10px 0;
+    bottom:0;
+    /* width: calc(100% - 10rem); */
+    width: 100%;
+    margin-inline: auto ;
+    z-index: 97;
+}
+
+.carousel__indicator{
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba(255,255,255,.50);
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.carousel__indicator.current_slide{
+    background: rgba(255,255,255,.95);
+
+}
+
+.is-hidden{display: none;}
+
+@media screen and  (max-width: 35rem) 
+{
+    .carousel_nav{
+        width: 100%;
+    }
+    .carousel{
+        position: relative;
+        height: 40vh;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .carousel__indicator{
+        border: 0;
+        border-radius: 15px;
+        width: 15px;
+        height: 15px;
+        background: rgba(255,255,255,.50);
+        margin: 0 12px;
+        cursor: pointer;
+    }
+
+    .carousel__image{
+        object-position: -50px 0px ;
+    }
+}
