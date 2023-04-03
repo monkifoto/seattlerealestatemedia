@@ -1,0 +1,20 @@
+<div class="tableCard_container">
+  <div class="gradient"></div>
+  <!-- <div class="tableCard_image"><img *ngIf="tableCard?.ImageUrl != '' " src="{{tableCard?.ImageUrl}}"/></div> -->
+  
+  <div class="tableCard_title">
+    <H1>{{ tableCard?.Title }}</H1>
+    <hr />
+  </div>
+
+  <br />
+  
+
+  <!-- <span class="tableCard_price">${{tableCard?.Price}}</span>
+<br/> -->
+  <span class="tableCard_subtitle">{{ tableCard?.Description }}</span>
+</div>
+<div class="tableCard_buttons">
+  <button>Edit</button> |
+  <button (click)="onDelete()">Delete</button>
+</div>

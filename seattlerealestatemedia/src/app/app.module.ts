@@ -15,6 +15,8 @@ import { HeadshotsComponent } from './components/sections/headshots/headshots.co
 import { AerialComponent } from './components/sections/aerial/aerial.component';
 import { CalculatorComponent } from './components/sections/calculator/calculator.component';
 import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
+import { TableCardComponent } from './components/table-card/table-card.component';
+import { TableCardListComponent } from './components/table-card-list/table-card-list.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ImageCarouselComponent } from './components/image-carousel/image-carous
     HeadshotsComponent,
     AerialComponent,
     CalculatorComponent,
-    ImageCarouselComponent
+    ImageCarouselComponent,
+    TableCardComponent,
+    TableCardListComponent
 
   ],
   imports: [

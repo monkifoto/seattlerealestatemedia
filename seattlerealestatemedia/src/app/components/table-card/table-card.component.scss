@@ -1,0 +1,71 @@
+.tableCard_container{
+    flex-grow: 1;
+    width: 35rem;
+    display: grid;
+    position: relative;
+    background-color: hsl(var(--clr-light));
+    border-radius: 5px;
+    min-height: 300px;
+}
+
+.tableCard_container > * {
+ padding-inline:4rem;
+}
+
+.tableCard_image{
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+    // background-color: green;
+    width: 100%;
+}
+
+.tableCard_price{
+    position: absolute;
+    top:1rem;
+    left: 1rem;
+    font-size: var(--fs-700);
+    color: hsl(var(--clr-dark));
+
+}
+
+.tableCard_title{
+    padding: 0;
+    //  position: absolute;
+    //  top:0;
+    //  align-self:flex-start;
+    // right: -6rem;
+    // transform-origin: 0 0;
+    // writing-mode: vertical-lr;
+    // transform: rotate(-180deg); 
+    // color: hsl(var(--clr-dark));
+}
+
+// .gradient {
+//     position: absolute;
+//     background-image: linear-gradient(0deg, #ccc , transparent);
+//     height: 100%;
+//     width: 100%;
+//     bottom: 0;
+// }
+
+.tableCard_subtitle{
+    padding-inline: 2rem;
+    color:  hsl(var(--clr-dark));
+    font-size: var(--fs-400);
+    width: 100%;
+    // position: absolute;
+    // bottom:3rem;
+    /* font-weight: 200; */
+    text-align: Left;
+    vertical-align: top;
+    // background-color: aqua;
+    z-index: 1;
+}
+
+.tableCard_buttons{
+
+    display: none;
+
+}

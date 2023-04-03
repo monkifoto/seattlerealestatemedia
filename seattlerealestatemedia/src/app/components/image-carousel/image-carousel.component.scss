@@ -1,6 +1,6 @@
 .carousel{
     position: relative;
-    height: 70vh;
+    height: 50vh;
     width: 100%;
     margin: 0 auto;
     scroll-snap-type: x mandatory;
@@ -19,7 +19,7 @@
     /* background-color: aquamarine; */
     height: 100%;
     overflow: hidden;
-    border-radius: 10px;
+    // border-radius: 10px;
     
 }
 
@@ -81,7 +81,7 @@
     width: 15px;
     height: 15px;
     background: rgba(255,255,255,.50);
-    margin: 0 12px;
+    margin: 0 5px;
     cursor: pointer;
 }
 
