@@ -8,7 +8,7 @@
   cursor: pointer;
   padding: var(--underline-gap, 0.5rem) 0;
   border: 0;
-  border-bottom: 0.2rem solid hsl(var(--clr-dark) / 0.5);
+  border-bottom: 0.2rem solid hsl(var(--clr-dark) / 0.2);
 }
 
 .primary-header {
@@ -20,6 +20,7 @@
   align-items: center;
   width: 100%;
   box-shadow: 5px 5px 3px #333;
+  z-index: 3000;
 }
 
 nav {
@@ -32,7 +33,7 @@ nav {
   list-style: none;
   font-weight: bold;
   
-  --gap: clamp(1.5rem, 3vw, 4.5rem);
+  --gap: clamp(.5rem, 1vw, 1rem);
   gap: var(--gap);
   width: 100%;
   height: 3.5rem;

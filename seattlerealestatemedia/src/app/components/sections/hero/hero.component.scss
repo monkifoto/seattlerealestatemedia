@@ -1,40 +1,99 @@
-.hero {
-    padding-top: 6rem;
-    color: white;
-    min-height: 800px;
-    width: 100%;
-    background: #0f1626;
-    vertical-align: middle;
-    background-image: url('https://1.bp.blogspot.com/-lQgJpZP9Gyo/XzsLuteFRNI/AAAAAAADnrM/xBBepCELa0s98bmvNdzU4OCCWG6jjrWlQCPcBGAsYHg/s2048/_MKY2867-HDR.jpg');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
 
-  }
-
-
-  .hero::before {
-         background-color: rgba(0, 0, 0, 0.1);
-
-  }
-
-.hero_heading{
-    font-size: var(--fs-850);
+.hero-section {
+  position: relative;
+  height: 80vh;
+  background-image: url('https://1.bp.blogspot.com/-lQgJpZP9Gyo/XzsLuteFRNI/AAAAAAADnrM/xBBepCELa0s98bmvNdzU4OCCWG6jjrWlQCPcBGAsYHg/s2048/_MKY2867-HDR.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-.text-block {
-    margin-inline: auto;
-    bottom: 0;
-    /* At the bottom. Use top:0 to append it to the top */
-    background: rgb(0, 0, 0);
-    /* Fallback color */
-    background: rgba(0, 0, 0, 0.5);
-    /* Black background with 0.5 opacity */
-    color: #f1f1f1;
-    /* Grey text */
-    width: calc(100% - 20vw);
-    /* Full width */
-    padding: 2rem;
-    /* Some padding */
-    font-size: 1.1em;
-  }
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #000;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+// .hero {
+//     padding-top: 6rem;
+//     color: white;
+//     min-height: 800px;
+//     width: 100%;
+//     background: #0f1626;
+//     vertical-align: middle;
+//     background-image: url('https://1.bp.blogspot.com/-lQgJpZP9Gyo/XzsLuteFRNI/AAAAAAADnrM/xBBepCELa0s98bmvNdzU4OCCWG6jjrWlQCPcBGAsYHg/s2048/_MKY2867-HDR.jpg');
+//     background-position: 50% 50%;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+
+//   }
+
+
+//   .hero::before {
+//          background-color: rgba(0, 0, 0, 0.1);
+
+//   }
+
+// .hero_heading{
+//     font-size: var(--fs-850);
+// }
+
+// .text-block {
+//     margin-inline: auto;
+//     bottom: 0;
+//     /* At the bottom. Use top:0 to append it to the top */
+//     background: rgb(0, 0, 0);
+//     /* Fallback color */
+//     background: rgba(0, 0, 0, 0.5);
+//     /* Black background with 0.5 opacity */
+//     color: #f1f1f1;
+//     /* Grey text */
+//     width: calc(100% - 20vw);
+//     /* Full width */
+//     padding: 2rem;
+//     /* Some padding */
+//     font-size: 1.1em;
+//   }
