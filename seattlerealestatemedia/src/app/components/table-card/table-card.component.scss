@@ -54,3 +54,20 @@
     display: none;
 
 }
+
+@media (max-width: 35rem) {
+    .tableCard_container{
+        flex-grow: 1;
+        width: 20rem;
+        display: grid;
+        position: relative;
+        background-color: hsl(var(--clr-light));
+        border-radius: 5px;
+        min-height: 350px;
+    }
+
+    .tableCard_container > * {
+        padding-inline:2rem;
+       }
+       
+}
