@@ -113,7 +113,7 @@ a:hover {
    
   }
 
-  .primary-navigation a {
+  .navigationprimary- a {
     color: hsl(var(--clr-dark));
     text-decoration: none;
   }
@@ -164,13 +164,13 @@ a:hover {
   }
 
   .logo {
-    // padding-inline: 3rem;
-    // margin: 1.5rem clamp(2.5rem, 4vw, 3.5rem);
-    // height:2rem;
+    all:unset;
+    padding:.5rem;
+    width: 200px;
   }
 
-  .logo img{
-    // height: 4rem;
+  li {
+    margin-top: .5rem;
   }
 
   .mobileMediaText {

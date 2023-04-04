@@ -64,14 +64,14 @@ h1 {
   grid-column: 2 / 3;
 }
 
-  .photography-section-container{
+  .section-container{
     display: flex;
     flex-wrap: wrap;
      background: #AB987A;
      height: 80vh;
   }
 
-.photography-container{
+.container{
   display: grid;
   flex: 1;
   align-items: center;
@@ -113,7 +113,7 @@ h1 {
       align-content: center;
     }
 
-    .photography-section-container{
+    .section-container{
       display: flex;
       flex-wrap: wrap;
        background: #AB987A;
