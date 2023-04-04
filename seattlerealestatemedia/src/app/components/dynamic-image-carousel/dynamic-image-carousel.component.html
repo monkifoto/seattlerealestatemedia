@@ -1,0 +1,14 @@
+<div class="carousel-container">
+    <div class="carousel-inner" [style.transform]="'translateX(' + (-currentIndex * 100) + '%)'">
+      <div class="carousel-item" *ngFor="let image of listOfImages; let i = index">
+        <img [src]="image.url" [alt]="image.alt">
+      </div>
+    </div>
+    <div class="carousel-navigation">
+      <button class="carousel-prev" (click)="prevImage()"><img src="../../../assets/left.svg" alt="right" /></button>
+      <button class="carousel-next" (click)="nextImage()"><img src="../../../assets/right.svg" alt="right" /></button>
+    </div>
+    <div class="carousel-indicators">
+      <span *ngFor="let image of listOfImages; let i = index" [class.active]="i === currentIndex" (click)="goToImage(i)"></span>
+    </div>
+  </div>
