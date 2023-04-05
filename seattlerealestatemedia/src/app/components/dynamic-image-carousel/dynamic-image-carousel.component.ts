@@ -26,6 +26,12 @@ export class DynamicImageCarouselComponent {
     else if(this.galleryType == 'photos'){
       this.listOfImages = this.carouselSvc.GetPhotographyImages();
     }
+    else if(this.galleryType == 'floorPlan'){
+      this.listOfImages = this.carouselSvc.GetFloorPlanImages();
+    }
+    else if(this.galleryType == 'staging'){
+      this.listOfImages = this.carouselSvc.GetStagingImages();
+    }
       
       this.startInterval();
   }

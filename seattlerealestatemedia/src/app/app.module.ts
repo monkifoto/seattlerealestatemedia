@@ -17,6 +17,7 @@ import { CalculatorComponent } from './components/sections/calculator/calculator
 import { TableCardComponent } from './components/table-card/table-card.component';
 import { TableCardListComponent } from './components/table-card-list/table-card-list.component';
 import { DynamicImageCarouselComponent } from './components/dynamic-image-carousel/dynamic-image-carousel.component';
+import { EstimatorComponent } from './components/estimator/estimator.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DynamicImageCarouselComponent } from './components/dynamic-image-carous
     CalculatorComponent,
     TableCardComponent,
     TableCardListComponent,
-    DynamicImageCarouselComponent
+    DynamicImageCarouselComponent,
+    EstimatorComponent
 
   ],
   imports: [

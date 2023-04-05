@@ -1,0 +1,190 @@
+.greenCheckMark {
+    color: #6c757d !important;
+    background-color: #f7f7f7 !important;
+    border-color: #5cb85c !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .deleteIcon {
+    position: absolute;
+    margin-left: 200px;
+    padding: 10px;
+    color: green;
+  }
+
+  .removeFromCartIcon {
+    position: absolute;
+    top: -20px;
+    right: 120px;
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .bs-example {
+    margin: 20px;
+  }
+
+  .hiddenControl {
+    display: none;
+
+  }
+
+  .btn-outline-secondary {
+    border-style: 3px;
+  }
+
+  .btn-outline-secondary:hover {
+    color: #6c757d !important;
+    background-color: #f7f7f7 !important;
+    /*border-color: #5cb85c !important;*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+
+
+  #stdPkgButton,
+  #proPkgButton,
+  #twilightButton,
+  #rushDeliveryButton,
+  #virtualTourButton,
+  #floorPlanButton,
+  #zillowTourButton,
+  #aerialPhotoButton,
+  #aerialVideoButton,
+  #slideShowTourButton,
+  #reelTourButton,
+  #headshotButton,
+  #videoTourButton,
+  #lifeStyleButton{
+    margin: 0 !important;
+    padding: 0 !important;
+
+  }
+
+  div.card-deck div.card {
+    display: table;
+    margin: 16px 1.66666%;
+    flex: 0 1 330px;
+    background-color: #F5F5F5;
+    border-width: 0 0 0 6px;
+    border-radius: 6px;
+    color: #AAA;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    line-height: 18px;
+
+  }
+
+  div.card-block {
+    width: 250px;
+    padding: 14px 14px 14px 14px;
+    box-shadow: 4px;
+  }
+
+  div.card-block:hover {
+    /*width: 300px;
+padding: 14px 14px 14px 14px;
+border: 1px solid rgba(0, 0, 0, 0.125);*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*border-color: #5cb85c !important;*/
+
+  }
+
+  .card-title {
+    max-width: 70%;
+  }
+
+  .card.attribute {
+    border-color: darkgray;
+  }
+
+  .card.metric {
+    border-color: orange;
+  }
+
+
+
+  .card {
+    position: relative;
+    display: block;
+    margin-bottom: .75rem;
+    background-color: #fff;
+    border-radius: .25rem;
+    border: 1px solid rgba(0, 0, 0, 0.125)
+  }
+
+  /*div.card-deck: hover {
+position: relative;
+display: block;
+margin-bottom: .75rem;
+background-color: #555;
+border-radius: .25rem;
+border: 0px solid rgba(0, 0, 0, 0.125)
+}*/
+
+  .card-block .card-title {
+    font-size: 18px;
+    color: #404040;
+    margin-top: 0;
+    margin-bottom: 14px;
+  }
+
+  .card-title,
+  .card-heading {
+    font-weight: bold;
+  }
+
+  .card-description .card-text {
+    padding: 0;
+    margin: 0;
+  }
+
+  .bundle {
+    border: solid 1px #0f1626;
+    background-color: black;
+    height: 100px;
+  }
+
+  /* Bottom right text */
+  .text-block {
+
+    bottom: 0;
+    /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0);
+    /* Fallback color */
+    background: rgba(0, 0, 0, 0.5);
+    /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    /* Grey text */
+    width: 100%;
+    /* Full width */
+    padding: 20px;
+    /* Some padding */
+    font-size: 1.1em;
+  }
+
+  #contact {
+    background-color: #fff;
+    margin: 30px 0 !important
+  }
+
+  .contact-form-name,
+  .contact-form-email,
+  .contact-form-email-message {
+    max-width: 420px !important;
+    width: 100%;
+  }
+
+  .contact-form-widget {
+    height: 320;
+    margin-left: 0;
+    max-width: 100% !important;
+    padding: 0;
+    padding-top: 0;
+    width: 100%;
+  }
+
+  * {
+    margin: 0 auto;
+  }
