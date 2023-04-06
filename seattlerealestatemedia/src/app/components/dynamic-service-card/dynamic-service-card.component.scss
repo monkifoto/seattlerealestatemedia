@@ -1,0 +1,32 @@
+.product_container
+{
+    background-color: hsl(var(--clr-white));
+    padding: 2rem;
+    height: 20rem;
+    border-radius: .75rem;
+    border: 1px solid rgba(0, 0, 0, 0.125)
+}
+
+
+
+.hidden{
+    visibility: hidden;
+}
+
+.product_header{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.product_title{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.product_subtitle{
+    line-height: .25rem;
+    font-size: .75rem;
+}
+
+.product_icon{
+    width: 4rem;
+}

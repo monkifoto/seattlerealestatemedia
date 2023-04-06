@@ -1,0 +1,18 @@
+
+<div class="product_container" id="{{product?.id}}">
+    <div class="product_id hidden"> {{product?.id}}</div>
+    <div class="product_header">
+        <div class="product_icon" [innerHtml]="product?.icon"></div>
+        <div class="product_header_title">
+            <div class="product_title"> {{product?.title}}</div>
+            <div class="product_subtitle"> {{product?.subtitle}}</div>
+        </div>
+    </div>
+    <div class="product_features">
+        <ul>
+            <li *ngFor="let feature of product?.features">{{feature}}</li>
+        </ul>
+      </div>
+    <div class="product_price hidden">$ {{product?.price}} / base</div>
+    <div class="product_sqFtPrice hidden">+$ {{product?.sqFtPrice}} / per 500sq ft</div>
+</div>

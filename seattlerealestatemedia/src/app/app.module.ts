@@ -18,6 +18,9 @@ import { TableCardComponent } from './components/table-card/table-card.component
 import { TableCardListComponent } from './components/table-card-list/table-card-list.component';
 import { DynamicImageCarouselComponent } from './components/dynamic-image-carousel/dynamic-image-carousel.component';
 import { EstimatorComponent } from './components/estimator/estimator.component';
+import { DynamicServiceCardComponent } from './components/dynamic-service-card/dynamic-service-card.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,12 +39,15 @@ import { EstimatorComponent } from './components/estimator/estimator.component';
     TableCardComponent,
     TableCardListComponent,
     DynamicImageCarouselComponent,
-    EstimatorComponent
+    EstimatorComponent,
+    DynamicServiceCardComponent
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

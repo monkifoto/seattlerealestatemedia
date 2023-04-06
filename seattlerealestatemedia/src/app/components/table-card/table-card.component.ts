@@ -14,7 +14,7 @@ export class TableCardComponent {
   constructor(private tblSvc : TableCardService){};
 
   ngOnInit():void{
-    console.log(this.tableCard);
+    // console.log(this.tableCard);
   }
 
   onDelete(){

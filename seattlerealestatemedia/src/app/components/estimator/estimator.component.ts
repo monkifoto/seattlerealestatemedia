@@ -1,12 +1,52 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Product } from 'src/app/product.mode';
+import { ProductService } from 'src/app/product.service';
 
 @Component({
   selector: 'app-estimator',
   templateUrl: './estimator.component.html',
   styleUrls: ['./estimator.component.scss']
 })
-export class EstimatorComponent {
+export class EstimatorComponent implements OnInit  {
 
+	myForm!: FormGroup ;
+	timeSlots: string[] = ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
+						   '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'];
+  
+
+	listOfProducts : Product [] = [];
+
+  constructor(private productSvc : ProductService, private formBuilder: FormBuilder){}
+
+  ngOnInit(){
+
+	this.myForm = this.formBuilder.group({
+		name: ['', Validators.required],
+		email: ['', [Validators.required, Validators.email]],
+		address: ['', Validators.required],
+		date: ['', Validators.required],
+		time: ['', Validators.required],
+		size: ['', [Validators.required, Validators.min(1), Validators.max(5)]]
+	  });
+
+    this.listOfProducts = this.productSvc.GetAllProducts();
+	
+	const productCards = document.querySelector('.estimator') as  HTMLDivElement;
+	const cards = Array.from(productCards?.children) as Element [];
+	// cards.forEach(card => 
+	// {
+	// 	console.log(card);	
+	// });
+	console.log("productCards" + cards);
+
+  }
+
+  onSubmit() {
+    if (this.myForm?.valid) {
+      // Handle form submission logic here
+    }
+  }
 
   // var bookNowDetails;
   // var name;

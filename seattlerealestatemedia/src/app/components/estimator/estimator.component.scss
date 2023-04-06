@@ -1,3 +1,99 @@
+.estimator{
+  display: flex;
+  flex-wrap: wrap;  
+  gap :1rem;
+  position: relative;
+}
+
+.estimator_card{
+  flex-grow: 1;
+  max-width: 20rem;
+  position: relative;
+  display: block;
+  // min-height: 20rem;
+}
+
+.estimator_card::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  border-radius: 5rem  0 0 5rem;
+  height: 100%; /* Set height to 100% to span the height of the div */
+  // background-color: #ff4500;
+  background-color: #AAA;
+}
+
+
+
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select,
+input[type="date"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+select {
+  appearance: none;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Error styles for invalid form controls */
+input.ng-invalid,
+textarea.ng-invalid,
+select.ng-invalid {
+  border-color: #ff0000;
+}
+
+/* Optional: style the date picker dropdown */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #007bff;
+  font-size: 14px;
+  padding: 0;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+
+
+/***********************************/
 .greenCheckMark {
     color: #6c757d !important;
     background-color: #f7f7f7 !important;

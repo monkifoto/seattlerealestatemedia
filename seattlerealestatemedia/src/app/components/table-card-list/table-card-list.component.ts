@@ -15,8 +15,8 @@ export class TableCardListComponent {
 
 ngOnInit(){
   this.listOfCards = this.tblSvc.GetCards();
-  console.log("table card list");
-  console.log(this.listOfCards);
+  // console.log("table card list");
+  // console.log(this.listOfCards);
 }
 
 }

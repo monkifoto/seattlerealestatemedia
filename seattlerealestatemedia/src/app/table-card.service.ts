@@ -28,8 +28,8 @@ export class TableCardService {
   }
 
   RemoveCard(index: number) {
-    console.log(index);
+    // console.log(index);
     this.listOfCards.splice(index, 1); 
-    console.log(this.listOfCards);
+    // console.log(this.listOfCards);
   }
 }

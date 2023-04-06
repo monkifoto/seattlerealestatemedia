@@ -13,7 +13,7 @@ export class NavbarComponent {
     const navToggle = document.querySelector(".mobile-nav-toggle")as HTMLButtonElement ;;
     console.log(nav);
     navToggle.addEventListener("click", () => {
-        console.log("nav - toggle  - click");
+        // console.log("nav - toggle  - click");
         const visiblity = nav.getAttribute("data-visible");
        
         console.log("visibility: " + visiblity);
@@ -30,7 +30,7 @@ export class NavbarComponent {
 }
 
 scrollTo(element: any): void {
-  console.log(element);
+  // console.log(element);
   (document.getElementById(element) as HTMLElement).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 }
 

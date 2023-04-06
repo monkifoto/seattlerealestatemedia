@@ -1,3 +1,38 @@
+
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <label for="name">Name:</label>
+  <input type="text" id="name" formControlName="name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" formControlName="email" required>
+
+  <label for="address">Address:</label>
+  <textarea id="address" formControlName="address" required></textarea>
+
+  <label for="date">Date:</label>
+  <input type="date" id="date" formControlName="date" required>
+
+  <label for="time">Time:</label>
+  <select id="time" formControlName="time" required>
+    <option *ngFor="let timeSlot of timeSlots" [value]="timeSlot">{{ timeSlot }}</option>
+  </select>
+
+  <label for="size">Size:</label>
+  <input type="number" id="size" formControlName="size" min="1" max="5" required>
+
+  <button type="submit" [disabled]="myForm.invalid">Submit</button>
+</form>
+
+<small class='error' id='invalid_package' style='color:red'>Please select between Essentials and Showcase
+  Packages.</small>
+
+<div class="estimator">
+  <app-dynamic-service-card class="estimator_card" *ngFor="let product of listOfProducts" [productObj]="product"></app-dynamic-service-card>
+  <!-- <app-dynamic-service-card [productType] ="'essential'"></app-dynamic-service-card> -->
+
+</div>
+
 <div class='container-fluid container-padding'>
 
     <form>
@@ -40,7 +75,7 @@
         </div>
         <!-- Schedule Options -->
         <hr/>
-        <div class='row'>
+        <!-- <div class='row'>
 
           <div class='col-md-2'>
 
@@ -74,7 +109,7 @@
 
         </div>
 
-        <!-- Photo Options -->
+         Photo Options 
         <div class='row'>
    
           <div class='col-md-6'>
@@ -89,384 +124,13 @@
           </div>
         
         </div>
-        <hr/>
-        <small class='error' id='invalid_package' style='color:red'>Please select between Essentials and Showcase
-          Packages.</small>
-        <div class='row'>
-
-         
-          <div class='col-md-2 py-1'>
-            <div class='card-deck'>
-              <input autocomplete='off' class='btn-check hiddenControl ' id='stdPkg' type='checkbox'/>
-              <label for='stdPkg' id='stdPkgButton'>
-                <div class='card attribute' id='stdPkgCard'>
-                  <div class='deleteIcon hiddenControl' id='stdPkgDelete'>
-                  </div>
-                  <div class='card-block'>
-                    <div class='card-title'>Essentials Pack </div>
-                    <div class='card-description'>
-                      <div class='text-left'>
-
-                        <ul>
-                          <li><small class='form-text text-muted'>15 - 30 Edited Images</small></li>
-                          <li><small class='form-text text-muted'>Blue Skies Exteriors</small></li>
-                          <li><small class='form-text text-muted'>Clear Interior Window Views</small></li>
-                          <li><small class='form-text text-muted'>Natural Interior Lighting</small></li>
-                          <li><small class='form-text text-muted'>Manually edited</small></li>
-                          <li><small class='form-text text-muted'>Virtual Staging**</small></li>
-
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </label>
-            </div>
-          </div>
-          <div class='col-md-2 py-1'>
-            <div class='card-deck'>
-
-              <input autocomplete='off' class='btn-check hiddenControl ' id='proPkg' type='checkbox'/>
-              <label for='proPkg' id='proPkgButton'>
-                <div class='card attribute' id='proPkgCard'>
-                  <div class='deleteIcon hiddenControl' id='proPkgDelete'>
-                  </div>
-                  <div class='card-block'>
-                    <div class='card-title'>Showcase Pack </div>
-                    <div class='card-description'>
-                      <div class='text-left'>
-                        <ul>
-                          <li><small class='form-text text-muted'>25 - 40 + Edited Images</small></li>
-                          <li><small>Professional Interior Lighting</small></li>
-                          <li><small class='form-text text-muted'>Blue Skies Exteriors</small></li>
-                          <li><small class='form-text text-muted'>Clear Interior Window Views</small></li>
-                          <li><small class='form-text text-muted'>Manually edited</small></li>
-                          <li><small class='form-text text-muted'>Virtual Staging**</small></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </label>
-            </div>
-          </div>
-          <div class='col-md-2 py-1'>
-            <div class='card-deck'>
-
-              <input autocomplete='off' class='btn-check hiddenControl ' id='aerialPhoto' type='checkbox'/>
-              <label for='aerialPhoto' id='aerialPhotoButton'>
-                <div class='card attribute' id='aerialPhotoCard'>
-                  <div class='deleteIcon hiddenControl' id='aerialPhotoButtonDelete'></div>
-                  <div class='card-block' style='min-height:210px;'>
-                    <div class='card-title'>Aerial Photo</div>
-                    <div class='card-description'>
-                      <ul>
-                        <li><small class='form-text text-muted'>5-10 Aerial Photos</small></li>
-                        <li><small class='form-text text-muted'>Manually edited</small></li>
-                        <li><small class='form-text text-muted'>Location Indicator</small></li>
-                     
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </label>
-            </div>
-          </div>
-          <div class='col-md-2 py-1'>
-            <div class='row'>
-              <div class='col-md-12 '>
-                <div class='card-deck'>
-                  <input autocomplete='off' class='btn-check hiddenControl ' id='twilight' type='checkbox'/>
-                  <label for='twilight' id='twilightButton'>
-                    <div class='card attribute' id='twilightCard'>
-                      <div class='deleteIcon hiddenControl' id='twilightPkgDelete'></div>
-                      <div class='card-block'>
-                        <div class='card-title'>TWILIGHT </div>
-                        <div class='card-description'>
-                          <ul>
-                               <li><small class='form-text text-muted'>Photos captured 30 minutes before sunset</small></li>
-                                <li><small class='form-text text-muted'>Taken on-site and requires a separate appointment.</small></li>
-                            
-                      </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                  </label>
-
-
-                </div>
-
-
-              </div>
-              
-            </div>
-            <div class='row'>
-              <div class='col-md-12 '>
-                <div class='card-deck'>
-
-                  <input autocomplete='off' class='btn-check hiddenControl ' id='rushDelivery' type='checkbox'/>
-                  <label for='rushDelivery' id='rushDeliveryButton'>
-                    <div class='card attribute' id='rushCard'>
-                      <div class='deleteIcon hiddenControl' id='rushPkgDelete'></div>
-                      <div class='card-block'>
-                        <div class='card-title'>Rush Delivery </div>
-                        <div class='card-description'>
-                          <ul>
-                       <li><small class='form-text text-muted'>10am Delivery</small></li>
-                      </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          
-        </div>
+      -->
+     
       
         <div class='col-md-12' stlye='font-size: 0.5em !important;'></div>
         <!-- Service Options -->
 
-        <hr/>
-        <div class='row'>
- 
-          <div class='col-md-2 py-1'>
-
-          <div class='row'>
-              <div class='col-md-12 '>
-                    <div class='card-deck'>
-
-              <input autocomplete='off' class='btn-check hiddenControl ' id='virtualTour' type='checkbox'/>
-              <label for='virtualTour' id='virtualTourButton'>
-                <div class='card attribute' id='virtualTourCard'>
-                  <div class='deleteIcon hiddenControl' id='virtualTourPkgDelete'></div>
-                  <div class='card-block'>
-                    <div class='card-title'> Matterport 3D Tour </div>
-                    <div class='card-description'>
-                      <ul>
-                         <li><small class='form-text text-muted'>12-hour turnaround</small></li>
-                        <li><small class='form-text text-muted'>Outdoor 360 Images</small></li>
-                        <li><small class='form-text text-muted'>*3 Months Hosting Included</small></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </label>
-            </div>
-            </div>
-           </div>
-            <div class='row'>
-              <div class='col-md-12 '>
-                <div class='card-deck'>
-
-              <input autocomplete='off' class='btn-check hiddenControl ' id='zillowTour' type='checkbox'/>
-              <label for='zillowTour' id='zillowTourButton'>
-                <div class='card attribute' id='zillowTourCard'>
-                  <div class='deleteIcon hiddenControl' id='zillowTourPkgDelete'></div>
-                  <div class='card-block'>
-                    <div class='card-title'>Zillow 3D Tour</div>
-                    <div class='card-description'>
-                       <ul>
-                       <li><small class='form-text text-muted'> Zillow Hosted 3D Tour </small></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </label>
-            </div>
-           </div>
-           </div>
-            <div class='row'>
-              <div class='col-md-12 '>
-                <div class='card-deck'>
-
-              <input autocomplete='off' class='btn-check hiddenControl ' id='floorPlan' type='checkbox'/>
-              <label for='floorPlan' id='floorPlanButton'>
-                <div class='card attribute' id='floorPlanCard'>
-                  <div class='deleteIcon hiddenControl ' id='floorPlanPkgDelete'></div>
-                  <div class='card-block'>
-                    <div class='card-title'> Floor Plan</div>
-                    <div class='card-description'>
-                      <div class='card-heading'>Description</div>
-                        <ul>
-                       <li><small class='form-text text-muted'> 2D Floor Plan </small></li>
-                       <li><small class='form-text text-muted'> Estimated Dimensions </small></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </label>
-            </div>
-                  </div>
-            </div>
-          </div>
-          <div class='col-md-2 py-1'>
-            <div class='row'>
-              <div class='col-md-12 '>
-                 <div class='card-deck'>
-
-              <input autocomplete='off' class='btn-check hiddenControl ' id='videoTour' type='checkbox'/>
-              <label for='videoTour' id='videoTourButton'>
-                <div class='card attribute' id='videoTourCard'>
-                  <div class='deleteIcon hiddenControl' id='videoTourButtonDelete'></div>
-                  <div class='card-block'>
-                    <div class='card-title'>  Video Tour</div>
-                    <div class='card-description'>
-                       <ul>
-                        <li><small class='form-text text-muted'> 1 - 2 Minute Walkthrough Video</small></li>
-                       <li><small class='form-text text-muted'> Multiple Angles </small></li>
-                        <li><small class='form-text text-muted'>MLS optimized </small> </li>
-                        <li><small class='form-text text-muted'>48-hour turnaround </small></li>
-                        <li><small class='form-text text-muted'>Youtube Streaming </small></li>
-                        <li><small class='form-text text-muted'>Agent Details</small></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </label>
-            </div>
-              </div>
-            </div>
-              <div class='row'>
-              <div class='col-md-12 '>
-                  <div class='card-deck'>
-
-              <input autocomplete='off' class='btn-check hiddenControl ' id='aerialVideo' type='checkbox'/>
-              <label for='aerialVideo' id='aerialVideoButton'>
-                <div class='card attribute' id='aerialVideoCard'>
-                  <div class='deleteIcon hiddenControl' id='aerialVideoPkgDelete'></div>
-                  <div class='card-block'>
-                    <div class='card-title'>Aerial Video</div>
-                    <div class='card-description'>
-                        <ul>
-                       <li><small class='form-text text-muted'> 1 Minute Aerial Video </small></li>
-                       <li> <small class='form-text text-muted'>Multiple Angles</small> </li>
-                        <li><small class='form-text text-muted'>MLS optimized</small>  </li>
-                        <li><small class='form-text text-muted'>48-hour turnaround </small></li>
-                        <li><small class='form-text text-muted'>Youtube Streaming </small></li>
-                        <li><small class='form-text text-muted'>Agent Details</small></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </label>
-            </div>
-              </div>
-            </div>
-             
-          </div>
-          <div class='col-md-2 py-1'>
-            <div class='row'>
-              <div class='col-md-12 '>
-            <div class='card-deck'>
-
-              <input autocomplete='off' class='btn-check hiddenControl ' id='slideShowTour' type='checkbox'/>
-              <label for='slideShowTour' id='slideShowTourButton'>
-                <div class='card attribute' id='slideShowTourCard'>
-                  <div class='deleteIcon hiddenControl' id='slideShowTourPkgDelete'></div>
-                  <div class='card-block'>
-                    <div class='card-title'> Slideshow Tour</div>
-                    <div class='card-description'>
-                       <ul>
-                       <li><small class='form-text text-muted'> 5 second slides with music </small></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </label>
-            </div>
-              </div>
-            </div>
-             <div class='row'>
-              <div class='col-md-12 '>
-              <div class='card-deck'>
-
-              <input autocomplete='off' class='btn-check hiddenControl ' id='reelTour' type='checkbox'/>
-              <label for='reelTour' id='reelTourButton'>
-                <div class='card attribute' id='reelTourCard'>
-                  <div class='deleteIcon hiddenControl' id='reelTourPkgDelete'></div>
-                  <div class='card-block'>
-                    <div class='card-title'> Social Media Tour</div>
-                    <div class='card-description'>
-                       <ul>
-                       <li><small class='form-text text-muted'> 60 second social media video with music </small></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </label>
-            </div>
-                </div>
-            </div>
-          </div>
-          <div class='col-md-2 py-1'>  
-            <div class='row'>
-              <div class='col-md-12 '>
-           <div class='card-deck'>
-
-              <input autocomplete='off' class='btn-check hiddenControl ' id='headshot' type='checkbox'/>
-              <label for='headshot' id='headshotButton'>
-                <div class='card attribute' id='headShotCard'>
-                  <div class='deleteIcon hiddenControl ' id='headshotPkgDelete'></div>
-                  <div class='card-block'>
-                    <div class='card-title'> Agent Headshots</div>
-                    <div class='card-description'>
-                       <ul>
-                       <li><small class='form-text text-muted'>10 - 20 Edited Photos </small></li>
-                       <li> <small class='form-text text-muted'>White / Gray Background</small> </li>
-                        <li><small class='form-text text-muted'>MLS optimized</small>  </li>
-                        <li><small class='form-text text-muted'>48-hour turnaround </small></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </label>
-            </div>
-    
-           <div class='card-deck'>
-
-              <input autocomplete='off' class='btn-check hiddenControl ' id='lifeStyle' type='checkbox'/>
-              <label for='lifeStyle' id='lifeStyleButton'>
-                <div class='card attribute' id='lifeStyleCard'>
-                  <div class='deleteIcon hiddenControl ' id='lifeStylePkgDelete'></div>
-                  <div class='card-block'>
-                    <div class='card-title'>Lifestyle Branding</div>
-                    <div class='card-description'>
-                       <ul>
-                       <li><small class='form-text text-muted'>5 - 10 Edited Photos </small></li>
-                       <li> <small class='form-text text-muted'>On Locatoin</small> </li>
-                        <li><small class='form-text text-muted'>MLS optimized</small>  </li>
-                        <li><small class='form-text text-muted'>48-hour turnaround </small></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </label>
-            </div>
-              </div>
-            </div>
-          </div>
-   
-        </div>
-        <div class='row'>
-          <div class='col-md-2 py-1'>
-            <p id='homeSizeDisplay' style='display: none'>></p>
-            <br/>
-          </div>
-
-          <div class='col-md-8 py-1 text-center'>
-
-            <button class='nav-link buttons' id='bookNowButton' style='color: #0f1626; background-color: #FF533D; border-color: #FF533D; padding: 10px 10px; margin-left: 10px; display:inline !important;' type='button'>
-              <span class='buttons' style='position:relative; display:inline-block; outline:0; padding: 12px 26px; font-size:10px; line-height:20px; letter-spacing:2px; font-style:normal; font-weight:700'>
-                BOOK NOW</span>
-            </button>
-
-          </div>
   
-        </div>
         <div class='row'>
      
           <div class='col-md-10'>
