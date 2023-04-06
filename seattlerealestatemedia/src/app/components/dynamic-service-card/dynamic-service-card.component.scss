@@ -30,3 +30,19 @@
 .product_icon{
     width: 4rem;
 }
+
+.selected{
+   // background-color: #5cb85c;
+  }
+  
+  .selected::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    border-radius: 5rem  0 0 5rem;
+    height: 100%; /* Set height to 100% to span the height of the div */
+    // background-color: #ff4500;
+    background-color: #ff4500;
+  }

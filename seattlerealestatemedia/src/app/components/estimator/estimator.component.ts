@@ -11,11 +11,13 @@ import { ProductService } from 'src/app/product.service';
 export class EstimatorComponent implements OnInit  {
 
 	myForm!: FormGroup ;
-	timeSlots: string[] = ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
-						   '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'];
-  
+	timeSlots: string[] = ['8:00 AM - 10:00 AM', '10:00 AM - 12:00 PM',
+						   '12:00 PM - 2:00 PM', '2:00 PM - 4:00 PM', '4:00 PM - 6:00 PM', 'Twilight'];
 
+	homeSize: string [] = ['500-2000', '2000-2500', '2500-3000', '3000-3500', '3500 - 4000', '4000-5000'];
+  
 	listOfProducts : Product [] = [];
+	total: number = 0;
 
   constructor(private productSvc : ProductService, private formBuilder: FormBuilder){}
 
@@ -31,21 +33,30 @@ export class EstimatorComponent implements OnInit  {
 	  });
 
     this.listOfProducts = this.productSvc.GetAllProducts();
-	
 	const productCards = document.querySelector('.estimator') as  HTMLDivElement;
 	const cards = Array.from(productCards?.children) as Element [];
-	// cards.forEach(card => 
-	// {
-	// 	console.log(card);	
-	// });
-	console.log("productCards" + cards);
-
   }
 
   onSubmit() {
     if (this.myForm?.valid) {
       // Handle form submission logic here
     }
+  }
+
+  addToTotal(product: Product) {
+	const productCard = document.getElementById('#'+product.id) as HTMLDivElement;
+	if(product.selected == false){
+		this.total += product.price;
+		product.selected = true;
+		productCard.classList.add('selected');
+	}
+	else{
+		this.total -= product.price;
+		product.selected = false;
+		productCard.classList.remove('selected');
+	}
+  
+
   }
 
   // var bookNowDetails;
@@ -67,20 +78,7 @@ export class EstimatorComponent implements OnInit  {
   
   // }
   
-  // /* Set the cart item as selected */
-  // function setSelectedItem(control, buttonID, cardID, checkMarkID) {
-  //   buttonID = $(control).next('label').attr('id');
-  //   cardID = $("#" + buttonID).find('div:first-child').attr('id');
-  //   checkMarkID = $("#" + cardID).find("div:first-child").attr('id');
-  //   if ($(control).is(':checked')) {
-  //     $("#" + cardID).addClass("greenCheckMark");
-  //     $("#" + checkMarkID).removeClass("hiddenControl");
-  //   } else {
-  //     $("#" + cardID).removeClass("greenCheckMark");
-  //     $("#" + checkMarkID).addClass("hiddenControl");
-  //   }
-  // }
-  
+
   
   
   // /* Validate Email */

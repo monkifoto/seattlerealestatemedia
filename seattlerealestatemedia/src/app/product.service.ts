@@ -18,7 +18,8 @@ export class ProductService {
         'Virtual Staging**',
       ],
       295,
-      60
+      60,
+      false
     ),
     new Product(
       2,
@@ -34,7 +35,8 @@ export class ProductService {
         'Virtual Staging**',
       ],
       230,
-      30
+      30,
+      false
     ),
     new Product(
       3,
@@ -47,7 +49,8 @@ export class ProductService {
         'Location Indicator'
       ],
       120,
-      1
+      1,
+      false
     ),
     new Product(
       4,
@@ -59,7 +62,8 @@ export class ProductService {
         'Taken on-site and requires a separate appointment.',
       ],
       120,
-      1
+      1,
+      false
     ),
     new Product(
       5,
@@ -72,7 +76,8 @@ export class ProductService {
         '3 Months Hosting Included'
       ],
       225,
-      1
+      1,
+      false
     ),
     new Product(
       5,
@@ -85,7 +90,8 @@ export class ProductService {
         '3 Months Hosting Included'
       ],
       175,
-      1
+      1,
+      false
     ),
     new Product(
       6,
@@ -97,7 +103,8 @@ export class ProductService {
         'Estimated Dimensions '
       ],
       75,
-      1
+      1,
+      false
     ),
     new Product(
       7,
@@ -113,7 +120,8 @@ export class ProductService {
         'Agent Details',
       ],
       295,
-      1
+      1,
+      false
     ),
     new Product(
      8,
@@ -125,7 +133,8 @@ export class ProductService {
         '5 second slides with music'
       ],
       295,
-      1
+      1,
+      false
     ),
     new Product(
       9,
@@ -136,7 +145,8 @@ export class ProductService {
         '60 second social media video with music '
       ],
       295,
-      1
+      1,
+      false
     ),
     new Product(
       10,
@@ -150,7 +160,8 @@ export class ProductService {
         '48-hour turnaround'
       ],
       295,
-      1
+      1,
+      false
     ),
     new Product(
       11,
@@ -164,7 +175,8 @@ export class ProductService {
         '48-hour turnaround',
       ],
       295,
-      1
+      1,
+      false
     ),
     new Product(
       12,
@@ -175,7 +187,8 @@ export class ProductService {
         'Call for Details',
       ],
       295,
-      1
+      1,
+      false
     ),
    
   ];

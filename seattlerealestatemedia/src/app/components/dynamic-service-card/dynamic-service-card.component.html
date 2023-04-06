@@ -1,5 +1,5 @@
 
-<div class="product_container" id="{{product?.id}}">
+<div class="product_container" id="{{product?.id}}" [ngClass]="{'selected':product?.selected == true}">
     <div class="product_id hidden"> {{product?.id}}</div>
     <div class="product_header">
         <div class="product_icon" [innerHtml]="product?.icon"></div>

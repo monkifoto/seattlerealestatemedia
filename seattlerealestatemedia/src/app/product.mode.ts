@@ -6,6 +6,7 @@ export class Product {
       public subtitle:string,
       public features: string [],
       public price: number,
-      public sqFtPrice: number
+      public sqFtPrice: number,
+      public selected : boolean,
     ) {}
   }

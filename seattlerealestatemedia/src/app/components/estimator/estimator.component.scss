@@ -1,3 +1,6 @@
+// .estimator_container{
+//   width: 100%;
+// }
 .estimator{
   display: flex;
   flex-wrap: wrap;  
@@ -10,6 +13,7 @@
   max-width: 20rem;
   position: relative;
   display: block;
+  cursor: pointer;
   // min-height: 20rem;
 }
 
@@ -20,20 +24,24 @@
   left: 0;
   width: 10px;
   border-radius: 5rem  0 0 5rem;
-  height: 100%; /* Set height to 100% to span the height of the div */
-  // background-color: #ff4500;
+  height: 100%; 
   background-color: #AAA;
 }
 
+// .selected{
+//   background-color: #5cb85c;
+// }
 
 
 
 form {
-  max-width: 500px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 20px;
   background-color: #f8f8f8;
   border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 label {
@@ -48,7 +56,7 @@ textarea,
 select,
 input[type="date"],
 input[type="number"] {
-  width: 100%;
+  width: 250px;
   padding: 8px;
   margin-bottom: 15px;
   border: 1px solid #ccc;

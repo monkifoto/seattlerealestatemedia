@@ -1,4 +1,5 @@
-
+<div class="estimator_container">
+<h2 class='pageHeader'>Online Booking</h2>
 
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
   <label for="name">Name:</label>
@@ -19,20 +20,22 @@
   </select>
 
   <label for="size">Size:</label>
-  <input type="number" id="size" formControlName="size" min="1" max="5" required>
+  <select id="time" formControlName="time" required>
+    <option *ngFor="let size of homeSize" [value]="size">{{ size }}</option>
+  </select>
 
   <button type="submit" [disabled]="myForm.invalid">Submit</button>
-</form>
+
 
 <small class='error' id='invalid_package' style='color:red'>Please select between Essentials and Showcase
   Packages.</small>
-
+<div class="estimator_total">Total: {{total}}</div>
 <div class="estimator">
-  <app-dynamic-service-card class="estimator_card" *ngFor="let product of listOfProducts" [productObj]="product"></app-dynamic-service-card>
-  <!-- <app-dynamic-service-card [productType] ="'essential'"></app-dynamic-service-card> -->
+  <app-dynamic-service-card class="estimator_card" *ngFor="let product of listOfProducts" [productObj]="product" (click)="addToTotal(product)"></app-dynamic-service-card>
+</div>
+</form>
 
 </div>
-
 <div class='container-fluid container-padding'>
 
     <form>
@@ -42,7 +45,7 @@
         <!-- Information -->
         <div class='row'>
           <div class='col-md-12'>
-            <h2 class='pageHeader'>Online Booking</h2>
+         
 
           </div>
 
