@@ -44,11 +44,20 @@ export class EstimatorComponent implements OnInit  {
   }
 
   addToTotal(product: Product) {
-	const productCard = document.getElementById('#'+product.id) as HTMLDivElement;
+	const productCard = document.getElementById(product.id.toString()) as HTMLDivElement;
 	if(product.selected == false){
 		this.total += product.price;
 		product.selected = true;
 		productCard.classList.add('selected');
+		 console.log('list of products' + this.listOfProducts);
+		if(product.id == 1 && this.listOfProducts[1].selected==true){
+			this.listOfProducts[1].selected = false;
+			this.total -= this.listOfProducts[1].price;
+		}
+		if(product.id == 2 && this.listOfProducts[0].selected==true){
+			this.listOfProducts[0].selected = false;
+			this.total -= this.listOfProducts[0].price;
+		}
 	}
 	else{
 		this.total -= product.price;

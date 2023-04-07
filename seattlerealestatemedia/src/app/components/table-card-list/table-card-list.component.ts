@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TableCard } from '../../table-card.model';
 import { TableCardService } from '../../table-card.service';
 
@@ -8,15 +8,19 @@ import { TableCardService } from '../../table-card.service';
   styleUrls: ['./table-card-list.component.scss']
 })
 export class TableCardListComponent {
-  listOfCards: TableCard[] = [];
+
+  @Input() pageName : string = '';
+
+  listOfCards?: TableCard[] = [];
   constructor(private tblSvc: TableCardService){
 
 }
 
 ngOnInit(){
-  this.listOfCards = this.tblSvc.GetCards();
-  // console.log("table card list");
-  // console.log(this.listOfCards);
+  this.listOfCards = this.tblSvc.GetCards(this.pageName);
+  // this.listOfCards = this.tblSvc.GetVideoCards(pageName);
+  // this.listOfCards = this.tblSvc.Get3DCards(pageName);
+
 }
 
 }

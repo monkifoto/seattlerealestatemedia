@@ -5,10 +5,13 @@
 
     <div class="container carousel-container">
       
-      <div class="image_carousel_container">
-        <iframe width="1024" height="610" src="https://www.youtube.com/embed/sFa7xBJ01Ws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
+      <!-- <div class="image_carousel_container">
+        <iframe width="1024" height="610" src="https://www.youtube.com/embed/sFa7xBJ01Ws&origin=https://seattlerealestatemedia.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div> -->
     
+      <video width="1024" height="610" controls autoplay muted>
+        <source src="../../../../assets/video/SCOUT_Group.mp4" type="video/mp4">
+        </video>
   </div>
   
     <div class="container info-container" >
@@ -28,7 +31,7 @@
           <a href="#" class="btn btn-accent">Inquire</a>
           <a href="#" class="btn btn-secondary">More info</a>
         </div>
-        <app-table-card-list></app-table-card-list>
+        <app-table-card-list [pageName]="'video'" ></app-table-card-list>
         </section>
   
     </div>
