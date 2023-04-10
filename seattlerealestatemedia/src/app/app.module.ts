@@ -21,6 +21,8 @@ import { EstimatorComponent } from './components/estimator/estimator.component';
 import { DynamicServiceCardComponent } from './components/dynamic-service-card/dynamic-service-card.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ReviewsComponent } from './components/sections/reviews/reviews.component';
+import { BrandsComponent } from './components/sections/brands/brands.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     TableCardListComponent,
     DynamicImageCarouselComponent,
     EstimatorComponent,
-    DynamicServiceCardComponent
+    DynamicServiceCardComponent,
+    ReviewsComponent,
+    BrandsComponent
 
   ],
   imports: [

@@ -1,40 +1,29 @@
-
-
-
 <div class="section-container">
+  <div class="container carousel-container">
 
-    <div class="container carousel-container">
-
-      <!-- <div class="image_carousel_container">
-        <iframe width="1024" height="610" src="https://www.youtube.com/embed/sFa7xBJ01Ws&origin=https://seattlerealestatemedia.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div> -->
-
-      <video width="1024" height="610" controls autoplay muted>
-        <source src="../../../../assets/video/SCOUT_Group.mp4" type="video/mp4">
-        </video>
+    <video class="responsive" width="1024" height="610" controls autoplay muted>
+      <source src="../../../../assets/video/SCOUT_Group.mp4" type="video/mp4" />
+    </video>
   </div>
 
-    <div class="container info-container" >
+  <div class="container info-container">
+    <section class="intro">
+      <h1>Video Tours</h1>
+      <h2>& Reels</h2>
+      <p class="subtitle">
+        Due to everything happening around us, buyers now rely on online tools
+        to help them narrow down potential home choices and the online presence
+        of each listing is everything. We offer professional videos and 3D Tours
+        that showcase both homes as well as the local community. We also offer
+        videos about the services you offer to potential clients so that way
+        people get to know you before they ever meet you.
+      </p>
 
-      <section class="intro">
-        <h1>Video Tours</h1>
-        <h2>& Reels</h2>
-        <p class="subtitle">
-            Due to everything happening around us, buyers now rely on online tools to help them narrow down
-            potential home choices and the online presence of each listing is everything. We offer professional
-            videos and 3D Tours that showcase both homes as well as the local community. We also offer videos about
-            the services you offer to potential clients so that way people get to know you before they ever meet
-            you.
-        </p>
-
-          <div class="btn-group">
-          <a href="#" class="btn btn-accent">Inquire</a>
-          <a href="#" class="btn btn-secondary">More info</a>
-        </div>
-        <app-table-card-list [pageName]="'video'" ></app-table-card-list>
-        </section>
-
-    </div>
-
+      <div class="btn-group">
+        <a href="#" class="btn btn-accent">Inquire</a>
+        <a href="#" class="btn btn-secondary">More info</a>
+      </div>
+      <app-table-card-list [pageName]="'video'"></app-table-card-list>
+    </section>
   </div>
-
+</div>

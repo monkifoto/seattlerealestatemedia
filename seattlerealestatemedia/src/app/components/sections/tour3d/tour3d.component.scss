@@ -8,6 +8,10 @@ h1 {
     color: hsl(var(--clr-light));
   }
 
+  li {
+    color: hsl(var(--clr-light));
+  }
+
   .btn-group {
     margin: 2em 0;
     display: relative;
@@ -91,6 +95,11 @@ h1 {
 
     margin:auto;
     padding: auto;
+  }
+
+  .responsive {
+    width: 100%;
+    height: auto;
   }
 
 

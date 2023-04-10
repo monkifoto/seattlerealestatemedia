@@ -1,0 +1,53 @@
+.section-container{
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rem;
+  height: 60vh !important;
+}
+
+.testimonial__heading{
+  text-align: center;
+  padding: 0 3rem 3rem 3rem;
+}
+
+.testimonals{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.testimonial__container{
+
+  width: 25rem;
+  height: 25rem;
+  background-color: hsl( var( --clr-light) );
+  padding: 2rem;
+
+}
+.testimonial__text{
+  color:  hsl(var(--clr-dark));
+  height: 160px;
+  font-style: italic;
+}
+
+.testimonial__image_container
+{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem;
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* makes the element circular */
+  overflow: hidden; /* clips the image to the circle */
+}
+
+.circle img {
+  width: 100%; /* ensures the image fills the circle */
+  height: auto; /* maintains the aspect ratio of the image */
+}

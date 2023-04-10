@@ -27,7 +27,7 @@
     <option *ngFor="let size of homeSize" [value]="size">{{ size }}</option>
   </select>
 
-  <button type="submit" [disabled]="myForm.invalid">Submit</button>
+
 
 
 <small class='error' id='invalid_package' style='color:red'>Please select between Essentials and Showcase
@@ -36,6 +36,7 @@
 <div class="estimator">
   <app-dynamic-service-card class="estimator_card" *ngFor="let product of listOfProducts" [productObj]="product" (click)="addToTotal(product)"></app-dynamic-service-card>
 </div>
+<button type="submit" [disabled]="myForm.invalid">Submit</button>
 </form>
 
 </div>
