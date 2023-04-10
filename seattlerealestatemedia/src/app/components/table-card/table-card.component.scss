@@ -1,15 +1,17 @@
 .tableCard_container{
-    flex-grow: 1;
-    width: 25rem;
-    display: grid;
-    position: relative;
-    background-color: hsl(var(--clr-light));
-    border-radius: 5px;
-    min-height: 300px;
+  width: 100%; /* Dynamic width - adjust as needed */
+  max-width: 400px; /* Optional: set a maximum width for the card */
+  background-color: hsl(var(--clr-light));
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: grid;
+  flex-shrink: 1;
 }
 
 .tableCard_container > * {
- padding-inline:4rem;
+//  padding-inline:4rem;
 }
 
 .tableCard_image{
@@ -36,7 +38,7 @@
 
 
 .tableCard_subtitle{
-    padding-inline: 2rem;
+    // padding-inline: 2rem;
     color:  hsl(var(--clr-dark));
     font-size: var(--fs-400);
     width: 100%;
@@ -69,5 +71,5 @@
     .tableCard_container > * {
         padding-inline:2rem;
        }
-       
+
 }

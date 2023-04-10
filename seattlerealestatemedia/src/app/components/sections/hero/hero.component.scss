@@ -65,7 +65,7 @@ h1 {
 
 .hero-section {
   position: relative;
-  height: 80vh;
+  height: 100vh;
   background-image: url('https://1.bp.blogspot.com/-lQgJpZP9Gyo/XzsLuteFRNI/AAAAAAADnrM/xBBepCELa0s98bmvNdzU4OCCWG6jjrWlQCPcBGAsYHg/s2048/_MKY2867-HDR.jpg');
   background-size: cover;
   background-position: center;
@@ -99,7 +99,8 @@ h1 {
 .hero-subtitle {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  font-style: italic;
+      // font-style: italic;
+      color: var(--background);
 }
 
 .btn-primary {
@@ -130,7 +131,8 @@ h1 {
   .hero-subtitle {
     font-size: 1rem;
     margin-bottom: 1rem;
-    font-style: italic;
+    // font-style: italic;
+    color: var(--background);
   }
 
   .hero-content {
@@ -150,5 +152,5 @@ h1 {
     color: #000;
     z-index: 1;
   }
-  
+
 }

@@ -8,12 +8,12 @@ h1 {
     max-width: 50%;
     color: hsl(var(--clr-light));
   }
-  
+
   .btn-group {
     margin: 2em 0;
     display: relative;
   }
-  
+
   .btn {
     padding: 1em 2em;
     text-decoration: none;
@@ -23,79 +23,79 @@ h1 {
     display: inline-block;
     line-height: 1;
   }
-  
+
   .btn + .btn {
     margin-left: 1em;
   }
-  
+
   .btn-secondary {
     background: var(--foreground);
     color: var(--background);
   }
-  
+
   .btn-accent {
     background: hsl(var(--clr-light));
     color: var(--foreground);
   }
-  
+
   .btn::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-  
+
     left: -4px;
     top: 4px;
     border-radius: inherit;
     z-index: -1;
   }
-  
+
   .intro {
     height: 30vh;
-  
+
     padding: 10rem;
     display: grid;
     color: hsl(var(--clr-dark));
-  
+
     align-content: center;
   }
-  
+
   .intro > * {
     grid-column: 2 / 3;
   }
-  
+
     .section-container{
       display: flex;
       flex-wrap: wrap;
        background: #AB987A;
-       height: 80vh;
     }
-  
+
   .container{
     display: grid;
     flex: 1;
     align-items: center;
     justify-content: center;
   }
-  
+
   .info-container{
-  
+
     padding: 1rem;
   }
-    .carousel-container{
-      display: block ;
-      padding: 5rem;
-    }
-  
+  .subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--background);
+  }
+
     .image_carousel_container{
-  
+
       margin:auto;
       padding: auto;
     }
-  
-  
+
+
     @media (max-width: 35rem) {
-  
+
       h1 {
         font-size: calc(2.5rem + 2vw);
         font-family: var( --ff-Montserrat);
@@ -104,7 +104,7 @@ h1 {
         max-width: 80%;
         color: hsl(var(--clr-light));
       }
-  
+
       .intro {
         height: 100%;
         padding: 1rem;
@@ -112,14 +112,14 @@ h1 {
         color: hsl(var(--clr-dark));
         align-content: center;
       }
-  
+
       .section-container{
         display: flex;
         flex-wrap: wrap;
          background: #AB987A;
          height: 100%;
       }
-  
+
       .carousel-container{
         display: unset ;
         padding: 2rem;

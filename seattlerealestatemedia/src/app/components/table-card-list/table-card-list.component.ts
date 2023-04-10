@@ -18,9 +18,6 @@ export class TableCardListComponent {
 
 ngOnInit(){
   this.listOfCards = this.tblSvc.GetCards(this.pageName);
-  // this.listOfCards = this.tblSvc.GetVideoCards(pageName);
-  // this.listOfCards = this.tblSvc.Get3DCards(pageName);
-
 }
 
 }
