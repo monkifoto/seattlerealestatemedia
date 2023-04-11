@@ -2,154 +2,64 @@
 <div class="section-container">
 
 <div class="estimator_container">
-<h2 class='pageHeader'>Online Booking</h2>
+
 
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div class="info">
+     <h1>Online Booking</h1>
+  </div>
+
+  <div class="client_info_form">
+    <div class="client_info_form_input">
   <label for="name">Name:</label>
   <input type="text" id="name" formControlName="name" required>
-
+  </div>
+  <div class="client_info_form_input">
   <label for="email">Email:</label>
   <input type="email" id="email" formControlName="email" required>
-
+</div>
+<div class="client_info_form_input">
   <label for="address">Address:</label>
   <textarea id="address" formControlName="address" required></textarea>
-
+</div>
+<div class="client_info_form_input">
   <label for="date">Date:</label>
   <input type="date" id="date" formControlName="date" required>
-
+</div>
+<div class="client_info_form_input">
   <label for="time">Time:</label>
   <select id="time" formControlName="time" required>
     <option *ngFor="let timeSlot of timeSlots" [value]="timeSlot">{{ timeSlot }}</option>
   </select>
-
+</div>
+<div class="client_info_form_input">
   <label for="size">Size:</label>
-  <select id="time" formControlName="time" required>
+  <select #homeSizeInput (change)="onSelected(homeSizeInput.value)" id="time"  formControlName="time" required>
     <option *ngFor="let size of homeSize" [value]="size">{{ size }}</option>
   </select>
+</div>
+</div>
 
 
-
-
-<small class='error' id='invalid_package' style='color:red'>Please select between Essentials and Showcase
-  Packages.</small>
-<div class="estimator_total">Total: {{total}}</div>
+<div class="notes_cart">
+  <div class="notes"> <small class='error' id='invalid_package' style='color:red'>Please select between Essentials and Showcase
+    Packages.</small></div>
+  <div class="cart"><div class="estimator_total">Total: {{total}}</div></div>
+  <!-- <div class="cart"><div class="estimator_total">Total: {{total}}</div></div> -->
+</div>
 <div class="estimator">
+
+
   <app-dynamic-service-card class="estimator_card" *ngFor="let product of listOfProducts" [productObj]="product" (click)="addToTotal(product)"></app-dynamic-service-card>
 </div>
-<button type="submit" [disabled]="myForm.invalid">Submit</button>
+<button class="btn btn-secondary" type="submit" [disabled]="myForm.invalid">Submit</button>
+<div >
+  <br/>
+<p><small>* All images delivered MLS optimized in less than 24 hours, print size by request. Fires in Fireplace and TV reflections removed standard for all packages.
+  <br/>** Virtual Staging is done by a 3rd party, 24 hour turnaround.
+<br/>$2 per mile, travel fee applies to locations
+that are 20 miles or more one way from my business address with the zip code of 98042 in Kent, WA</small></p>
+</div>
 </form>
 
-</div>
-<div class='container-fluid container-padding'>
-
-    <form>
-      <div class='card p-5'>
-         <br/>
-
-        <!-- Information -->
-        <!-- <div class='row'>
-          <div class='col-md-12'>
-
-
-          </div>
-
-          <div class='col-md-2'>
-            <label class='font-weight-bold' for='name'>Name</label>
-            <input class='form-control' id='name' name='name' placeholder='Your name..' type='text'/>
-            <small class='error' id='invalid_name' style='color:red'>Please enter your name.</small>
-          </div>
-          <div class='col-md-2'>
-            <div class='form-group'>
-              <label class='font-weight-bold' for='email'>Email address</label>
-              <input aria-describedby='emailHelp' class='form-control' id='email' placeholder='Enter email' type='email'/>
-              <small class='error' id='invalid_email' style='color:red'>Please Enter a Valid Email</small>
-              <small class='form-text text-muted' id='emailHelp'>We&#39;ll never share your email with anyone
-                else.</small>
-
-            </div>
-          </div>
-          <div class='col-md-2'>
-            <div class='form-group'>
-              <label class='font-weight-bold' for='address'>Property Address</label>
-              <input class='form-control' id='address' placeholder='Property Address..' type='text'/>
-              <small class='error' id='invalid_address' style='color:red'>Please Enter a Valid Address</small>
-              <small class='form-text text-muted' id='addressHelp'>Enter the address of the property you want
-                photographed.</small>
-
-            </div>
-          </div>
-
-        </div> -->
-        <!-- Schedule Options -->
-        <hr/>
-        <!-- <div class='row'>
-
-          <div class='col-md-2'>
-
-            <label class='font-weight-bold' for='appointmentDate'>Prefered Date</label><br/>
-            <input class='form-control' id='appointmentDate' name='appointmentDate' type='date'/>
-            <small class='error' id='invalid_date' style='color:red'>Please select a date.</small>
-          </div>
-          <div class='col-md-2'>
-            <label class='font-weight-bold'>Prefered Time Slot</label><br/>
-            <select class='form-control' id='timeSlot' name='timeSlot'>
-              <option value='1'>8am - 10am</option>
-              <option value='2'>10am - 12pm</option>
-              <option value='3'>12pm - 2pm</option>
-              <option value='4'>2pm - 4pm</option>
-              <option value='5'>4pm - 6pm</option>
-              <option value='6'>6pm - 8pm</option>
-            </select>
-          </div>
-          <div class='col-md-2'>
-            <label class='font-weight-bold' for='homeSize'>Home Size(sq ft)</label><br/>
-
-            <select class='form-control' id='homeSize' name='homeSize'>
-              <option value='1'>500-2000</option>
-              <option value='2'>2000-2500</option>
-              <option value='3'>2500-3000</option>
-              <option value='4'>3000-3500</option>
-              <option value='5'>3500-4000</option>
-              <option value='6'>4000-5000+</option>
-            </select>
-          </div>
-
-        </div>
-
-         Photo Options
-        <div class='row'>
-
-          <div class='col-md-6'>
-            <br/>
-            <label class='font-weight-bold'>Photo Options</label><br/>
-            <p>Please choose your items below. Prices are estimates only. Final pricing will be based on the actual services provided.</p>
-          </div>
-          <div class='col-md-2'>
-            <div class='' style='width: 150px;border:solid 0px green;'><br/><br/>
-              <label class='font-weight-bold '> Subtotal: </label><label class='font-weight-bold ' id='totalCost'></label>
-            </div>
-          </div>
-
-        </div>
-      -->
-
-
-        <div class='col-md-12' stlye='font-size: 0.5em !important;'></div>
-        <!-- Service Options -->
-
-
-        <div class='row'>
-
-          <div class='col-md-10'>
-              <br/>
-            <p><small>* All images delivered MLS optimized in less than 24 hours, print size by request. Fires in Fireplace and TV reflections removed standard for all packages.
-              <br/>** Virtual Staging is done by a 3rd party, 24 hour turnaround.
-            <br/>$2 per mile, travel fee applies to locations
-        that are 20 miles or more one way from my business address with the zip code of 98042 in Kent, WA</small></p>
-          </div>
-
-        </div>
-      </div>
-    </form>
-  </div>
 </div>

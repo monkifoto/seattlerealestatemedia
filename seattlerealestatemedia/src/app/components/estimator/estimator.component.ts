@@ -14,10 +14,13 @@ export class EstimatorComponent implements OnInit  {
 	timeSlots: string[] = ['8:00 AM - 10:00 AM', '10:00 AM - 12:00 PM',
 						   '12:00 PM - 2:00 PM', '2:00 PM - 4:00 PM', '4:00 PM - 6:00 PM', 'Twilight'];
 
-	homeSize: string [] = ['500-2000', '2000-2500', '2500-3000', '3000-3500', '3500 - 4000', '4000-5000'];
-  
+	homeSize: string [] = ['500 sqft - 2000 sqft', '2000 sqft - 2500  sqft', '2500 sqft - 3000 sqft', '3000  sqft - 3500 sqft', '3500 sqft - 4000 sqft', '4000 sqft - 5000 sqft'];
+
+
 	listOfProducts : Product [] = [];
 	total: number = 0;
+
+  selectedHomeSize : number = 0;
 
   constructor(private productSvc : ProductService, private formBuilder: FormBuilder){}
 
@@ -46,27 +49,41 @@ export class EstimatorComponent implements OnInit  {
   addToTotal(product: Product) {
 	const productCard = document.getElementById(product.id.toString()) as HTMLDivElement;
 	if(product.selected == false){
-		this.total += product.price;
+
 		product.selected = true;
 		productCard.classList.add('selected');
 		 console.log('list of products' + this.listOfProducts);
 		if(product.id == 1 && this.listOfProducts[1].selected==true){
 			this.listOfProducts[1].selected = false;
-			this.total -= this.listOfProducts[1].price;
+			this.total -= this.listOfProducts[1].sqFtPrice;
 		}
-		if(product.id == 2 && this.listOfProducts[0].selected==true){
+		else if(product.id == 2 && this.listOfProducts[0].selected==true){
 			this.listOfProducts[0].selected = false;
-			this.total -= this.listOfProducts[0].price;
+			this.total -= this.listOfProducts[0].sqFtPrice;
 		}
+    else{
+      this.total += product.price;
+    }
 	}
 	else{
 		this.total -= product.price;
 		product.selected = false;
 		productCard.classList.remove('selected');
 	}
-  
+
 
   }
+
+  onSelected(value:string): void {
+    if(value === this.homeSize[1]){
+      this.selectedHomeSize = 2;
+      this.listOfProducts[0].sqFtPrice = this.listOfProducts[0].price + 60;
+    }
+    else{
+      this.listOfProducts[0].sqFtPrice = this.listOfProducts[0].price;
+    }
+
+	}
 
   // var bookNowDetails;
   // var name;
@@ -75,21 +92,21 @@ export class EstimatorComponent implements OnInit  {
   // var displayMessage = '';
   // var appDate;
   // var nameValidation, emailValidation, addressValidation, dateValidation, packageValidation;
-  
-  
+
+
   // /* Grab the data fill in the contact form and submit it. */
-  
+
   // function bookAppointment() {
   //   document.getElementById("ContactForm1_contact-form-name").value = name;
   //   document.getElementById("ContactForm1_contact-form-email").value = email;
   //   document.getElementById("ContactForm1_contact-form-email-message").value = bookNowDetails;
   //   document.getElementById('ContactForm1_contact-form-submit').click();
-  
-  // }
-  
 
-  
-  
+  // }
+
+
+
+
   // /* Validate Email */
   // function IsEmail(email) {
   //   var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -99,7 +116,7 @@ export class EstimatorComponent implements OnInit  {
   //     return true;
   //   }
   // }
-  
+
 
 
 	// $("#homeSize").change(function() {

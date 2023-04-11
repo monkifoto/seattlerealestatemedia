@@ -82,7 +82,7 @@ export class ProductService {
     new Product(
       5,
       '<img src="../../../assets/3DTour.svg">',
-      '3D Tour',
+      'Zillow 3D',
       '(Zillow 3D)',
       [
         '12-hour turnaround',
@@ -190,7 +190,7 @@ export class ProductService {
       1,
       false
     ),
-   
+
   ];
 
   GetProducts(prodType: string) {

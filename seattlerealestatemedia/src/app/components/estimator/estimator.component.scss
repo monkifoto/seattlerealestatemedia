@@ -1,9 +1,31 @@
 // .estimator_container{
 //   width: 100%;
 // }
+.info{
+  width: 100%;
+}
+.client_info_form{
+  width: 100%;
+  display: flex;
+  flex: 0 1 33%;
+}
+.section-container{
+  display: flex;
+  flex-wrap: wrap;
+   background: #fff;
+   height: 100%;
+}
+h1 {
+  font-size: calc(3rem + 3vw);
+  font-family: var( --ff-Montserrat);
+  margin: 0 0 0.25em;
+  line-height: 1;
+  max-width: 50%;
+  color: hsl(var(--clr-dark));
+}
 .estimator{
   display: flex;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
   gap :1rem;
   position: relative;
 }
@@ -24,8 +46,14 @@
   left: 0;
   width: 10px;
   border-radius: 5rem  0 0 5rem;
-  height: 100%; 
+  height: 100%;
   background-color: #AAA;
+}
+.notes_cart{
+  width: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
 }
 
 // .selected{
@@ -38,8 +66,6 @@ form {
   max-width: 80%;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f8f8f8;
-  border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -72,7 +98,6 @@ button[type="submit"] {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
-  background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -102,32 +127,46 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
 /***********************************/
-.greenCheckMark {
-    color: #6c757d !important;
-    background-color: #f7f7f7 !important;
-    border-color: #5cb85c !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+.btn-group {
+  margin: 2em 0;
+  display: relative;
+}
 
-  .deleteIcon {
-    position: absolute;
-    margin-left: 200px;
-    padding: 10px;
-    color: green;
-  }
+.btn {
+  padding: 1em 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
 
-  .removeFromCartIcon {
-    position: absolute;
-    top: -20px;
-    right: 120px;
-    padding: 5px;
-    width: 35px;
-    height: 35px;
-  }
+.btn + .btn {
+  margin-left: 1em;
+}
 
-  .bs-example {
-    margin: 20px;
-  }
+.btn-secondary {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.btn-accent {
+  background: hsl(var(--clr-light));
+  color: var(--foreground);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  left: -4px;
+  top: 4px;
+  border-radius: inherit;
+  z-index: -1;
+}
 
   .hiddenControl {
     display: none;
