@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "seattlerealestatemedia": {
+      "hosting": {
+        "seattlerealestatemedia": [
+          "seattlerealestatemedia"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "seattlerealestatemedia"
+  }
+}
