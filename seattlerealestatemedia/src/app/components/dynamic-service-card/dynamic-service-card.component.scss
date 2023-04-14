@@ -1,8 +1,8 @@
 .product_container
 {
     background-color: hsl(var(--clr-white));
-    padding: 2rem;
-    height: 20rem;
+    padding: 0 1.5rem 0 1.5rem;
+    height: 18rem;
     border-radius: .75rem;
     border: 1px solid rgba(0, 0, 0, 0.125)
 }
@@ -21,10 +21,13 @@
 .product_title{
     font-size: 1.5rem;
     font-weight: 600;
+    word-wrap: normal;
+    width: 12rem;
 }
 .product_subtitle{
     line-height: .25rem;
     font-size: .75rem;
+
 }
 
 .product_icon{
@@ -34,7 +37,7 @@
 .selected{
    // background-color: #5cb85c;
   }
-  
+
   .selected::before{
     content: "";
     position: absolute;
@@ -45,4 +48,9 @@
     height: 100%; /* Set height to 100% to span the height of the div */
     // background-color: #ff4500;
     background-color: #ff4500;
+  }
+
+  ul> li {
+    font-size: .9rem;
+    width: 10rem;
   }

@@ -5,9 +5,11 @@
   width: 100%;
 }
 .client_info_form{
-  width: 100%;
-  display: flex;
-  flex: 0 1 33%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  height: 100%
 }
 .section-container{
   display: flex;
@@ -32,7 +34,7 @@ h1 {
 
 .estimator_card{
   flex-grow: 1;
-  max-width: 20rem;
+  max-width: 17rem;
   position: relative;
   display: block;
   cursor: pointer;
@@ -95,17 +97,23 @@ select {
 
 button[type="submit"] {
   display: block;
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: 0;
+  padding: 10px 20px;
+  background-color: #FF533D;
   color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
   border: none;
   border-radius: 3px;
   cursor: pointer;
 }
 
 button[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #333;
+  color: #FF533D;
 }
 
 /* Error styles for invalid form controls */
@@ -208,7 +216,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   div.card-deck div.card {
     display: table;
     margin: 16px 1.66666%;
-    flex: 0 1 330px;
+    flex: 0 1 210px;
     background-color: #F5F5F5;
     border-width: 0 0 0 6px;
     border-radius: 6px;

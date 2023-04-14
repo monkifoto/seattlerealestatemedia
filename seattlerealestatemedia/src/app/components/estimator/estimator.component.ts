@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Product } from 'src/app/product.mode';
 import { ProductService } from 'src/app/product.service';
 import { customerRequest } from 'src/app/customerRequest';
+import { DatabaseService } from 'src/app/database.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-estimator',
@@ -31,48 +33,79 @@ export class EstimatorComponent implements OnInit {
   ];
 
   listOfProducts: Product[] = [];
+  listOfBootings: customerRequest[] = [];
   total: number = 0;
 
   selectedHomeSize: number = 0;
-  fakeCustomer = new customerRequest(1, 'John Doe', 'johndoe@example.com', '1234 Elm Street','4/14/2023','5pm','2000sqft','showcase');
+  fakeCustomer = new customerRequest(
+    1,
+    'John Doe',
+    'johndoe@example.com',
+    '1234 Elm Street',
+    '4/14/2023',
+    '5pm',
+    '2000sqft',
+    'showcase',
+    0
+  );
+
+  today: Date = new Date();
 
   constructor(
     private productSvc: ProductService,
     private formBuilder: FormBuilder,
-    private store: AngularFirestore
+    private store: AngularFirestore,
+    private db: DatabaseService
   ) {}
 
   ngOnInit() {
+    const tomorrow = new Date(this.today.setDate(this.today.getDate() + 1));
+
     this.myForm = this.formBuilder.group({
       name: ['Alex', Validators.required],
       email: ['alex@gmail.com', [Validators.required, Validators.email]],
       address: ['15325 Se 155th pl', Validators.required],
       date: ['', Validators.required],
-      time: ['', Validators.required],
-      size: ['', [Validators.required, Validators.min(1), Validators.max(5)]],
+      time: ['4:00 PM - 6:00 PM', Validators.required],
+      size: ['500 sqft - 2000 sqft', [Validators.required]],
     });
 
+    this.myForm.get('date')?.patchValue(this.formatDate(tomorrow));
     this.listOfProducts = this.productSvc.GetAllProducts();
     const productCards = document.querySelector('.estimator') as HTMLDivElement;
     const cards = Array.from(productCards?.children) as Element[];
   }
 
-  onSubmit(): void {
-// why is form not valid when filled
+  private formatDate(date: Date) {
+    const d = new Date(date);
+    let month = '' + (d.getMonth() + 1);
+    let day = '' + d.getDate();
+    const year = d.getFullYear();
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+    return [year, month, day].join('-');
+  }
 
-    console.log(this.myForm?.valid);
-    console.log(this.myForm.controls['name'].value);
-    let custName = this.myForm.controls['name'].value;
-    let custEmail = this.myForm.controls['email'].value;
-    let custAddress = this.myForm.controls['address'].value;
-    let custDate = this.myForm.controls['date'].value;
-    let custTime = this.myForm.controls['time'].value;
-    let custSize = this.myForm.controls['size'].value;
-    let cust = new customerRequest(1,custName,custEmail,custAddress,custDate,custTime,custSize,'showcase');
-    console.log(cust);
-    this.store.collection('bookingRequests').add(Object.assign({}, cust));
+  onSubmit(): void {
     if (this.myForm?.valid) {
-      alert('Book Now Clicked');
+      let custName = this.myForm.controls['name'].value;
+      let custEmail = this.myForm.controls['email'].value;
+      let custAddress = this.myForm.controls['address'].value;
+      let custDate = this.myForm.controls['date'].value;
+      let custTime = this.myForm.controls['time'].value;
+      let custSize = this.myForm.controls['size'].value;
+      let cust = new customerRequest(
+        1,
+        custName,
+        custEmail,
+        custAddress,
+        custDate,
+        custTime,
+        custSize,
+        'showcase',
+        this.total
+      );
+      this.db.addBooking(cust);
     } else {
       console.log('not valid');
     }
@@ -82,18 +115,25 @@ export class EstimatorComponent implements OnInit {
     const productCard = document.getElementById(
       product.id.toString()
     ) as HTMLDivElement;
-    if (product.selected == false) {
-      product.selected = true;
-      productCard.classList.add('selected');
-      console.log('list of products' + this.listOfProducts);
-      if (product.id == 1 && this.listOfProducts[1].selected == true) {
-        this.listOfProducts[1].selected = false;
-        this.total -= this.listOfProducts[1].sqFtPrice;
-      } else if (product.id == 2 && this.listOfProducts[0].selected == true) {
+
+    if (product.selected == false) { // if the clicked product is not already selected
+      product.selected = true; // set selected property to tue
+      productCard.classList.add('selected'); // add selected class
+      this.total += product.price;
+      if (
+        product.id == 1 && //Showcase
+        this.listOfProducts.find((item) => item.id === 2)?.selected == true //and Esentials already selected
+      ) {
+        this.listOfProducts[1].selected = false; //find essentials and set selected to false
+        this.total -= this.listOfProducts[1].price; // subtract the price of the essentials from total
+      } else if (
+        product.id == 2 &&
+        this.listOfProducts.find((item) => item.id === 1)?.selected == true
+      ) {
         this.listOfProducts[0].selected = false;
-        this.total -= this.listOfProducts[0].sqFtPrice;
+        this.total -= this.listOfProducts[0].price;
       } else {
-        this.total += product.price;
+        //this.total += product.price;
       }
     } else {
       this.total -= product.price;

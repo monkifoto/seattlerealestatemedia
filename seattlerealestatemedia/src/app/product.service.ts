@@ -97,7 +97,7 @@ export class ProductService {
       6,
       '<img src="../../../assets/floorplan.svg">',
       'Floor Plan',
-      '',
+      'Package',
       [
         '2D Floor Plan ',
         'Estimated Dimensions '
@@ -126,8 +126,8 @@ export class ProductService {
     new Product(
      8,
      '<img src="../../../assets/slideshow.svg">',
-      'Slideshow Tour',
-      '',
+      'Slideshow',
+      'Tour',
       [
         '1-2 min long slide show',
         '5 second slides with music'
@@ -139,8 +139,8 @@ export class ProductService {
     new Product(
       9,
       '<img src="../../../assets/social.svg">',
-      'Social Media Tour',
-      '',
+      'Social Media',
+      'Tour',
       [
         '60 second social media video with music '
       ],

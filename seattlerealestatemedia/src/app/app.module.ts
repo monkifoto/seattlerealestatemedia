@@ -28,6 +28,7 @@ import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat/';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { BookingListComponent } from './components/booking-list/booking-list.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     EstimatorComponent,
     DynamicServiceCardComponent,
     ReviewsComponent,
-    BrandsComponent
+    BrandsComponent,
+    BookingListComponent
 
   ],
   imports: [

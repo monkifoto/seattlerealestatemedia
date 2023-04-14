@@ -1,0 +1,27 @@
+
+
+.bookingInfo {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9rem;
+}
+
+.bookingInfo th,
+.bookingInfo td {
+  border: 1px solid #eaeaea;
+  padding: 1rem;
+  text-align: left;
+}
+
+.bookingInfo th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.bookingInfo tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.bookingInfotbody tr:hover {
+  background-color: #f0f0f0;
+}

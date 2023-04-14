@@ -1,0 +1,24 @@
+
+<table class="bookingInfo">
+  <thead>
+    <td><strong>Customer Name</strong></td>
+    <td><strong>Email Address</strong></td>
+    <td><strong>Property Address</strong></td>
+    <td><strong>Appointment Date</strong></td>
+    <td><strong>Time</strong></td>
+    <td><strong>Property Size</strong></td>
+    <td><strong>Total Cost</strong></td>
+  </thead>
+ <tbody>
+  <tr  *ngFor="let booking of listOfBootings; let i = index">
+    <td>{{booking['name']}}</td>
+    <td>{{booking['email']}}</td>
+    <td>{{booking['address']}}</td>
+    <td>{{booking['date']}}</td>
+    <td>{{booking['time']}}</td>
+    <td>{{booking['size']}}</td>
+    <td>{{booking['total']}}</td>
+  </tr>
+</tbody>
+</table>
+

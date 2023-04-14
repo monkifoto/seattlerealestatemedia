@@ -1,5 +1,7 @@
 <div class="section-container">
 
+<app-booking-list></app-booking-list>
+
   <div class="estimator_container">
 
 
@@ -14,26 +16,26 @@
     <input type="text" id="name" formControlName="name" required>
     </div>
     <div class="client_info_form_input">
-    <label for="email">Email:</label>
+    <label for="email">Email address:</label>
     <input type="email" id="email" formControlName="email" required>
   </div>
   <div class="client_info_form_input">
-    <label for="address">Address:</label>
+    <label for="address">Property Address:</label>
     <textarea id="address" formControlName="address" required></textarea>
   </div>
   <div class="client_info_form_input">
-    <label for="date">Date:</label>
-    <input type="date" id="date" formControlName="date" required>
+    <label for="date">Prefered Date:</label>
+    <input type="date" id="date" min ={{today}} formControlName="date" required>
   </div>
   <div class="client_info_form_input">
-    <label for="time">Time:</label>
+    <label for="time">Prefered Time Slot:</label>
     <select id="time" formControlName="time" required>
       <option *ngFor="let timeSlot of timeSlots" [value]="timeSlot">{{ timeSlot }}</option>
     </select>
   </div>
   <div class="client_info_form_input">
-    <label for="size">Size:</label>
-    <select #homeSizeInput (change)="onSelected(homeSizeInput.value)" id="time"  formControlName="time" required>
+    <label for="size">Home Size(sq ft):</label>
+    <select #homeSizeInput (change)="onSelected(homeSizeInput.value)" id="size"  formControlName="size" required>
       <option *ngFor="let size of homeSize" [value]="size">{{ size }}</option>
     </select>
   </div>
