@@ -29,6 +29,8 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat/';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { BookingListComponent } from './components/booking-list/booking-list.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { BookingListComponent } from './components/booking-list/booking-list.com
     DynamicServiceCardComponent,
     ReviewsComponent,
     BrandsComponent,
-    BookingListComponent
+    BookingListComponent,
+    MainPageComponent,
+    AdminComponent
 
   ],
   imports: [

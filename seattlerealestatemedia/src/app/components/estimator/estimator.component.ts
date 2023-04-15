@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Product } from 'src/app/product.mode';
@@ -13,6 +13,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./estimator.component.scss'],
 })
 export class EstimatorComponent implements OnInit {
+  isSticky: boolean = false;
   myForm!: FormGroup;
   timeSlots: string[] = [
     '8:00 AM - 10:00 AM',
@@ -55,7 +56,8 @@ export class EstimatorComponent implements OnInit {
     private productSvc: ProductService,
     private formBuilder: FormBuilder,
     private store: AngularFirestore,
-    private db: DatabaseService
+    private db: DatabaseService,
+    private elementRef: ElementRef
   ) {}
 
   ngOnInit() {
@@ -87,6 +89,16 @@ export class EstimatorComponent implements OnInit {
   }
 
   onSubmit(): void {
+    let listOfSelectedProducts: Product[] = [];
+    let listOfPackageNames: string = '';
+
+    listOfSelectedProducts = this.listOfProducts.filter(
+      (p) => p.selected == true
+    );
+    listOfSelectedProducts.forEach((ele) => {
+      listOfPackageNames = listOfPackageNames + ele.title + ',';
+    });
+
     if (this.myForm?.valid) {
       let custName = this.myForm.controls['name'].value;
       let custEmail = this.myForm.controls['email'].value;
@@ -102,7 +114,7 @@ export class EstimatorComponent implements OnInit {
         custDate,
         custTime,
         custSize,
-        'showcase',
+        listOfPackageNames,
         this.total
       );
       this.db.addBooking(cust);
@@ -116,7 +128,8 @@ export class EstimatorComponent implements OnInit {
       product.id.toString()
     ) as HTMLDivElement;
 
-    if (product.selected == false) { // if the clicked product is not already selected
+    if (product.selected == false) {
+      // if the clicked product is not already selected
       product.selected = true; // set selected property to tue
       productCard.classList.add('selected'); // add selected class
       this.total += product.price;
@@ -150,4 +163,13 @@ export class EstimatorComponent implements OnInit {
       this.listOfProducts[0].sqFtPrice = this.listOfProducts[0].price;
     }
   }
+
+  // @HostListener('window:scroll', [])
+  // onWindowScroll() {
+  //   const notes_cart = this.elementRef.nativeElement.querySelector('.notes_cart');
+  //   const rect = notes_cart.getBoundingClientRect();
+  //   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  //   this.isSticky = scrollTop >= rect.top;
+  // }
 }

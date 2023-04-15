@@ -80,7 +80,7 @@ export class ProductService {
       false
     ),
     new Product(
-      5,
+      6,
       '<img src="../../../assets/3DTour.svg">',
       'Zillow 3D',
       '(Zillow 3D)',
@@ -94,7 +94,7 @@ export class ProductService {
       false
     ),
     new Product(
-      6,
+      7,
       '<img src="../../../assets/floorplan.svg">',
       'Floor Plan',
       'Package',
@@ -107,7 +107,7 @@ export class ProductService {
       false
     ),
     new Product(
-      7,
+      8,
       '<img src="../../../assets/video.svg">',
       'Video Tour',
       '',
@@ -124,7 +124,7 @@ export class ProductService {
       false
     ),
     new Product(
-     8,
+     9,
      '<img src="../../../assets/slideshow.svg">',
       'Slideshow',
       'Tour',
@@ -137,7 +137,7 @@ export class ProductService {
       false
     ),
     new Product(
-      9,
+      10,
       '<img src="../../../assets/social.svg">',
       'Social Media',
       'Tour',
@@ -149,7 +149,7 @@ export class ProductService {
       false
     ),
     new Product(
-      10,
+      11,
       '<img src="../../../assets/user.svg">',
       'Agent Headshots',
       '',
@@ -164,7 +164,7 @@ export class ProductService {
       false
     ),
     new Product(
-      11,
+      12,
       '<img src="../../../assets/brand.svg">',
       'Lifestyle Branding',
       '',
@@ -179,9 +179,21 @@ export class ProductService {
       false
     ),
     new Product(
-      12,
+      13,
       '<img src="../../../assets/stageing.svg">',
       'Virtual Staging',
+      '',
+      [
+        'Call for Details',
+      ],
+      295,
+      1,
+      false
+    ),
+    new Product(
+      14,
+      '<img src="../../../assets/site.svg">',
+      'Websites',
       '',
       [
         'Call for Details',

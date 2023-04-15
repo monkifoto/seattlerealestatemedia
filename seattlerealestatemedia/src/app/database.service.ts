@@ -17,4 +17,8 @@ export class DatabaseService {
     return this.store.collection('bookingRequests').valueChanges() as Observable<customerRequest[]>;
   }
 
+  deleteBooking(cr:customerRequest){
+    // not implemented
+  }
+
 }

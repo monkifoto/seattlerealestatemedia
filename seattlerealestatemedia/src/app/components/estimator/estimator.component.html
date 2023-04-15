@@ -1,7 +1,4 @@
 <div class="section-container">
-
-<app-booking-list></app-booking-list>
-
   <div class="estimator_container">
 
 
@@ -42,10 +39,9 @@
   </div>
 
 
-  <div class="notes_cart">
-    <div class="notes"> <small class='error' id='invalid_package' style='color:red'>Please select between Essentials and Showcase
-      Packages.</small></div>
-    <div class="cart"><div class="estimator_total">Total: {{total}}</div></div>
+  <div class="notes_cart"  #notes_cart>
+    <div class="notes"> <small>Please select between Essentials and Showcase Packages.</small></div>
+    <div class="cart"><div class="estimator_total sticky-item" [ngClass]="{'fixed': isSticky}">Total:  ${{total}} <span style="font-size: .7rem;">+tax</span></div></div>
 
   </div>
   <div class="estimator">
@@ -53,13 +49,18 @@
 
     <app-dynamic-service-card class="estimator_card" *ngFor="let product of listOfProducts" [productObj]="product" (click)="addToTotal(product)"></app-dynamic-service-card>
   </div>
-  <button class="btn btn-secondary" type="submit" >Book Now</button>
-  <div >
-    <br/>
-  <p><small>* All images delivered MLS optimized in less than 24 hours, print size by request. Fires in Fireplace and TV reflections removed standard for all packages.
-    <br/>** Virtual Staging is done by a 3rd party, 24 hour turnaround.
-  <br/>$2 per mile, travel fee applies to locations
-  that are 20 miles or more one way from my business address with the zip code of 98042 in Kent, WA</small></p>
+
+  <div class="estimator_button_group">
+    <button class="btn btn-secondary" type="submit" >Book Now</button>
   </div>
+
+
+  <div class="estimator_notes">
+  <span>* All images delivered MLS optimized in less than 24 hours, print size by request. Fires in Fireplace and TV reflections removed standard for all packages.</span>
+  <span>** Virtual Staging is done by a 3rd party, 24 hour turnaround.</span>
+    <span>$2 per mile, travel fee applies to locations</span>
+      <span>that are 20 miles or more one way from my business address with the zip code of 98042 in Kent, WA</span>
+  </div>
+
   </form>
   </div>

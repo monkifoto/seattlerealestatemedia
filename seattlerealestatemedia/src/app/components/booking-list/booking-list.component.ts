@@ -18,4 +18,8 @@ export class BookingListComponent {
       console.log(element);
     });
   }
+
+  onDelete(booking: customerRequest){
+    this.db.deleteBooking(booking);
+  }
 }
