@@ -12,10 +12,12 @@ export class ModalComponent {
   @Input() title : string = "";
   @Input() description : string ="";
   @Input() pageName : string = "";
+  @Input() buttonText : string = "";
 
   modalTitle : string = '';
   modalDescription : string ='';
   modalPageName:string ='';
+  modalButtonText : string ='';
 
   isModalOpen: boolean = false;
 
@@ -25,7 +27,8 @@ ngOnInit(){
   this.modalTitle = this.title;
   this.modalDescription = this.description;
   this.modalPageName = this.pageName;
-  console.log("onInit " + this.modalTitle + ' desc: ' + this.modalDescription + 'page: '+ this.modalPageName);
+  this.modalButtonText = this.buttonText;
+  //console.log("onInit " + this.modalTitle + ' desc: ' + this.modalDescription + 'page: '+ this.modalPageName);
 }
 
   openModal() {

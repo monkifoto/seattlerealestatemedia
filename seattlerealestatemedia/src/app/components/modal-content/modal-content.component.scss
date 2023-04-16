@@ -1,11 +1,10 @@
-/* modal-content.component.css */
+
 .modal-content {
-  /* Add your CSS styles for the modal content here */
   background-color: #fff;
   padding: 20px;
-  /* Add other styles as needed */
   max-height: 90vh;
   overflow-y: scroll;
+  max-width: 1024px;
 }
 
 h1{
@@ -14,7 +13,7 @@ h1{
 
 
 .btn {
-  padding: 1em 2em;
+  padding: 1rem 2rem;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 5px;
@@ -24,7 +23,7 @@ h1{
 }
 
 .btn + .btn {
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
 .btn-secondary {
@@ -47,4 +46,8 @@ h1{
   top: 4px;
   border-radius: inherit;
   z-index: -1;
+}
+
+.question{
+  font-weight: bold;
 }

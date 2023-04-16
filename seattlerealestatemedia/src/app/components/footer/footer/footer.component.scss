@@ -106,9 +106,9 @@ padding: 1rem;
   gap: 2rem;
 }
 
-img{
-  height: 1.5rem;
-}
+// img{
+//   height: 1.5rem;
+// }
 
 a{
   color: hsl(var(--clr-dark));
@@ -150,3 +150,13 @@ a{
 }
 
 
+.about_me_section{
+  display: flex;
+  gap:3rem;
+  // flex-wrap: wrap;
+  // flex-direction: row;
+}
+
+.about_me_contact{
+  width: 40%;
+}

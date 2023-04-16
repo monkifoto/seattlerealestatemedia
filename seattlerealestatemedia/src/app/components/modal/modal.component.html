@@ -1,6 +1,6 @@
 <!-- Modal Trigger Button -->
 <!-- <button class="btn btn-secondary" (click)="openModal()">More Info</button> -->
-<button href="#" class="btn btn-secondary" (click)="openModal()">More info</button>
+<button href="#" class="btn btn-secondary" (click)="openModal()">{{modalButtonText?modalButtonText:'More Info'}}</button>
 <!-- Modal Container -->
 <div class="modal-container" *ngIf="isModalOpen">
   <!-- Modal Content -->

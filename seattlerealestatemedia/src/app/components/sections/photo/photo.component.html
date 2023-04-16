@@ -11,7 +11,8 @@
               Our services include interior, exterior, aerial photography, and video to help your listings stand out and grab the attention of potential buyers.</p>
               <div class="btn-group">
                 <a href="#booknow" (click)="scrollTo('estimator')" class="btn btn-accent">Book Online</a>
-              <app-modal [title]="'Photography'" [description]="'We offer 2 beautiful pacages.'" [pageName]="'photo'"></app-modal>
+              <app-modal [title]="'Photography'" [description]="'Welcome to our real estate photography services! We offer two distinct packages to cater to your unique needs and budget: the Showcase Package and the Essentials Package.<br><br><b>Showcase Package:</b><br><br>Our Showcase Package is perfect for clients who want to highlight their propertys best features and create stunning visuals that capture the attention of potential buyers.<br><br><b>Essentials Package:</b><br><br> Our Essentials Package is designed for clients who want professional real estate photography at a more affordable price . '" [pageName]="'photo'"></app-modal>
+              <app-faq></app-faq>
             </div>
 
             </section>
@@ -22,7 +23,7 @@
 
             <div class="image_carousel_container">
               <app-dynamic-image-carousel [galleryType]="'photos'"></app-dynamic-image-carousel>
-              <!-- <app-image-carousel></app-image-carousel> -->
+
             </div>
 
         </div>

@@ -1,7 +1,7 @@
 <div class="modal-content">
   <!-- Add your content here -->
   <h2>{{ title }}</h2>
-  <p>{{ description }}</p>
+  <div [innerHTML]="description"></div>
 
   <app-table-card-list [pageName]="pageName" ></app-table-card-list>
 

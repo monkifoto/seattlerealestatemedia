@@ -35,6 +35,7 @@ import { ModalComponent } from './components/modal/modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalContentComponent } from './components/modal-content/modal-content.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FAQComponent } from './components/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MainPageComponent,
     AdminComponent,
     ModalComponent,
-    ModalContentComponent
+    ModalContentComponent,
+    FAQComponent
 
   ],
   imports: [
