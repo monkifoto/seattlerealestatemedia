@@ -198,7 +198,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     box-sizing: border-box;
   }
   form {
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -212,5 +212,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: hsl(var(--clr-dark));
     align-content: center;
   }
+
+  .estimator_card{
+    flex-grow: 0;
+    flex-shrink: 1;
+     max-width: 11.5rem;
+    position: relative;
+    display: block;
+    cursor: pointer;
+
+  }
+
 
   }

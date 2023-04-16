@@ -54,3 +54,31 @@
     font-size: .9rem;
     width: 10rem;
   }
+
+
+  @media (max-width: 35rem) {
+
+    .product_container
+{
+    background-color: hsl(var(--clr-white));
+    padding: 0 1rem 0 1rem;
+    height: 6rem;
+    border-radius: .75rem;
+    border: 1px solid rgba(0, 0, 0, 0.125)
+}
+
+.product_icon{
+  width: 4rem;
+}
+
+.product_title{
+  font-size: 1rem;
+  font-weight: 500;
+  word-wrap: normal;
+  width: 7rem;
+}
+
+    .product_features{
+      display: none;
+    }
+  }

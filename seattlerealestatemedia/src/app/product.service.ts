@@ -52,21 +52,9 @@ export class ProductService {
       1,
       false
     ),
+
     new Product(
       4,
-      '<img src="../../../assets/sunset.svg">',
-      'TWILIGHT',
-      'Package',
-      [
-        'Photos captured 30 minutes before sunset',
-        'Taken on-site and requires a separate appointment.',
-      ],
-      120,
-      1,
-      false
-    ),
-    new Product(
-      5,
       '<img src="../../../assets/3DTour.svg">',
       '3D Tour',
       '(MatterPort 3D)',
@@ -120,6 +108,19 @@ export class ProductService {
         'Agent Details',
       ],
       295,
+      1,
+      false
+    ),
+    new Product(
+      5,
+      '<img src="../../../assets/sunset.svg">',
+      'Twilight',
+      'Package',
+      [
+        'Photos captured 30 minutes before sunset',
+        'Taken on-site and requires a separate appointment.',
+      ],
+      120,
       1,
       false
     ),
