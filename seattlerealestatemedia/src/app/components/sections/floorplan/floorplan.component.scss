@@ -13,6 +13,8 @@ h1 {
 .btn-group {
   margin: 2em 0;
   display: relative;
+  display: flex;
+  gap: 1rem;
 }
 
 .btn {

@@ -31,10 +31,9 @@
         </li>
       </ul>
       <div class="btn-group">
-        <a href="#" class="btn btn-accent">Inquire</a>
-        <a href="#" class="btn btn-secondary">More info</a>
+        <a href="#booknow" (click)="scrollTo('estimator')" class="btn btn-accent">Book Online</a>
+        <app-modal [title]="'3D Tours'" [description]="'We offer 2 beautiful 3d tour pacages.'" [pageName]="'3d'"></app-modal>
       </div>
-      <app-table-card-list [pageName]="'3d'"></app-table-card-list>
     </section>
   </div>
 </div>

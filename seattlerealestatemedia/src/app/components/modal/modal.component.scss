@@ -1,0 +1,90 @@
+/* Modal Container */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 4px;
+  overflow-y: auto;
+  max-height: 90vh;
+  overflow-y: scroll;
+}
+
+/* Modal Header */
+.modal-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 20px;
+}
+
+
+
+/* Additional styles for mobile-friendly design */
+@media (max-width: 767px) {
+  .modal-content {
+    width: 100%;
+    border-radius: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+
+
+.btn {
+  all:unset;
+  border: 0;
+  padding: 1em 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.btn + .btn {
+  margin-left: 1em;
+}
+
+.btn-secondary {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.btn-accent {
+  background: hsl(var(--clr-light));
+  color: var(--foreground);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  left: -4px;
+  top: 4px;
+  border-radius: inherit;
+  z-index: -1;
+}

@@ -31,6 +31,10 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { BookingListComponent } from './components/booking-list/booking-list.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalContentComponent } from './components/modal-content/modal-content.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -55,7 +59,9 @@ import { AdminComponent } from './components/admin/admin.component';
     BrandsComponent,
     BookingListComponent,
     MainPageComponent,
-    AdminComponent
+    AdminComponent,
+    ModalComponent,
+    ModalContentComponent
 
   ],
   imports: [
@@ -66,7 +72,9 @@ import { AdminComponent } from './components/admin/admin.component';
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    BrowserAnimationsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./aerial.component.scss']
 })
 export class AerialComponent {
-
+  scrollTo(element: any): void {
+    // console.log(element);
+    (document.getElementById(element) as HTMLElement).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
 }

@@ -1,12 +1,5 @@
 
 <div class="section-container">
-  <div class="container carousel-container">
-    <div class="image_carousel_container">
-      <app-dynamic-image-carousel
-        [galleryType]="'floorPlan'"
-      ></app-dynamic-image-carousel>
-    </div>
-  </div>
 
   <div class="container info-container">
     <section class="intro">
@@ -34,9 +27,19 @@
         <br />
       </p>
       <div class="btn-group">
-        <a href="#" class="btn btn-accent">Inquire</a>
-        <a href="#" class="btn btn-secondary">More info</a>
+        <a href="#booknow" (click)="scrollTo('estimator')" class="btn btn-accent">Book Online</a>
+        <app-modal [title]="'Floor Plan'" [description]="'We do awesome floor plans.'" [pageName]="''"></app-modal>
       </div>
     </section>
   </div>
+
+  <div class="container carousel-container">
+    <div class="image_carousel_container">
+      <app-dynamic-image-carousel
+        [galleryType]="'floorPlan'"
+      ></app-dynamic-image-carousel>
+    </div>
+  </div>
+
+
 </div>

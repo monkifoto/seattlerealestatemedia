@@ -1,12 +1,4 @@
 <div class="section-container">
-  <div class="container carousel-container">
-    <div class="image_carousel_container">
-      <app-dynamic-image-carousel
-        [galleryType]="'aerial'"
-      ></app-dynamic-image-carousel>
-    </div>
-  </div>
-
   <div class="container info-container">
     <section class="intro">
       <h1>Aerial Photography</h1>
@@ -17,24 +9,22 @@
         perspective of a property. With the help of drones we can capture
         stunning footage from high above, showcasing a property's unique selling
         features from a bird's-eye view. <br /><br />
-        By providing a visual representation of the property and its
-        surroundings, aerial photography and video can help potential buyers get
-        a better idea of what the property has to offer. This is especially
-        useful for showcasing a property's location, proximity to amenities, and
-        natural surroundings. By capturing footage of the surrounding
-        neighborhood and landmarks from above, agents can help potential buyers
-        get a better understanding of the property's location and its unique
-        surroundings.
 
-        <br /><br />
         Million dollar properties with waterfront views, acreage and
         one-of-a-kind land features can all be highlighted and showcased with
         aerial/drone photography and video.
       </p>
       <div class="btn-group">
-        <a href="#" class="btn btn-accent">Inquire</a>
-        <a href="#" class="btn btn-secondary">More info</a>
+        <a href="#booknow" (click)="scrollTo('estimator')" class="btn btn-accent">Book Online</a>
+        <app-modal [title]="'Aerial Photography & Video'" [description]="'By providing a visual representation of the property and its surroundings, aerial photography and video can help potential buyers get a better idea of what the property has to offer. This is especially useful for showcasing a property location, proximity to amenities, and natural surroundings.By capturing footage of the surrounding neighborhood and landmarks from above, agents can help potential buyers get a better understanding of the propertys location and its unique surroundings.'" [pageName]="''"></app-modal>
       </div>
     </section>
+  </div>
+  <div class="container carousel-container">
+    <div class="image_carousel_container">
+      <app-dynamic-image-carousel
+        [galleryType]="'aerial'"
+      ></app-dynamic-image-carousel>
+    </div>
   </div>
 </div>

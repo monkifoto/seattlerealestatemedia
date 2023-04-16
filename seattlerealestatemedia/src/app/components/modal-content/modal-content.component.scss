@@ -1,0 +1,50 @@
+/* modal-content.component.css */
+.modal-content {
+  /* Add your CSS styles for the modal content here */
+  background-color: #fff;
+  padding: 20px;
+  /* Add other styles as needed */
+  max-height: 90vh;
+  overflow-y: scroll;
+}
+
+h1{
+  color: hsl(var(--clr-dark));
+}
+
+
+.btn {
+  padding: 1em 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+.btn + .btn {
+  margin-left: 1em;
+}
+
+.btn-secondary {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.btn-accent {
+  background: hsl(var(--clr-light));
+  color: var(--foreground);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  left: -4px;
+  top: 4px;
+  border-radius: inherit;
+  z-index: -1;
+}

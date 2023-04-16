@@ -4,27 +4,27 @@
 
         <div class="container info-container" >
 
-          <section class="intro">      
+          <section class="intro">
             <h1>Photography</h1>
             <p class="subtitle">Our aim is to provide homeowners and realtors with professional images that will enhance their property listings.
-              By using the latest camera technology, multiple lighting options, and advanced image blending techniques, to produce stunning professional photos. 
-              Our services include interior, exterior, aerial photography, and video to help your listings stand out and grab the attention of potential buyers.</p>  
-              <div class="btn-group"> 
-              <a href="#" class="btn btn-accent">Inquire</a>
-              <a href="#" class="btn btn-secondary">More info</a>
+              By using the latest camera technology, multiple lighting options, and advanced image blending techniques, to produce stunning professional photos.
+              Our services include interior, exterior, aerial photography, and video to help your listings stand out and grab the attention of potential buyers.</p>
+              <div class="btn-group">
+                <a href="#booknow" (click)="scrollTo('estimator')" class="btn btn-accent">Book Online</a>
+              <app-modal [title]="'Photography'" [description]="'We offer 2 beautiful pacages.'" [pageName]="'photo'"></app-modal>
             </div>
-            <app-table-card-list [pageName]="'photo'" ></app-table-card-list>
+
             </section>
 
         </div>
 
        <div class="container carousel-container">
-          
+
             <div class="image_carousel_container">
               <app-dynamic-image-carousel [galleryType]="'photos'"></app-dynamic-image-carousel>
               <!-- <app-image-carousel></app-image-carousel> -->
             </div>
-          
+
         </div>
       </div>
 
