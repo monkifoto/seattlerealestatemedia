@@ -32,7 +32,7 @@
   </div>
   <div class="client_info_form_input">
     <label for="size">Home Size(sq ft):</label>
-    <select #homeSizeInput (change)="onSelected(homeSizeInput.value)" id="size"  formControlName="size" required>
+    <select #homeSizeInput (change)="onSelected()" id="size"  formControlName="size" required>
       <option *ngFor="let size of homeSize" [value]="size">{{ size }}</option>
     </select>
   </div>

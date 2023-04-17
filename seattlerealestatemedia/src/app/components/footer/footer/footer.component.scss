@@ -147,7 +147,55 @@ a{
     padding: 2rem;
   }
 
+  .footer_link{
+font-size: .7rem;
+  }
+
+  .links-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
 }
+
+@media screen and (min-width: 48rem) {
+
+  h1 {
+    font-size: calc(2rem + 1.5vw);
+    margin: 5rem 0 0.25em;
+    line-height: 1;
+    max-width: 100%;
+
+  }
+
+  .subtitle{
+    font-size: 1rem;
+  }
+
+  .intro{
+    padding: 1rem;
+  }
+
+  .image_carousel_container{
+    padding: 1rem;
+  }
+
+.footer_link{
+    font-size: .7rem;
+      }
+
+      .links-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 1rem;
+      }
+}
+
 
 
 .about_me_section{

@@ -26,9 +26,9 @@ export class EstimatorComponent implements OnInit {
 
   homeSize: string[] = [
     '500 sqft - 2000 sqft',
-    '2000 sqft - 2500  sqft',
+    '2000 sqft - 2500 sqft',
     '2500 sqft - 3000 sqft',
-    '3000  sqft - 3500 sqft',
+    '3000 sqft - 3500 sqft',
     '3500 sqft - 4000 sqft',
     '4000 sqft - 5000 sqft',
   ];
@@ -132,36 +132,72 @@ export class EstimatorComponent implements OnInit {
       // if the clicked product is not already selected
       product.selected = true; // set selected property to tue
       productCard.classList.add('selected'); // add selected class
-      this.total += product.price;
+      this.total += this.getPriceBySize(product);
       if (
         product.id == 1 && //Showcase
         this.listOfProducts.find((item) => item.id === 2)?.selected == true //and Esentials already selected
       ) {
         this.listOfProducts[1].selected = false; //find essentials and set selected to false
-        this.total -= this.listOfProducts[1].price; // subtract the price of the essentials from total
+        this.total -= this.getPriceBySize(this.listOfProducts[1]); // subtract the price of the essentials from total
       } else if (
         product.id == 2 &&
         this.listOfProducts.find((item) => item.id === 1)?.selected == true
       ) {
         this.listOfProducts[0].selected = false;
-        this.total -= this.listOfProducts[0].price;
+        this.total -= this.getPriceBySize(this.listOfProducts[0]);
       } else {
-        //this.total += product.price;
+
       }
     } else {
-      this.total -= product.price;
+      this.total -= this.getPriceBySize(product);
       product.selected = false;
       productCard.classList.remove('selected');
     }
   }
 
-  onSelected(value: string): void {
-    if (value === this.homeSize[1]) {
-      this.selectedHomeSize = 2;
-      this.listOfProducts[0].sqFtPrice = this.listOfProducts[0].price + 60;
-    } else {
-      this.listOfProducts[0].sqFtPrice = this.listOfProducts[0].price;
+  getPriceBySize(product: Product): number{
+
+    const homeSize = this.myForm.get('size')?.value;
+    const rateMultiplier: number = product.sqFtPrice;
+    let price = product.price;
+
+    if(product.id == 1 || product.id == 2 || product.id == 4 || product.id ==6 || product.id ==7){
+    switch(homeSize){
+      case '500 sqft - 2000 sqft':
+        price = price;
+        break;
+      case '2000 sqft - 2500 sqft':
+        price = price + (rateMultiplier * 1);
+        break;
+      case '2500 sqft - 3000 sqft':
+        price = price + (rateMultiplier * 2);
+        break;
+      case '3000 sqft - 3500 sqft':
+        price = price + (rateMultiplier * 3);
+        break;
+      case '3500 sqft - 4000 sqft':
+        price = price + (rateMultiplier * 4);
+        break;
+      case '4000 sqft - 5000 sqft':
+      price = price + (rateMultiplier * 5);
+      break;
     }
+  }
+  else{
+    return product.price;
+  }
+
+    return price
+  }
+
+  onSelected(): void {
+   this.listOfProducts.forEach(item =>{
+    if(item.selected == true){
+      //this.addToTotal(item) // to be done at a later date for now unselect all selected values
+      item.selected = false;
+    }
+   })
+   this.total = 0;
   }
 
   // @HostListener('window:scroll', [])

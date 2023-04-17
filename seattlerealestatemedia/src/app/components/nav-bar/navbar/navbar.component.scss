@@ -177,3 +177,53 @@ a:hover {
     display: inline;
   }
 }
+
+/* CSS for tablets and laptops */
+@media screen and (min-width: 48rem) {
+  nav {
+    padding-inline: 1rem;
+    font-family: var(--ff-Montserrat);
+  }
+
+  .logo {
+    padding-left: .5rem;
+    margin: 1rem clamp(1rem, 3vw, 1rem);
+    width: 200px;
+  }
+
+  .primary-navigation {
+
+  --gap: clamp(.5rem, 1vw, .5rem);
+    gap: var(--gap);
+    width: 100%;
+    height: 3.5rem;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+  }
+
+
+  .primary-navigation a {
+    color: hsl(var(--clr-dark));
+    font-weight: 400;
+    font-size: var(--fs-200);
+    cursor: pointer;
+  }
+
+  .social_media_icon{
+display: none;
+  }
+
+  /* Insert your CSS styles for tablets and laptops here */
+  /* For example: */
+  // body {
+  //   font-size: 1rem; /* 16px */
+  // }
+  // .container {
+  //   width: 80%; /* 80% of the parent element */
+  //   margin: 0 auto;
+  // }
+  /* Add more styles as needed */
+}

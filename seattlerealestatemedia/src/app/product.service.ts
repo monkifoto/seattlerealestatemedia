@@ -18,7 +18,7 @@ export class ProductService {
         'Virtual Staging**',
       ],
       295,
-      60,
+      70,
       false
     ),
     new Product(
@@ -34,8 +34,8 @@ export class ProductService {
         'Manually edited',
         'Virtual Staging**',
       ],
-      230,
-      30,
+      240,
+      40,
       false
     ),
     new Product(
@@ -48,7 +48,7 @@ export class ProductService {
         'Manually edited',
         'Location Indicator'
       ],
-      120,
+      125,
       1,
       false
     ),
@@ -64,7 +64,7 @@ export class ProductService {
         '3 Months Hosting Included'
       ],
       225,
-      1,
+      40,
       false
     ),
     new Product(
@@ -78,7 +78,7 @@ export class ProductService {
         '3 Months Hosting Included'
       ],
       175,
-      1,
+      25,
       false
     ),
     new Product(
@@ -90,8 +90,8 @@ export class ProductService {
         '2D Floor Plan ',
         'Estimated Dimensions '
       ],
-      75,
-      1,
+      95,
+      5,
       false
     ),
     new Product(
@@ -108,7 +108,7 @@ export class ProductService {
         'Agent Details',
       ],
       295,
-      1,
+      100,
       false
     ),
     new Product(
@@ -120,7 +120,7 @@ export class ProductService {
         'Photos captured 30 minutes before sunset',
         'Taken on-site and requires a separate appointment.',
       ],
-      120,
+      125,
       1,
       false
     ),
@@ -133,7 +133,7 @@ export class ProductService {
         '1-2 min long slide show',
         '5 second slides with music'
       ],
-      295,
+      105,
       1,
       false
     ),
@@ -145,7 +145,7 @@ export class ProductService {
       [
         '60 second social media video with music '
       ],
-      295,
+      195,
       1,
       false
     ),
@@ -186,8 +186,9 @@ export class ProductService {
       '',
       [
         'Call for Details',
+        '',
       ],
-      295,
+      0,
       1,
       false
     ),
@@ -199,7 +200,7 @@ export class ProductService {
       [
         'Call for Details',
       ],
-      295,
+      195,
       1,
       false
     ),

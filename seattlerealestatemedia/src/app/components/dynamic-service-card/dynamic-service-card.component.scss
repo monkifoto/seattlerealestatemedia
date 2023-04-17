@@ -82,3 +82,30 @@
       display: none;
     }
   }
+
+  @media screen and (min-width: 48rem) {
+    .product_container
+{
+    background-color: hsl(var(--clr-white));
+    padding: 0 1rem 0 1rem;
+    height: 17rem;
+    border-radius: .75rem;
+    border: 1px solid rgba(0, 0, 0, 0.125)
+}
+
+.product_icon{
+  width: 4rem;
+}
+
+.product_title{
+  font-size: 1rem;
+  font-weight: 500;
+  word-wrap: normal;
+  width: 7rem;
+}
+
+    // .product_features{
+    //   display: none;
+    // }
+
+  }
