@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 import { customerRequest } from 'src/app/customerRequest';
+import { user } from './user';
 
 @Injectable({ providedIn: 'root' })
 export class DatabaseService {
@@ -19,6 +20,10 @@ export class DatabaseService {
 
   deleteBooking(cr:customerRequest){
     // not implemented
+  }
+
+  getUsers(){
+    return this.store.collection('users').valueChanges() as Observable<user[]>;
   }
 
 }

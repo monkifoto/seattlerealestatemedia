@@ -36,6 +36,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalContentComponent } from './components/modal-content/modal-content.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FAQComponent } from './components/faq/faq.component';
+import { LoginComponent } from './components/login/login.component';
+import { MainComponent } from './components/portfolio/main/main.component';
+import { PhotographyComponent } from './components/portfolio/photography/photography.component';
+import { ThreedimentionComponent } from './components/portfolio/threedimention/threedimention.component';
+import { VirtualstagingComponent } from './components/portfolio/virtualstaging/virtualstaging.component';
+import { BrandingComponent } from './components/portfolio/branding/branding.component';
+import { WebsitesComponent } from './components/portfolio/websites/websites.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +70,14 @@ import { FAQComponent } from './components/faq/faq.component';
     AdminComponent,
     ModalComponent,
     ModalContentComponent,
-    FAQComponent
+    FAQComponent,
+    LoginComponent,
+    MainComponent,
+    PhotographyComponent,
+    ThreedimentionComponent,
+    VirtualstagingComponent,
+    BrandingComponent,
+    WebsitesComponent
 
   ],
   imports: [

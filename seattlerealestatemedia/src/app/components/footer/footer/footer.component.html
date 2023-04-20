@@ -71,14 +71,17 @@
     >Youtube</a
   >
   <a class="footer_link"  href="https://www.yelp.com/biz/monkifoto-renton" target="_blank">Yelp</a>
-  <a class="footer_link" data-id="about" (click)="scrollTo('about')">HOME</a>
-  <a class="footer_link" data-id="portfolio"   (click)="scrollTo('portfolio')" >PHOTOGRAPHY</a>
-  <a class="footer_link" data-id="video"  (click)="scrollTo('video')">VIDEO</a>
-  <a class="footer_link" data-id="aerial"  (click)="scrollTo('aerial')">AERIAL</a>
-  <a class="footer_link" data-id="matterport"  (click)="scrollTo('matterport')" >MATTERPORT 3D</a>
-  <a class="footer_link" data-id="floorplan"  (click)="scrollTo('floorplan')" >FLOOR PLAN</a>
-  <a class="footer_link" data-id="staging"  (click)="scrollTo('staging')" >STAGING</a>
-  <a class="footer_link" data-id="pricing" (click)="scrollTo('estimator')">BOOK NOW</a>
+  <a class="footer_link" data-id="about" outerLink="/" >HOME</a>
+  <a class="footer_link" data-id="portfolio" routerLink="/photography"  >PHOTOGRAPHY</a>
+  <a class="footer_link" data-id="video" routerLink="/video" >VIDEO</a>
+  <a class="footer_link" data-id="aerial" routerLink="/aerial" >AERIAL</a>
+  <a class="footer_link" data-id="matterport" routerLink="/3d"  >MATTERPORT 3D</a>
+  <a class="footer_link" data-id="floorplan" routerLink="/floorplan"   >FLOOR PLAN</a>
+  <a class="footer_link" data-id="staging" routerLink="/staging" >STAGING</a>
+  <a class="footer_link" data-id="headshots" routerLink="/headshots"  >HEADSHOTS</a>
+  <a class="footer_link" data-id="branding" routerLink="/branding"  >BRANDING</a>
+  <a class="footer_link" data-id="websites" routerLink="/websites"  >WEBSITES</a>
+  <a class="footer_link" data-id="pricing"  routerLink="/estimate" >BOOK NOW</a>
   <a class="footer_link" href="https://seattlerealestatephoto.pixieset.com/">CLIENT PORTAL</a>
   <a class="footer_link" href="#" routerLink="/admin" routerLinkActive="active">Admin</a>
 </div>
@@ -88,3 +91,6 @@
     Reserved. Design by Alex Bucse.
   </p>
 </div>
+<!-- <users>
+	<user style='color:#fff'>1701D660830AD8C7BF62F648324373F4</user>
+</users> -->

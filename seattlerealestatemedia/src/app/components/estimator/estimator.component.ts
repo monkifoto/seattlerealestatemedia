@@ -118,6 +118,7 @@ export class EstimatorComponent implements OnInit {
         this.total
       );
       this.db.addBooking(cust);
+      alert("Thank you for your booking. We will contact you soon to confirm the appointment.")
     } else {
       console.log('not valid');
     }

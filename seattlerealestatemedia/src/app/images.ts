@@ -55,14 +55,6 @@ export const photographyImages = [
     alt: 'Image 14',
   },
   {
-    url: 'https://blogger.googleusercontent.com/img/a/AVvXsEiljGCNTzCXoWXF3lzTz4JDiBraRAUAFw49DYVnXXcNN5a1qjN1iBdBenyxPZHOqlb6rKlT2m5Ac7tp5JnvMBhmZeczn2ImCbo8Hr8jefnJwt5ZGFKUbO5wtdEXq-zD8y_4pP1qdC6rBuC7aWIla1jRfKJjwmSwctj6ugS8uQVSAYVzQ46RJu3Pc1eC-Q=s1024',
-    alt: 'Image 14',
-  },
-  {
-    url: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOWRJ-AvuQvoRoWtvjWRWdj0PSU89eeKYLDyJIPNaDHuW84yzUCErmpVt5ZIQwHNWh3OKsTKPzRM-XAbbMDBgF9YPundxGhM4w2TdsTY060TYdnpmkuyJhXkrY7RPG5U6IR0NFNMkoJt_fLqShndkGNwFuhVK53CNMO0wKAMsZ-bnpNQKgjSu61NjcKg/s1024/DJI_0240-Edit.jpg',
-    alt: 'Image 14',
-  },
-  {
     url: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPniAKFOHplxuu2O_uFZ8HDyfMwtx-qyqj5Bjq2X2GLmhbVrelpA0sGoWYOS5ArrXRJ4dr5h98u8MDFc98Hw-LkEhJI1GKL1Ft2DsNkrzZjK-T7kaErZ5Dmwc3nW7b8vzJKrrtsXzPJypXUa6egP8EvooxkJrUquuMWKvfjfnghkMzI1k5BdPLgeDwBA/s1024/_MKY0544.jpg',
     alt: 'Image 14',
   },
@@ -183,6 +175,14 @@ export const aerialImages = [
   },
   {
     url: 'https://1.bp.blogspot.com/-71eKAxNkUd4/X1rOcy_KrFI/AAAAAAADowY/mXREa2jXcLgnCm2obWYGUyF8bOQp0cVsQCLcBGAsYHQ/s1024/DJI_0955-HDR.jpg',
+    alt: 'Image 14',
+  },
+  {
+    url: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOWRJ-AvuQvoRoWtvjWRWdj0PSU89eeKYLDyJIPNaDHuW84yzUCErmpVt5ZIQwHNWh3OKsTKPzRM-XAbbMDBgF9YPundxGhM4w2TdsTY060TYdnpmkuyJhXkrY7RPG5U6IR0NFNMkoJt_fLqShndkGNwFuhVK53CNMO0wKAMsZ-bnpNQKgjSu61NjcKg/s1024/DJI_0240-Edit.jpg',
+    alt: 'Image 14',
+  },
+  {
+    url: 'https://blogger.googleusercontent.com/img/a/AVvXsEiljGCNTzCXoWXF3lzTz4JDiBraRAUAFw49DYVnXXcNN5a1qjN1iBdBenyxPZHOqlb6rKlT2m5Ac7tp5JnvMBhmZeczn2ImCbo8Hr8jefnJwt5ZGFKUbO5wtdEXq-zD8y_4pP1qdC6rBuC7aWIla1jRfKJjwmSwctj6ugS8uQVSAYVzQ46RJu3Pc1eC-Q=s1024',
     alt: 'Image 14',
   },
 ];
