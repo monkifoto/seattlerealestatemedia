@@ -6,7 +6,8 @@ import { ProductService } from 'src/app/product.service';
 import { customerRequest } from 'src/app/customerRequest';
 import { DatabaseService } from 'src/app/database.service';
 import { Observable } from 'rxjs';
-
+import { emailMessage } from 'src/app/emailMessage';
+import { Customer } from 'src/app/customer';
 @Component({
   selector: 'app-estimator',
   templateUrl: './estimator.component.html',
@@ -91,6 +92,8 @@ export class EstimatorComponent implements OnInit {
   onSubmit(): void {
     let listOfSelectedProducts: Product[] = [];
     let listOfPackageNames: string = '';
+    let to:string = 'seattlerealestatephoto@gmail.com';
+    let messageStr: string = 'message' ;
 
     listOfSelectedProducts = this.listOfProducts.filter(
       (p) => p.selected == true
@@ -117,11 +120,19 @@ export class EstimatorComponent implements OnInit {
         listOfPackageNames,
         this.total
       );
-      this.db.addBooking(cust);
+
+      let adminMessage = new emailMessage(
+        to = 'seattlerealestatephoto@gmail.com',
+        messageStr  = cust.toString()
+      )
+
+      this.db.addBooking(cust,adminMessage);
       alert("Thank you for your booking. We will contact you soon to confirm the appointment.")
     } else {
       console.log('not valid');
     }
+
+    //this.db.sendMail();
   }
 
   addToTotal(product: Product) {

@@ -43,6 +43,7 @@ import { ThreedimentionComponent } from './components/portfolio/threedimention/t
 import { VirtualstagingComponent } from './components/portfolio/virtualstaging/virtualstaging.component';
 import { BrandingComponent } from './components/portfolio/branding/branding.component';
 import { WebsitesComponent } from './components/portfolio/websites/websites.component';
+import { AngularFireFunctions } from '@angular/fire/compat/functions';
 
 @NgModule({
   declarations: [

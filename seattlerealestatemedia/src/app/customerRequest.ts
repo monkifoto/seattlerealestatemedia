@@ -20,4 +20,10 @@ export class customerRequest {
     this.mediaPackage = mediaPackage;
     this.total = total;
   }
+
+  toString(): string {
+    return `Id:${this.id}<br>Name: ${this.name}<br>Email: ${this.email}<br>Property Address: ${this.address}<br>Prefered Date: ${this.date}<br>Prefered Time: ${this.time}<br>Home Size: ${this.size}<br>Media Package: ${this.mediaPackage}<br>Total: ${this.total}`
+  }
+
+
 }

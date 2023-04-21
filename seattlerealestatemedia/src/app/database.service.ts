@@ -3,6 +3,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 import { customerRequest } from 'src/app/customerRequest';
 import { user } from './user';
+import { emailMessage } from './emailMessage';
 
 @Injectable({ providedIn: 'root' })
 export class DatabaseService {
@@ -10,8 +11,10 @@ export class DatabaseService {
     private store: AngularFirestore
   ) {}
 
-  addBooking(cr:customerRequest){
+  addBooking(cr:customerRequest, message:emailMessage){
     this.store.collection('bookingRequests').add(Object.assign({}, cr));
+    this.sendMail( message);
+    //this.store.collection('mail').add(Object.assign({}, message));
   }
 
   getBookings(){
@@ -24,6 +27,16 @@ export class DatabaseService {
 
   getUsers(){
     return this.store.collection('users').valueChanges() as Observable<user[]>;
+  }
+
+  sendMail(message:emailMessage){
+    this.store.collection('mail').add({
+      to: 'seattlerealestatephoto@gmail.com',
+      message: {
+        subject: 'New booking from the website!',
+        html: message.message,
+      },
+    });
   }
 
 }
