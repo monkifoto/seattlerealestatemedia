@@ -1,10 +1,11 @@
 
 .section-container{
+  padding-top:6rem;
   padding-inline: auto;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
    background: #FF533D;
    font-size: .8rem;
-   min-height: 2048px;
+   height: 100%;
 }

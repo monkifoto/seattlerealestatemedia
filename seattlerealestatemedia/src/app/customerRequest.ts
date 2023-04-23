@@ -1,5 +1,5 @@
 export class customerRequest {
-  id: number;
+  id: string;
   name: string;
   email: string;
   address: string;
@@ -9,7 +9,7 @@ export class customerRequest {
   mediaPackage:string;
   total:number;
 
-  constructor(id: number, name: string, email: string, address: string, date: string, time:string, size: string, mediaPackage: string, total: number) {
+  constructor(id: string, name: string, email: string, address: string, date: string, time:string, size: string, mediaPackage: string, total: number) {
     this.id = id;
     this.name = name;
     this.email = email;

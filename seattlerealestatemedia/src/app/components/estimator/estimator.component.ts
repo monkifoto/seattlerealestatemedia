@@ -15,6 +15,7 @@ import { Customer } from 'src/app/customer';
 })
 export class EstimatorComponent implements OnInit {
   isSticky: boolean = false;
+  bookingCount: number = 11;
   myForm!: FormGroup;
   timeSlots: string[] = [
     '8:00 AM - 10:00 AM',
@@ -40,7 +41,7 @@ export class EstimatorComponent implements OnInit {
 
   selectedHomeSize: number = 0;
   fakeCustomer = new customerRequest(
-    1,
+    '1',
     'John Doe',
     'johndoe@example.com',
     '1234 Elm Street',
@@ -65,9 +66,9 @@ export class EstimatorComponent implements OnInit {
     const tomorrow = new Date(this.today.setDate(this.today.getDate() + 1));
 
     this.myForm = this.formBuilder.group({
-      name: ['Alex', Validators.required],
-      email: ['alex@gmail.com', [Validators.required, Validators.email]],
-      address: ['15325 Se 155th pl', Validators.required],
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      address: ['', Validators.required],
       date: ['', Validators.required],
       time: ['4:00 PM - 6:00 PM', Validators.required],
       size: ['500 sqft - 2000 sqft', [Validators.required]],
@@ -77,6 +78,7 @@ export class EstimatorComponent implements OnInit {
     this.listOfProducts = this.productSvc.GetAllProducts();
     const productCards = document.querySelector('.estimator') as HTMLDivElement;
     const cards = Array.from(productCards?.children) as Element[];
+    //console.log( this.db.getBookingCount());
   }
 
   private formatDate(date: Date) {
@@ -110,7 +112,7 @@ export class EstimatorComponent implements OnInit {
       let custTime = this.myForm.controls['time'].value;
       let custSize = this.myForm.controls['size'].value;
       let cust = new customerRequest(
-        1,
+        '1',
         custName,
         custEmail,
         custAddress,

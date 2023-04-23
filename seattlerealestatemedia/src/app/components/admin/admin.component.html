@@ -1,5 +1,9 @@
-<app-login></app-login>
-
 <div class="section-container">
-<app-booking-list></app-booking-list>
+  <div class="login">
+    <app-login (authenticated)="onAuthenticated($event)"></app-login>
+  </div>
+
+  <div class="bookings">
+    <app-booking-list></app-booking-list>
+  </div>
 </div>

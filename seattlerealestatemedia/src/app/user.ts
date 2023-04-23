@@ -1,12 +1,19 @@
 export class user {
 
-  userID: string;
-  pwd: string;
+  userName: string;
+  password: string;
+  role: string;
 
 
-  constructor( userID: string, pwd: string) {
-    this.userID = userID;
-    this.pwd = pwd;
+  constructor( userName: string, password: string, role : string) {
+    this.userName = userName;
+    this.password = password;
+    this.role = role;
 
   }
+
+  toString(): string {
+    return 'userName: ' + this.userName + ' password: ' + this.password+ ' role: ' + this.password;
+  }
+
 }
