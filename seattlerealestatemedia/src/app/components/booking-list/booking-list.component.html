@@ -1,18 +1,21 @@
 <div class="booking_info_container">
+  <span>Total number of bookings: {{count}}</span>
 <table class="bookingInfo">
   <thead>
-    <td><strong>Customer Name</strong></td>
-    <td><strong>Email Address</strong></td>
-    <td><strong>Property Address</strong></td>
-    <td><strong>Appointment Date</strong></td>
-    <td><strong>Time</strong></td>
-    <td><strong>Property Size</strong></td>
-    <td><strong>Media Packages</strong></td>
-    <td><strong>Total Cost</strong></td>
-    <td><strong>Commands</strong></td>
+    <th><strong>ID</strong></th>
+    <th><strong>Customer Name</strong></th>
+    <th><strong>Email Address</strong></th>
+    <th><strong>Property Address</strong></th>
+    <th><strong>Appointment Date</strong></th>
+    <th><strong>Time</strong></th>
+    <th><strong>Property Size</strong></th>
+    <th><strong>Media Packages</strong></th>
+    <th><strong>Total Cost</strong></th>
+    <th><strong>Commands</strong></th>
   </thead>
  <tbody>
-  <tr  *ngFor="let booking of listOfBootings; let i = index">
+  <tr  *ngFor="let booking of listOfBookings; let i = index">
+    <td>{{booking['id']}}</td>
     <td>{{booking['name']}}</td>
     <td>{{booking['email']}}</td>
     <td>{{booking['address']}}</td>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { TableCard } from './table-card.model';
+import { TableCard } from '../models/table-card.model';
 
 @Injectable({ providedIn: 'root' })
 export class TableCardService {

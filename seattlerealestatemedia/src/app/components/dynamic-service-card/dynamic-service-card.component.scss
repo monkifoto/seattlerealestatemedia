@@ -61,12 +61,15 @@
     .product_container
 {
     background-color: hsl(var(--clr-white));
-    padding: 0 1rem 0 1rem;
-    height: 6rem;
+    padding: 1rem 0 0 1rem;
+    height: 5rem;
     border-radius: .75rem;
     border: 1px solid rgba(0, 0, 0, 0.125)
 }
 
+.product_id{
+  display: none;
+}
 .product_icon{
   width: 4rem;
 }

@@ -1,21 +1,22 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Product } from 'src/app/product.mode';
-import { ProductService } from 'src/app/product.service';
-import { customerRequest } from 'src/app/customerRequest';
-import { DatabaseService } from 'src/app/database.service';
-import { Observable } from 'rxjs';
-import { emailMessage } from 'src/app/emailMessage';
-import { Customer } from 'src/app/customer';
+import { Product } from 'src/app/data/models/product.mode';
+import { ProductService } from 'src/app/data/services/product.service';
+import { customerRequest } from 'src/app/data/models/customerRequest';
+import { DatabaseService } from 'src/app/data/services/database.service';
 @Component({
   selector: 'app-estimator',
   templateUrl: './estimator.component.html',
   styleUrls: ['./estimator.component.scss'],
 })
 export class EstimatorComponent implements OnInit {
+  listOfBookings: customerRequest[] = [];
+  listOfProducts: Product[] = [];
+  total: number = 0;
+  numberOfBookings: number = 0;
+
   isSticky: boolean = false;
-  bookingCount: number = 11;
+  bookingCount: number = 0;
   myForm!: FormGroup;
   timeSlots: string[] = [
     '8:00 AM - 10:00 AM',
@@ -35,9 +36,6 @@ export class EstimatorComponent implements OnInit {
     '4000 sqft - 5000 sqft',
   ];
 
-  listOfProducts: Product[] = [];
-  listOfBootings: customerRequest[] = [];
-  total: number = 0;
 
   selectedHomeSize: number = 0;
   fakeCustomer = new customerRequest(
@@ -57,12 +55,32 @@ export class EstimatorComponent implements OnInit {
   constructor(
     private productSvc: ProductService,
     private formBuilder: FormBuilder,
-    private store: AngularFirestore,
-    private db: DatabaseService,
-    private elementRef: ElementRef
+    private db: DatabaseService
   ) {}
 
   ngOnInit() {
+
+    this.db.getBookingsWithMetaData().subscribe({
+      next: (res) => {
+        //console.log('Next getting bookings ');
+      this.listOfBookings = res.map((book: any) =>{
+        const data = book.payload.doc.data();
+        data.id = book.payload.doc.id;
+        return data;
+
+      })
+      this.numberOfBookings = this.listOfBookings.length;
+    },
+    error:(err)  => {
+      console.log('Error getting bookings ' + err);
+      return err;
+    },
+    complete:() =>{
+    }
+
+  })
+
+
     const tomorrow = new Date(this.today.setDate(this.today.getDate() + 1));
 
     this.myForm = this.formBuilder.group({
@@ -78,7 +96,6 @@ export class EstimatorComponent implements OnInit {
     this.listOfProducts = this.productSvc.GetAllProducts();
     const productCards = document.querySelector('.estimator') as HTMLDivElement;
     const cards = Array.from(productCards?.children) as Element[];
-    //console.log( this.db.getBookingCount());
   }
 
   private formatDate(date: Date) {
@@ -94,9 +111,6 @@ export class EstimatorComponent implements OnInit {
   onSubmit(): void {
     let listOfSelectedProducts: Product[] = [];
     let listOfPackageNames: string = '';
-    let to:string = 'seattlerealestatephoto@gmail.com';
-    let messageStr: string = 'message' ;
-
     listOfSelectedProducts = this.listOfProducts.filter(
       (p) => p.selected == true
     );
@@ -123,18 +137,12 @@ export class EstimatorComponent implements OnInit {
         this.total
       );
 
-      let adminMessage = new emailMessage(
-        to = 'seattlerealestatephoto@gmail.com',
-        messageStr  = cust.toString()
-      )
-
-      this.db.addBooking(cust,adminMessage);
+      this.db.addBooking(cust);
       alert("Thank you for your booking. We will contact you soon to confirm the appointment.")
     } else {
       console.log('not valid');
     }
 
-    //this.db.sendMail();
   }
 
   addToTotal(product: Product) {

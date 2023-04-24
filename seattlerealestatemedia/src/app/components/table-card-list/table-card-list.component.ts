@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { TableCard } from '../../table-card.model';
-import { TableCardService } from '../../table-card.service';
+import { TableCard } from '../../data/models/table-card.model';
+import { TableCardService } from '../../data/services/table-card.service';
 
 @Component({
   selector: 'app-table-card-list',

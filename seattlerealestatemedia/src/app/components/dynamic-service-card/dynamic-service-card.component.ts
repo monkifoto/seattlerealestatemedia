@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Product } from 'src/app/product.mode';
-import { ProductService } from 'src/app/product.service';
+import { Product } from 'src/app/data/models/product.mode';
+import { ProductService } from 'src/app/data/services/product.service';
 
 @Component({
   selector: 'app-dynamic-service-card',

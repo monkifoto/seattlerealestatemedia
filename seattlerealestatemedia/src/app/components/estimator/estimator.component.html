@@ -1,4 +1,7 @@
 <div class="section-container">
+
+  <div class="booking_info_container">
+
   <div class="estimator_container">
 
 
@@ -40,9 +43,10 @@
 
 
   <div class="notes_cart"  #notes_cart>
-    <div class="notes"> <small>Please select between Essentials and Showcase Packages.</small></div>
-    <div class="count"><small>Current number of bookings: {{bookingCount}}</small></div>
-    <div class="cart"><div class="estimator_total sticky-item" [ngClass]="{'fixed': isSticky}">Total:  ${{total}} <span style="font-size: .7rem;">+tax</span></div></div>
+    <div class="notes note"> <small>Please select between Essentials and Showcase Packages.</small></div>
+    <div class="notes count"><strong>Current bookings: {{numberOfBookings}} / 10</strong></div>
+    <div class="notes count"><strong>Available bookings: {{ 10 - numberOfBookings}}</strong></div>
+    <div class="note cart"><div class="estimator_total sticky-item" [ngClass]="{'fixed': isSticky}">Total:  ${{total}} <span style="font-size: .7rem;">+tax</span></div></div>
 
   </div>
   <div class="estimator">

@@ -1,33 +1,33 @@
 // .estimator_container{
 //   width: 100%;
 // }
-.info{
+.info {
   width: 100%;
 }
 
-.section-container{
+.section-container {
   display: flex;
   flex-wrap: wrap;
-   background: #fff;
-   height: 100%;
+  background: #fff;
+  height: 100%;
 }
 h1 {
   font-size: calc(3rem + 3vw);
-  font-family: var( --ff-Montserrat);
+  font-family: var(--ff-Montserrat);
   margin: 0 0 0.25em;
   line-height: 1;
   max-width: 50%;
   color: hsl(var(--clr-dark));
 }
-.estimator{
+.estimator {
   display: flex;
   flex-wrap: wrap;
-  gap :1rem;
+  gap: 1rem;
   position: relative;
   align-content: center;
 }
 
-.estimator_card{
+.estimator_card {
   flex-grow: 1;
   // max-width: 17rem;
   position: relative;
@@ -36,15 +36,15 @@ h1 {
   // min-height: 20rem;
 }
 
-.estimator_card::before{
+.estimator_card::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 10px;
-  border-radius: 5rem  0 0 5rem;
+  border-radius: 5rem 0 0 5rem;
   height: 100%;
-  background-color: #AAA;
+  background-color: #aaa;
 }
 form {
   max-width: 80%;
@@ -69,32 +69,35 @@ form {
   box-sizing: border-box;
 }
 
-
-.notes_cart{
+.notes_cart {
   position: relative;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   flex: 1;
   justify-content: space-between;
 }
 
-.estimator_notes{
- display: grid;
- grid-template-columns: 1fr;
- grid-gap: 10px;
- font-size: var(--fs-200);
+.notes {
+  flex-basis: calc(25% - 1.5rem);
+  padding: 3rem;
+  box-sizing: border-box;
 }
 
+.estimator_notes {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  font-size: var(--fs-200);
+}
 
-
-.estimator_button_group{
+.estimator_button_group {
   display: flex;
   align-items: center;
   align-content: center;
   width: 100%;
   padding: 5rem;
 }
-
 
 label {
   display: block;
@@ -125,7 +128,7 @@ button[type="submit"] {
   margin-left: auto;
   margin-right: auto;
   padding: 10px 20px;
-  background-color: #FF533D;
+  background-color: #ff533d;
   color: #fff;
   font-size: 2rem;
   font-weight: bold;
@@ -137,7 +140,7 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #333;
-  color: #FF533D;
+  color: #ff533d;
 }
 
 /* Error styles for invalid form controls */
@@ -155,10 +158,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-left: 5px;
   cursor: pointer;
 }
-.cart{
+.cart {
   font-size: var(--fs-500);
 }
-
 
 // .sticky-item {
 //   position: absolute;
@@ -176,13 +178,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 //   /* Additional styles for the fixed sticky item */
 // }
 
-  @media (max-width: 35rem) {
+@media (max-width: 35rem) {
+  .notes {
+    max-width: 12rem;
+  }
 
-    .notes{
-      max-width: 12rem;
-    }
-
-  .client_info_form{
+  .client_info_form {
     display: flex;
     flex: 0 1 20%;
   }
@@ -205,7 +206,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     flex-wrap: wrap;
   }
 
-  .info{
+  .info {
     height: 100%;
     padding: 1rem;
     display: grid;
@@ -213,27 +214,54 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     align-content: center;
   }
 
-  .estimator_card{
+  .estimator_card {
     flex-grow: 0;
     flex-shrink: 1;
-     max-width: 11.5rem;
+    max-width: 11.5rem;
     position: relative;
     display: block;
     cursor: pointer;
-
   }
 
-
+  .estimator_button_group {
+    padding: 1rem;
   }
 
-  @media screen and (min-width: 48rem) {
-    h1 {
-      font-size: calc(2rem + 1.5vw);
-
-      margin: 5rem 0 0.25em;
-      line-height: 1;
-      max-width: 100%;
-
-    }
-
+  .client_info_form {
+    flex: auto;
   }
+
+  .client_info_form_input {
+    padding: 2px;
+  }
+
+  .client_info_form_input input,
+  .client_info_form_input textarea,
+  .client_info_form_input select {
+    width: 100%;
+  }
+
+  .notes {
+    display: none;
+  }
+  .cart{
+    width: 100%;
+
+    padding-bottom: .5rem;
+  }
+
+  .estimator_total{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  h1 {
+    font-size: calc(2rem + 1.5vw);
+
+    margin: 5rem 0 0.25em;
+    line-height: 1;
+    max-width: 100%;
+  }
+}

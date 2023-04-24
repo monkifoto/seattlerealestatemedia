@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { user } from 'src/app/user';
-import { DatabaseService } from 'src/app/database.service';
+import { user } from 'src/app/data/models/user';
+import { DatabaseService } from 'src/app/data/services/database.service';
 import { Observable } from 'rxjs';
 
 @Component({

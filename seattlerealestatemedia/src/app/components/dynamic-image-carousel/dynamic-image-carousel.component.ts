@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
-import { CarouselService } from 'src/app/carousel.service';
-import { CarouselImage } from 'src/app/carousel.model';
+import { CarouselService } from 'src/app/data/services/carousel.service';
+import { CarouselImage } from 'src/app/data/models/carousel.model';
 
 @Component({
   selector: 'app-dynamic-image-carousel',
@@ -32,7 +32,7 @@ export class DynamicImageCarouselComponent {
     else if(this.galleryType == 'staging'){
       this.listOfImages = this.carouselSvc.GetStagingImages();
     }
-      
+
       this.startInterval();
   }
 
