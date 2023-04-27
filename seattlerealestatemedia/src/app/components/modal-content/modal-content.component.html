@@ -1,9 +1,13 @@
 <div class="modal-content">
   <!-- Add your content here -->
-  <h2>{{ title }}</h2>
+  <div class="modalTitle">
+  <h1>{{ title }}</h1>
+</div>
   <div [innerHTML]="description"></div>
 
   <app-table-card-list [pageName]="pageName" ></app-table-card-list>
-
+<br><br>
+<div class="closeBtn">
   <a href="#" class="btn btn-secondary" (click)="onClose()">Close</a>
+</div>
 </div>

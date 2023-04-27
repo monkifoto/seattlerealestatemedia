@@ -4,6 +4,7 @@ import { Product } from 'src/app/data/models/product.mode';
 import { ProductService } from 'src/app/data/services/product.service';
 import { customerRequest } from 'src/app/data/models/customerRequest';
 import { DatabaseService } from 'src/app/data/services/database.service';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-estimator',
   templateUrl: './estimator.component.html',
@@ -59,6 +60,8 @@ export class EstimatorComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+
+
 
     this.db.getBookingsWithMetaData().subscribe({
       next: (res) => {
@@ -138,7 +141,7 @@ export class EstimatorComponent implements OnInit {
       );
 
       this.db.addBooking(cust);
-      alert("Thank you for your booking. We will contact you soon to confirm the appointment.")
+      this.successNotification(custName);
     } else {
       console.log('not valid');
     }
@@ -220,6 +223,29 @@ export class EstimatorComponent implements OnInit {
     }
    })
    this.total = 0;
+  }
+
+  tinyAlert() {
+    Swal.fire('Hey there!');
+  }
+  successNotification(name: string) {
+    Swal.fire('Hi '+ name , 'Thank you for your booking. We will contact you soon to confirm the appointment.', 'success');
+  }
+  alertConfirmation() {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'This process is irreversible.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, go ahead.',
+      cancelButtonText: 'No, let me think',
+    }).then((result) => {
+      if (result.value) {
+        Swal.fire('Removed!', 'Product removed successfully.', 'success');
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire('Cancelled', 'Product still in our database.)', 'error');
+      }
+    });
   }
 
   // @HostListener('window:scroll', [])

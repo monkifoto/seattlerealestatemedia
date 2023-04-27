@@ -13,6 +13,9 @@ import { HeadshotsComponent } from './components/portfolio/headshots/headshots.c
 import { BrandingComponent } from './components/portfolio/branding/branding.component';
 import { WebsitesComponent } from './components/portfolio/websites/websites.component';
 import { StagingComponent } from './components/sections/staging/staging.component';
+import { AirBnBComponent } from './components/portfolio/air-bn-b/air-bn-b.component';
+import { PropertyManagmentComponent } from './components/portfolio/property-managment/property-managment.component';
+import { RentalComponent } from './components/portfolio/rental/rental.component';
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
@@ -27,6 +30,9 @@ const routes: Routes = [
   {path: 'headshots', component: HeadshotsComponent},
   {path: 'branding', component: BrandingComponent},
   {path: 'websites', component: WebsitesComponent},
+  {path: 'airBnB', component:AirBnBComponent},
+  {path: 'landlord', component: RentalComponent},
+  {path: 'propertymanagment', component: PropertyManagmentComponent}
 
 ];
 @NgModule({

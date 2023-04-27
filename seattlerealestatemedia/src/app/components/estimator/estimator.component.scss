@@ -178,7 +178,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 //   /* Additional styles for the fixed sticky item */
 // }
 
-@media (max-width: 35rem) {
+@media (max-width: 35rem) and (min-width:21rem){
   .notes {
     max-width: 12rem;
   }
@@ -217,7 +217,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .estimator_card {
     flex-grow: 0;
     flex-shrink: 1;
-    max-width: 11.5rem;
+    //max-width: 10rem;
+    max-width: 42vw;
     position: relative;
     display: block;
     cursor: pointer;

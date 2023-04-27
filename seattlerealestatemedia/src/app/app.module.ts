@@ -44,6 +44,9 @@ import { VirtualstagingComponent } from './components/portfolio/virtualstaging/v
 import { BrandingComponent } from './components/portfolio/branding/branding.component';
 import { WebsitesComponent } from './components/portfolio/websites/websites.component';
 import { AngularFireFunctions } from '@angular/fire/compat/functions';
+import { AirBnBComponent } from './components/portfolio/air-bn-b/air-bn-b.component';
+import { RentalComponent } from './components/portfolio/rental/rental.component';
+import { PropertyManagmentComponent } from './components/portfolio/property-managment/property-managment.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +81,10 @@ import { AngularFireFunctions } from '@angular/fire/compat/functions';
     ThreedimentionComponent,
     VirtualstagingComponent,
     BrandingComponent,
-    WebsitesComponent
+    WebsitesComponent,
+    AirBnBComponent,
+    RentalComponent,
+    PropertyManagmentComponent
 
   ],
   imports: [

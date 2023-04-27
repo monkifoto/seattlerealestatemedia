@@ -100,6 +100,13 @@ a:hover {
   display: none;
 }
 
+.bookNow{
+  white-space: nowrap;
+  border:1px solid gray;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  color: #FF533D !important;
+}
 
 /* CSS for tablets and laptops */
 @media (min-width: 480px) and (max-width: 1280px) {

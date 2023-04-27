@@ -17,7 +17,4 @@ export class TableCardComponent {
     // console.log(this.tableCard);
   }
 
-  onDelete(){
-    this.tblSvc.RemoveCard(this.index);
-  }
 }
