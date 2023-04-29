@@ -21,6 +21,7 @@
   width: 100%;
   box-shadow: 0px 5px 4px #333;
   z-index: 3000;
+  text-transform: uppercase;
 }
 
 .primary-naviation-container{
@@ -92,6 +93,11 @@ a:hover {
 .nav-link img {
   height: 1.5rem;
 }
+
+.mobileOnly{
+  display: none;
+}
+
 @media (max-width: 35rem) {
 
 }
@@ -107,6 +113,8 @@ a:hover {
   border-radius: 5px;
   color: #FF533D !important;
 }
+
+
 
 /* CSS for tablets and laptops */
 @media (min-width: 480px) and (max-width: 1280px) {
@@ -125,7 +133,7 @@ a:hover {
 
   --gap: clamp(.2rem, .1vw, .2rem);
     gap: var(--gap);
-    width: 100%;
+    // width: 100%;
     height: 3.5rem;
     align-items: center;
     list-style: none;
@@ -150,23 +158,23 @@ a:hover {
 display: none;
   }
 
+
 }
 
 
 @media (min-width: 320px) and (max-width: 480px) {
   .primary-navigation {
-    --underline-gap: 0.5rem;
     position: fixed;
     align-items: unset;
     z-index: 1000;
-    inset: 0 0 0 30%;
-    padding: min(20rem, 15vh) 2rem;
+    inset: 0 0 0 5%;
+    padding: min(10rem, 10vh) 2rem;
     margin: 0;
     flex-direction: column;
     transform: translateX(100%);
     transition: transform 500ms ease-in-out;
     border-radius: 0px;
-    background: hsl(var(--clr-white) / 0.25);
+    background: hsl(var(--clr-white) / 0.5);
     backdrop-filter: blur(1.5rem);
     height: 100%;
 
@@ -185,7 +193,7 @@ display: none;
     display: block;
     position: absolute;
     z-index: 2000;
-    right: 1rem;
+    right: 1.5rem;
     top: 1.5rem;
     color: var(--foreground);
     background: transparent;
@@ -233,6 +241,11 @@ display: none;
   }
 
   .mobileMediaText {
-    display: inline;
+    display: none;
   }
+
+  .mobileOnly{
+    display: block;
+  }
+
 }

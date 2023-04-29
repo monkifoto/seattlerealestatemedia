@@ -5,46 +5,59 @@
       <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
       <ul id="primary-navigation" class="primary-navigation">
         <li class='navbar_item'>
-          <a class='nav-link internal' routerLink="/"  (click)="scrollTo('about')">HOME</a>
+          <a class='nav-link ' routerLink="/"  (click)="scrollTo('about')">HOME</a>
         </li>
         <li class='navbar_item'>
-          <a class='nav-link internal' routerLink="/"  (click)="scrollTo('portfolio')">PHOTOS</a>
+          <a class='nav-link ' routerLink="/"  (click)="scrollTo('portfolio')">PHOTOS</a>
         </li>
         <li class='navbar_item'>
-          <a class='nav-link internal'  (click)="scrollTo('matterport')">3D <span class='social_media_icon'>TOURS</span></a>
+          <a class='nav-link '  (click)="scrollTo('matterport')">3D <span class='social_media_icon'>TOURS</span></a>
         </li>
         <li class='navbar_item'>
-          <a class='nav-link internal' (click)="scrollTo('aerial')" >AERIAL</a>
+          <a class='nav-link ' (click)="scrollTo('aerial')" >AERIAL</a>
         </li>
         <li class='navbar_item'>
-          <a class='nav-link internal' (click)="scrollTo('video')" >VIDEO</a>
+          <a class='nav-link ' (click)="scrollTo('video')" >VIDEO</a>
         </li>
          <li class='navbar_item'>
-          <a class='nav-link internal' (click)="scrollTo('floorplan')">FLOOR PLAN</a>
+          <a class='nav-link ' (click)="scrollTo('floorplan')">FLOOR PLAN</a>
         </li>
          <li class='navbar_item'>
-          <a class='nav-link internal' (click)="scrollTo('staging')">STAGING</a>
+          <a class='nav-link ' (click)="scrollTo('staging')">STAGING</a>
         </li>
         <li class='navbar_item'>
-          <a class='nav-link internal bookNow' (click)="scrollTo('estimator')" >BOOK NOW</a>
+          <a class='nav-link  bookNow' (click)="scrollTo('estimator')" >BOOK NOW</a>
         </li>
         <li class='navbar_item'>
-          <a class='nav-link internal social_media_icon' (click)="scrollTo('contact')" ><img src="../../../../assets/info.svg" alt="Aboout Us"></a>
+          <a class='nav-link mobileOnly' routerLink="/airBnB" >AirBnB</a>
+        </li>
+        <li class='navbar_item'>
+          <a class='nav-link mobileOnly' routerLink="/landlord" >Rental</a>
+        </li>
+        <li class='navbar_item'>
+          <a class='nav-link mobileOnly' routerLink="/propertymanagment" >Property Managment</a>
+        </li>
+
+        <li class='navbar_item social_media_icon'>
+          <a class='nav-link svg-link' (click)="scrollTo('contact')" ><img src="../../../../assets/info.svg" alt="About Us"><span class='mobileMediaText'>About Us</span></a>
         </li>
         <li class='navbar_item social_media_icon'>
-          <a class='nav-link internal ' data-target='.bd-example-modal-lg' data-toggle='modal' href='tel:4253904204' ><img src="../../../../assets/call.svg" alt="Call Now"/><span class='mobileMediaText'>Call Now</span></a>
+          <a class='nav-link svg-link ' data-target='.bd-example-modal-lg' data-toggle='modal' href='tel:4253904204' ><img src="../../../../assets/call.svg" alt="Call Now"/><span class='mobileMediaText'>Call Now</span></a>
+
         </li>
         <li class='navbar_item social_media_icon'>
-          <a class='nav-link' href='mailto:seattlerealestatephoto@gmail.com' style='color:#000000;'><img src="../../../../assets/email.svg" alt="Email Us"/><span class='mobileMediaText'>EMAIL</span></a>
+  <a class='nav-link svg-link' href='mailto:seattlerealestatephoto@gmail.com' style='color:#000000;'><img src="../../../../assets/email.svg" alt="Email Us"/><span class='mobileMediaText'>EMAIL</span></a>
         </li>
         <li class='navbar_item social_media_icon'>
-          <a class='nav-link' href='http://www.instagram.com/seattlerealestatephoto' style='color:#000000; '><img src="../../../../assets/ig.svg" alt="Instagram"/><span class='mobileMediaText'>INSTAGRAM</span></a>
+          <a class='nav-link svg-link' href='http://www.instagram.com/seattlerealestatephoto' style='color:#000000; '><img src="../../../../assets/ig.svg" alt="Instagram"/><span class='mobileMediaText'>INSTAGRAM</span></a>
+
         </li>
         <li class='navbar_item social_media_icon'>
-          <a class='nav-link' href='http://www.facebook.com/monkifoto' style='color:#000000;'><img src="../../../../assets/fb.svg" alt="Facebook"/><span class='mobileMediaText'>FACEBOOK</span></a>
+<a class='nav-link svg-link' href='http://www.facebook.com/monkifoto' style='color:#000000;'><img src="../../../../assets/fb.svg" alt="Facebook"/><span class='mobileMediaText'>FACEBOOK</span></a>
+
         </li>
         <li class='navbar_item social_media_icon'>
-          <a class='nav-link' href='https://www.youtube.com/channel/UCqT0likujRE4LjRimlbhxfg' style='color:#000000;'><img  src="../../../../assets/youtube.svg" alt="YouTube"/><span class='mobileMediaText'>YOUTUBE</span></a>
+ <a class='nav-link svg-link' href='https://www.youtube.com/channel/UCqT0likujRE4LjRimlbhxfg' style='color:#000000;'><img  src="../../../../assets/youtube.svg" alt="YouTube"/><span class='mobileMediaText'>YOUTUBE</span></a>
         </li>
 
       </ul>

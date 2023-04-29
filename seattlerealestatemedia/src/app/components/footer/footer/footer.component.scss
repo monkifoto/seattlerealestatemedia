@@ -158,6 +158,10 @@ font-size: .7rem;
     gap: 1rem;
     padding: 1rem;
   }
+  .about_me_contact{
+    width: 100%;
+  }
+
 
 }
 
@@ -201,10 +205,13 @@ font-size: .7rem;
 .about_me_section{
   display: flex;
   gap:3rem;
-  // flex-wrap: wrap;
-  // flex-direction: row;
 }
 
 .about_me_contact{
-  width: 40%;
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.about_me_info{
+  padding: 1rem;
 }
