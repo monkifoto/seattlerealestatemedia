@@ -18,6 +18,23 @@ export class UploaderComponent {
   constructor(private uploadService: StorageService) { }
 
   ngOnInit(): void {
+
+    // const fileInput = document.querySelector('input[type=file]') as HTMLInputElement;
+    // const filenameContainer = document.querySelector('#filename') as HTMLParagraphElement;
+    // const dropzone = document.querySelector('div') as HTMLDivElement;
+
+    // fileInput.addEventListener('change', function() {
+    //   filenameContainer.innerText = fileInput.value.split('\\').pop()!;
+    // });
+
+    // fileInput.addEventListener('dragenter', function() {
+    //   dropzone.classList.add('dragover');
+    // });
+
+    // fileInput.addEventListener('dragleave', function() {
+    //   dropzone.classList.remove('dragover');
+    // });
+
   }
 
   selectFile(event: any): void {

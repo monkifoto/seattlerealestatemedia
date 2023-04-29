@@ -1,14 +1,34 @@
+
+
+
 <div class="section-container">
+
   <div class="login">
     <app-login (authenticated)="onAuthenticated($event)"></app-login>
   </div>
 
   <div class="bookings">
-    <app-booking-list></app-booking-list>
+    <mat-tab-group selectedIndex="0" (selectedTabChange)="changeTab($event)">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span>Bookings</span>
+        </ng-template>
+        <div class="bookings">
+          <app-booking-list></app-booking-list>
+        </div>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span>Image Uploader</span>
+        </ng-template>
+        <div class="imageUpload">
+          <app-uploader></app-uploader>
+          <app-upload-list></app-upload-list>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
   </div>
 
-  <div class="imageUpload">
-    <app-uploader></app-uploader>
-    <app-upload-list></app-upload-list>
-  </div>
 </div>
+
+

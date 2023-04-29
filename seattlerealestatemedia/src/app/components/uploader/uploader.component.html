@@ -1,55 +1,41 @@
-<div class="row">
-  <div class="col-8">
-    <label>
-      <input
-        type="file"
-        class="text-nowrap text-truncate"
-        (change)="selectFile($event)"
-      />
-    </label>
-  </div>
+<div class="section-container">
+  <div class="container info-container">
+    <section class="intro">
+      <h1>Upload Photos</h1>
+      <div class="upload_container">
+        <div class="upload_input">
 
-  <div class="col-4">
-    <button
-      class="btn btn-success btn-sm"
-      [disabled]="!selectedFiles"
-      (click)="upload()"
-    >
-      Upload
-    </button>
+          <label class="btn btn-primary">
+            Choose File<input type="file" style="display: none;" (change)="selectFile($event)">
+          </label>
+        </div>
+        <div class="upload_command">
+          <button class="btn btn-accent" [disabled]="!selectedFiles"(click)="upload()">Upload</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="container carousel-container">
+    <div class="image_carousel_container">
+      <div *ngIf="currentFileUpload" class="progress mt-2">
+        <div
+          class="progress-bar progress-bar-info"
+          role="progressbar"
+          attr.aria-valuenow="{{ percentage }}"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          [ngStyle]="{ width: percentage + '%' }"
+        >
+          {{ percentage }}%
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<div *ngIf="currentFileUpload" class="progress mt-2">
-  <div
-    class="progress-bar progress-bar-info"
-    role="progressbar"
-    attr.aria-valuenow="{{ percentage }}"
-    aria-valuemin="0"
-    aria-valuemax="100"
-    [ngStyle]="{ width: percentage + '%' }"
-  >
-    {{ percentage }}%
-  </div>
-</div>
 
-
-
-<!-- <label class="btn btn-default p-0">
-  <input type="file" accept="image/*" (change)="chooseFile($event)" />
-</label> -->
-
-<!-- <button
-class="btn btn-success btn-sm float-right"
-[disabled]="!selectedFiles"
-(click)="upload()"
->
-Upload
-</button> -->
-
-<!-- <button
-class="btn btn-success btn-sm float-right"
-(click)="upload()"
->
-Upload
-</button> -->
+<!-- <label for="test">
+  <div>Click or drop something here</div>
+  <input type="file" id="test">
+</label>
+<p id="filename"></p> -->

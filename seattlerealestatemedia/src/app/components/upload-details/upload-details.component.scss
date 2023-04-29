@@ -1,0 +1,15 @@
+.fileElement{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.fileElement > *{
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filePreview img {
+  width: 100px;
+}

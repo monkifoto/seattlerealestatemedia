@@ -1,4 +1,10 @@
 import { Component } from '@angular/core';
+import { Observable, Observer } from 'rxjs';
+
+export interface ExampleTab {
+  label: string;
+  content: string;
+}
 
 @Component({
   selector: 'app-admin',
@@ -7,7 +13,10 @@ import { Component } from '@angular/core';
 })
 export class AdminComponent {
 
+  tabIndex = 0 ;
 
+  constructor() {
+  }
 
   ngOnInit(){
     let bookings = document.querySelector('.bookings') as HTMLDivElement;
@@ -29,6 +38,11 @@ export class AdminComponent {
 
 
 
+  }
+
+  changeTab(event: { index: any; }){
+    console.log(event.index)
+    this.tabIndex = event.index;
   }
 
 }

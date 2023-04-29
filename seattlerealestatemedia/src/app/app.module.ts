@@ -52,6 +52,7 @@ import { provideStorage, getStorage} from '@angular/fire/storage';
 import { UploaderComponent } from './components/uploader/uploader.component';
 import { UploadDetailsComponent } from './components/upload-details/upload-details.component';
 import { UploadListComponent } from './components/upload-list/upload-list.component'
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -107,6 +108,7 @@ import { UploadListComponent } from './components/upload-list/upload-list.compon
     provideFirestore(() => getFirestore()),
     BrowserAnimationsModule,
     MatDialogModule,
+    MatTabsModule,
    provideStorage(()=> getStorage()),
   ],
   providers: [],
