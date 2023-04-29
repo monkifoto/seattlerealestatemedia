@@ -209,7 +209,9 @@ a {
 
   display: flex;
   flex-wrap: wrap;
- height: 100vh;
+  padding: 5rem;
+  margin-inline: auto;
+//  height: 100vh;
 }
 
 .carousel-container{
@@ -274,8 +276,12 @@ h1 {
 
 @media screen and  (max-width: 35rem)
 {
-
+  .section-container{
+    padding: 0;
+    margin-inline: 0;
+  }
 }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

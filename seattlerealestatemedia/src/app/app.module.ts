@@ -28,6 +28,7 @@ import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat/';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { BookingListComponent } from './components/booking-list/booking-list.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { AdminComponent } from './components/admin/admin.component';
@@ -47,6 +48,10 @@ import { AngularFireFunctions } from '@angular/fire/compat/functions';
 import { AirBnBComponent } from './components/portfolio/air-bn-b/air-bn-b.component';
 import { RentalComponent } from './components/portfolio/rental/rental.component';
 import { PropertyManagmentComponent } from './components/portfolio/property-managment/property-managment.component';
+import { provideStorage, getStorage} from '@angular/fire/storage';
+import { UploaderComponent } from './components/uploader/uploader.component';
+import { UploadDetailsComponent } from './components/upload-details/upload-details.component';
+import { UploadListComponent } from './components/upload-list/upload-list.component'
 
 @NgModule({
   declarations: [
@@ -84,7 +89,10 @@ import { PropertyManagmentComponent } from './components/portfolio/property-mana
     WebsitesComponent,
     AirBnBComponent,
     RentalComponent,
-    PropertyManagmentComponent
+    PropertyManagmentComponent,
+    UploaderComponent,
+    UploadDetailsComponent,
+    UploadListComponent
 
   ],
   imports: [
@@ -93,11 +101,13 @@ import { PropertyManagmentComponent } from './components/portfolio/property-mana
     FormsModule,
     ReactiveFormsModule,
     AngularFirestoreModule,
+    AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     BrowserAnimationsModule,
     MatDialogModule,
+   provideStorage(()=> getStorage()),
   ],
   providers: [],
   bootstrap: [AppComponent]

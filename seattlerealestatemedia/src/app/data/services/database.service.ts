@@ -65,15 +65,6 @@ export class DatabaseService {
   }
 
 
-
-
-  // getBookingCount():number {
-
-  //   this.listOfBookings = this.getAllBookings();
-  //   console.log("db getbookincount called and returned: " + this.listOfBookings.length);
-  //   return this.listOfBookings.length;
-  // }
-
   getUsers(): Observable<user[]> {
     return this.afs.collection('users').valueChanges() as Observable<user[]>;
   }
@@ -82,7 +73,7 @@ export class DatabaseService {
   sendMail(cr: customerRequest) {
 
     let emailTo = 'seattlerealestatephoto@gmail.com';
-    let emailSubject = cr.name + 'created a new booking from the website!';
+    let emailSubject = cr.name + ' created a new booking from the website!';
 
     this.afs.collection('mail').add({
       to: emailTo,
