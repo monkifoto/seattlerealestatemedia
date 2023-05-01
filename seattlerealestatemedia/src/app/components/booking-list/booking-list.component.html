@@ -23,8 +23,8 @@
     <td>{{booking['time']}}</td>
     <td>{{booking['size']}}</td>
     <td>{{booking['mediaPackage']}}</td>
-    <td>{{booking['total']}}</td>
-    <td><button type="button" (click)="onDelete(booking)">Delete</button></td>
+    <td>${{booking['total']}}</td>
+    <td><button class="btn btn-primary" type="button" (click)="onDelete(booking)">Delete</button></td>
   </tr>
 </tbody>
 </table>

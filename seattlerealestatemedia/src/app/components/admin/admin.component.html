@@ -7,7 +7,7 @@
     <app-login (authenticated)="onAuthenticated($event)"></app-login>
   </div>
 
-  <div class="bookings">
+  <div class="adminTabs">
     <mat-tab-group selectedIndex="0" (selectedTabChange)="changeTab($event)">
       <mat-tab>
         <ng-template mat-tab-label>
@@ -23,7 +23,7 @@
         </ng-template>
         <div class="imageUpload">
           <app-uploader></app-uploader>
-          <app-upload-list></app-upload-list>
+
         </div>
       </mat-tab>
     </mat-tab-group>

@@ -1,7 +1,7 @@
 
 .booking_info_container{
   height: 100%;
-  padding-top: 10rem;
+  // padding-top: 10rem;
 }
 
 .bookingInfo {
@@ -94,4 +94,29 @@
   td:nth-of-type(10)::before{
     content: 'Commands';
   }
+}
+
+
+.btn {
+  padding: 1em 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+.btn + .btn {
+  margin-left: 1em;
+}
+
+.btn-secondary {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.btn-accent {
+  background: hsl(var(--clr-light));
+  color: var(--foreground);
 }

@@ -1,8 +1,8 @@
-<div class="section-container">
+<div class="upload-container">
   <div class="container info-container">
     <section class="intro">
       <h1>Upload Photos</h1>
-      <div class="upload_container">
+      <div class="select_file_container">
         <div class="upload_input">
 
           <label class="btn btn-primary">
@@ -14,22 +14,22 @@
         </div>
       </div>
     </section>
-  </div>
-  <div class="container carousel-container">
-    <div class="image_carousel_container">
+    <section>
+      <div class="progress">
+
       <div *ngIf="currentFileUpload" class="progress mt-2">
         <div
-          class="progress-bar progress-bar-info"
-          role="progressbar"
-          attr.aria-valuenow="{{ percentage }}"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          [ngStyle]="{ width: percentage + '%' }"
-        >
-          {{ percentage }}%
+          class="progress-bar progress-bar-info" role="progressbar" attr.aria-valuenow="{{ percentage }}" aria-valuemin="0"aria-valuemax="100" [ngStyle]="{ width: percentage + '%' }" >{{ percentage }}%
         </div>
+        <app-upload-progress [progress]="percentage"></app-upload-progress>
       </div>
+      </div>
+    </section>
+  </div>
+  <div class="container ">
+    <div class="file_list_container">
     </div>
+    <app-upload-list></app-upload-list>
   </div>
 </div>
 
