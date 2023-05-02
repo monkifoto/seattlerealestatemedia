@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { customerRequest } from 'src/app/data/models/customerRequest';
+import { DatabaseService } from 'src/app/data/services/database.service';
+import { contactMessage } from 'src/app/data/models/contactMessage';
 
 @Component({
   selector: 'app-contact-us',
@@ -13,9 +16,17 @@ export class ContactUsComponent {
       message: ''
     };
 
+    constructor(private db: DatabaseService){}
+
     onSubmit() {
-      // Code to submit the form data to the server goes here
-      console.log(this.formData);
+      let cm = new contactMessage(
+        '',
+        this.formData.name,
+        this.formData.email,
+        this.formData.message
+
+      )
+      this.db.sendContactRequest(cm);
     }
 
   }

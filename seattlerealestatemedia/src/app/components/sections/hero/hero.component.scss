@@ -5,7 +5,7 @@ h1 {
   margin: 0 0 0.25em;
   line-height: 1;
   max-width: 100%;
-  color: hsl(var(--clr-dark));
+  color: hsl(var(--clr-light));
 }
 
 .btn-group {
@@ -69,7 +69,7 @@ h1 {
   height: 100vh;
   // background-image: url('https://1.bp.blogspot.com/-lQgJpZP9Gyo/XzsLuteFRNI/AAAAAAADnrM/xBBepCELa0s98bmvNdzU4OCCWG6jjrWlQCPcBGAsYHg/s2048/_MKY2867-HDR.jpg');
 
-  background-image: url('https://firebasestorage.googleapis.com/v0/b/seattlerealestatemedia.appspot.com/o/Interior%2FA7406969.jpg?alt=media&token=6ce5e90d-5102-4c17-8534-a590eb7c318f');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/seattlerealestatemedia.appspot.com/o/Interior%2FA7406969-Edit.jpg?alt=media&token=6ce5e90d-5102-4c17-8534-a590eb7c318f');
   background-size: cover;
   background-position: center;
 }
@@ -92,6 +92,8 @@ h1 {
   text-align: center;
   color: #000;
   z-index: 1;
+  background-color: hsl( var(--clr-dark)/ 0.40);
+  padding: 2rem;
 }
 
 .hero-content h1 {

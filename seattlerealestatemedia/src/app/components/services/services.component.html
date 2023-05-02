@@ -1,0 +1,77 @@
+<div class="section-container">
+  <div class="container left-container">
+    <section class="intro">
+      <h1>Services</h1>
+      <h2 class="pageHeader">
+        Say goodbye to juggling multiple media providers - we offer a
+        comprehensive solution for all your media requirements.
+      </h2>
+      <div class="service_lists">
+        <div class="service-list_left">
+          <ul>
+            <li class="corner-arrow">
+              <div class="service_card" (mouseenter)="onMouseOver($event)" (mouseleave)="onMouseOut($event)">
+                <span class="li_title">Photography</span>
+                <p>I aim to produce professional images using advanced technology and techniques for homeowners and realtors to enhance their property listings.</p>
+              </div>
+            </li>
+            <li class="corner-arrow">
+              <div class="service_card" (mouseenter)="onMouseOver($event)" (mouseleave)="onMouseOut($event)">
+                <span class="li_title">Aerial</span>
+                <p>Aerial photography and video using drones have gained popularity in the real estate industry for their ability to showcase a property's unique features from a bird's-eye view.</p>
+              </div>
+            </li>
+            <li class="corner-arrow">
+              <div class="service_card" (mouseenter)="onMouseOver($event)" (mouseleave)="onMouseOut($event)">
+              <span class="li_title">3D Tours</span>
+              <p> Virtual Tours offer an immersive virtual experience for potential buyers, allowing them to experience listings from the comfort their home with 24/7.</p>
+            </div>
+          </li>
+            <li class="corner-arrow">
+              <div class="service_card" (mouseenter)="onMouseOver($event)" (mouseleave)="onMouseOut($event)">
+              <span class="li_title">Video</span>
+              <p>Enhance the online presence of your listings, by helping potential clients get to know the property before inperson showing.</p>
+            </div></li>
+          </ul>
+        </div>
+        <div class="service_list_right">
+          <ul>
+            <li class="corner-arrow">
+              <div class="service_card" (mouseenter)="onMouseOver($event)" (mouseleave)="onMouseOut($event)">
+              <span class="li_title">Floorplan</span>
+              <p>A floor plan gives the buyer a chance to visualize the property as their very own, rather than someone else's</p>
+            </div></li>
+            <li class="corner-arrow">
+              <div class="service_card" (mouseenter)="onMouseOver($event)" (mouseleave)="onMouseOut($event)">
+              <span class="li_title">Staging</span>
+              <p>Using virtual staging, you can turn boring empty properties into dream homes, and increase views, and leads for your listing.</p>
+            </div></li>
+            <li class="corner-arrow">
+              <div class="service_card" (mouseenter)="onMouseOver($event)" (mouseleave)="onMouseOut($event)">
+              <span class="li_title">Headshots</span>
+              <p>Professional headshots create a strong first impression, help establish credibility, and can be used across multiple marketing platforms.</p>
+            </div></li>
+            <li class="corner-arrow">
+              <div class="service_card" (mouseenter)="onMouseOver($event)" (mouseleave)="onMouseOut($event)">
+              <span class="li_title">Website</span>
+              <p>Custom websites for listings provide a personalized platform to showcase properties, increases online visibility, and help build a strong brand image.</p>
+            </div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="container right-container">
+    <div class="contact-form">
+      <div class="gallery-section">
+        <div class="carousel-inner">
+          <div
+            class="carousel-item"
+            *ngFor="let image of listOfImages; let i = index">
+            <img [class]="'img' + i" [id]="'img_'+image.service" [src]="image.url" [alt]="image.alt" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

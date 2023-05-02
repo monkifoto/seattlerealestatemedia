@@ -1,0 +1,179 @@
+
+.section-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 20rem;
+}
+
+.section-container > * {
+  flex-basis: 48%;
+}
+
+.left-container{
+  h1 {
+    font-size: calc(1.5rem + 1.5vw);
+    font-family: var(--ff-Montserrat);
+    margin: 0 0.25em;
+    line-height: 1;
+    max-width: 80%;
+    color: hsl(var(--clr-dark));
+  }
+
+ display: grid;
+ align-content: center;
+ align-items: center;
+
+}
+
+
+// body{
+//   max-width: 70%;
+//   margin:0 auto;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   height: 50vh;
+// }
+
+.gallery-section{
+  position: relative;
+}
+
+.gallery-section img{
+  width:40%;
+  position: absolute;
+  z-index:10;
+  transition:all .5s;
+  box-shadow: -3px 1px 5px rgba(0,0,0,.5);
+}
+
+.img0{
+  left:0rem;
+}
+
+.img1{
+  left:3rem;
+  top:3rem;
+}
+
+.img2{
+  left:6rem;
+  top:6rem;
+}
+
+.img3{
+  left:9rem;
+  top:9rem;
+}
+.img4{
+  left:12rem;
+  top:12rem;
+}
+.img5{
+  left:15rem;
+  top:15rem;
+}
+.img6{
+  left:18rem;
+  top:18rem;
+}
+.img7{
+  left:21rem;
+  top:21rem;
+}
+.gallery-section img:hover{
+  z-index:20;
+  // transform: scale(1.5) rotate(-10deg) translateY(5rem);
+  transform: scale(1.5) rotate(-10deg) translate(5rem, -5rem);
+}
+
+.gallery-section:hover img:not(:hover){
+  transform:scale(.9);
+  opacity:0;
+}
+
+@media screen and (max-width:500px){
+  .img1{
+    left:5rem;
+  }
+
+  .img2{
+    left:7rem;
+  }
+
+  .img3{
+    left:10rem;
+  }
+}
+
+.service_lists{
+  display: flex;
+}
+
+.service_lists > * {
+  flex-basis: 50%;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  position: relative;
+  padding: 0 2rem;
+  // border-bottom: 1px solid #ccc;
+}
+
+.li_title{
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.service_card{
+  cursor: pointer;
+ opacity: .7;
+}
+.service_card:hover{
+  opacity: 1;
+}
+
+.corner-arrow::before {
+  content: "";
+  position: absolute;
+  top: .7rem;
+  left: 0;
+  transform: translateY(-50%) rotate(45deg);
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 8px solid #000;
+  border-bottom: 8px solid transparent;
+}
+
+.service_card > p{
+  display: block;
+  height: 5rem;
+}
+
+.corner-arrow:hover::before{
+  content: "";
+  position: absolute;
+  top: .7rem;
+  left: 0;
+  transform: translateY(-50%) rotate(45deg);
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 8px solid var(--clr-accent);
+  border-bottom: 8px solid transparent;
+}
+
+.clsO{
+  z-index:20;
+  transform: scale(1.5) rotate(-10deg) translate(5rem, -5rem);
+
+}
+
+

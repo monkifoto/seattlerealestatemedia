@@ -1,5 +1,32 @@
+.section-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-container > * {
+  flex-basis: 50%;
+}
+
+.left-container{
+  h1 {
+    font-size: calc(1.5rem + 1.5vw);
+    font-family: var(--ff-Montserrat);
+    margin: 0 0.25em;
+    line-height: 1;
+    max-width: 80%;
+    color: hsl(var(--clr-dark));
+  }
+
+ display: grid;
+ align-content: center;
+ align-items: center;
+
+}
+
+
+
 .contact-form {
-  max-width: 500px;
+  padding: 2rem;
   margin: auto;
   text-align: center;
   font-size: 1.2rem;
@@ -13,6 +40,7 @@
 
 label {
   margin-bottom: 5px;
+  text-align: left;
 }
 
 input[type="text"],
@@ -31,16 +59,59 @@ textarea {
   height: 150px;
 }
 
-button[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 8px;
+  margin-bottom: 15px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
+  box-shadow: 0px 0px 5px #ccc;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+button[type="submit"] {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px 20px;
+  background-color: #ff533d;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
 }
 
 button[type="submit"]:hover {
-  background-color: #0062cc;
+  background-color: #333;
+  color: #ff533d;
+}
+
+/* Error styles for invalid form controls */
+input.ng-invalid,
+textarea.ng-invalid,
+select.ng-invalid {
+  border-color: #ff0000;
+}
+
+/* Optional: style the date picker dropdown */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #007bff;
+  font-size: 14px;
+  padding: 0;
+  margin-left: 5px;
+  cursor: pointer;
 }
