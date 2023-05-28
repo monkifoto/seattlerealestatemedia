@@ -55,37 +55,44 @@
 .img1{
   left:3rem;
   top:3rem;
+  transform: rotate(5deg);
 }
 
 .img2{
   left:6rem;
   top:6rem;
+  transform: rotate(10deg);
 }
 
 .img3{
   left:9rem;
   top:9rem;
+  transform: rotate(15deg);
 }
 .img4{
   left:12rem;
   top:12rem;
+  transform: rotate(20deg);
 }
 .img5{
   left:15rem;
   top:15rem;
+  transform: rotate(25deg);
 }
 .img6{
   left:18rem;
   top:18rem;
+  transform: rotate(30deg);
 }
 .img7{
   left:21rem;
   top:21rem;
+  transform: rotate(35deg);
 }
 .gallery-section img:hover{
   z-index:20;
   // transform: scale(1.5) rotate(-10deg) translateY(5rem);
-  transform: scale(1.5) rotate(-10deg) translate(5rem, -5rem);
+  transform: scale(1.8) rotate(-10deg) translate(2rem, 5rem);
 }
 
 .gallery-section:hover img:not(:hover){
@@ -174,6 +181,10 @@ li {
   z-index:20;
   transform: scale(1.5) rotate(-10deg) translate(5rem, -5rem);
 
+
 }
 
 
+.service_image_name{
+  display: none;
+}

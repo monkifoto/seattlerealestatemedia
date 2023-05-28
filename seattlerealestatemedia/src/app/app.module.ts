@@ -53,6 +53,9 @@ import { UploaderComponent } from './components/uploader/uploader.component';
 import { UploadDetailsComponent } from './components/upload-details/upload-details.component';
 import { UploadListComponent } from './components/upload-list/upload-list.component'
 import {MatTabsModule} from '@angular/material/tabs';
+import { UploadProgressComponent } from './components/upload-progress/upload-progress.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { ServicesComponent } from './components/services/services.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +96,10 @@ import {MatTabsModule} from '@angular/material/tabs';
     PropertyManagmentComponent,
     UploaderComponent,
     UploadDetailsComponent,
-    UploadListComponent
+    UploadListComponent,
+    UploadProgressComponent,
+    ContactUsComponent,
+    ServicesComponent
 
   ],
   imports: [

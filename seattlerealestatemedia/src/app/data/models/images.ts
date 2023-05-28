@@ -32,7 +32,7 @@ export const photographyImages = [
     alt: 'Beautiful Sunset over a remodeled home on the hill of Rainer Beach with views towards boeing factory.',
   },
   {
-    url: 'https://firebasestorage.googleapis.com/v0/b/seattlerealestatemedia.appspot.com/o/Interior%2FA7406969.jpg?alt=media&token=6ce5e90d-5102-4c17-8534-a590eb7c318f',
+    url: 'https://firebasestorage.googleapis.com/v0/b/seattlerealestatemedia.appspot.com/o/Interior%2FA7406969-Edit.jpg?alt=media&token=6ce5e90d-5102-4c17-8534-a590eb7c318f',
     alt: 'Beautiful Livingroom of a water view condo in Seattle on Alki Beach showing a water view from the couch perspective',
   },
   {
@@ -346,3 +346,49 @@ export const stagingImages = [
     alt: 'Image 2',
   },
 ];
+
+export const servicesImages =[
+  {
+    url: 'https://firebasestorage.googleapis.com/v0/b/seattlerealestatemedia.appspot.com/o/Website%2FWebsite.png?alt=media&token=6b907ba9-8eb3-4dea-9b06-56fd37d41d53',
+    alt: 'Image 2',
+    service: 'Website'
+  },
+  {
+    url: 'https://firebasestorage.googleapis.com/v0/b/seattlerealestatemedia.appspot.com/o/Headshots%2FHeadshotCollage.jpg?alt=media&token=4a921852-0e47-41bc-94b9-5c3702d057e7',
+    alt: 'Image 2',
+    service: 'Headshots'
+  },
+  {
+    url: 'https://firebasestorage.googleapis.com/v0/b/seattlerealestatemedia.appspot.com/o/Floorplan%2FFloorplan.png?alt=media&token=f831518d-634d-4a0d-8807-3c4a10060543',
+    alt: 'Floor Plans for everyone',
+    service: 'Floorplan'
+  },
+  {
+    url: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3jPSZAnnRUVU7fNXFb2kjhkNEUKJCP_a940yZdfSZWCtKL99HxzgXQrIJtly9thue-YZHGG3gm_7sS29N3kUKqVY9KX9HJ_zD_qQA5aWj2oCqYV4h2rSjTK_Ecy85aF2MmMEv8_Fi5LzLTJIPSphecbOZHRfk2na4YXug7X9iq5RdMVc0mbI36n4NWA/s1024/RE2022_VSDining%20Area.jpg',
+    alt: 'Virtual Staging',
+    service: 'Staging'
+  },
+  {
+    url: 'https://firebasestorage.googleapis.com/v0/b/seattlerealestatemedia.appspot.com/o/Video%2FVIdeo.png?alt=media&token=a7a93b2f-2842-4e4f-86ef-c531cf9ff370',
+    alt: 'Image 2',
+    service: 'Video'
+  },
+  {
+    url: 'https://firebasestorage.googleapis.com/v0/b/seattlerealestatemedia.appspot.com/o/3D%2FMatterport.png?alt=media&token=841f60ae-4974-4e5d-a0a9-a169d42dcc62',
+    alt: 'Image 2',
+    service: '3DTour'
+  },
+  {
+    url: 'https://firebasestorage.googleapis.com/v0/b/seattlerealestatemedia.appspot.com/o/Aerial%2FAerial.png?alt=media&token=d48b491c-3eca-4856-839a-794f13192069',
+    alt: 'Aeral capture of a four million dollar property',
+    service: 'Aerial'
+  },
+  {
+    url: 'https://firebasestorage.googleapis.com/v0/b/seattlerealestatemedia.appspot.com/o/Interior%2FA7406969-Edit.jpg?alt=media&token=6ce5e90d-5102-4c17-8534-a590eb7c318f',
+    alt: 'Beautiful Livingroom of a water view condo in Seattle on Alki Beach showing a water view from the couch perspective',
+    service: 'Photography'
+  },
+
+
+];
+

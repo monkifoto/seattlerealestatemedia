@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { customerRequest } from 'src/app/data/models/customerRequest';
 import { user } from '../models/user';
 import { emailMessage } from '../models/emailMessage';
+import { contactMessage } from '../models/contactMessage';
 
 @Injectable({ providedIn: 'root' })
 export class DatabaseService {
@@ -80,6 +81,20 @@ export class DatabaseService {
       message: {
         subject: emailSubject,
         html: cr.toString()
+      },
+    });
+  }
+
+  sendContactRequest(cm: contactMessage) {
+
+    let emailTo = 'seattlerealestatephoto@gmail.com';
+    let emailSubject = cm.name + ' sent you a message via the website!!!';
+
+    this.afs.collection('mail').add({
+      to: emailTo,
+      message: {
+        subject: emailSubject,
+        html: cm.toString()
       },
     });
   }
