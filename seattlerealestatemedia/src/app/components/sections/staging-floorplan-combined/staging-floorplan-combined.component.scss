@@ -10,10 +10,6 @@
   text-align: center;
 }
 
-// .intro > * {
-//   grid-column: 2 / 3;
-// }
-
   .section-container{
     display: flex;
     flex-wrap: wrap;
@@ -65,14 +61,7 @@
       align-content: center;
     }
 
-    // .section-container{
-    //   display: flex;
-    //   flex-wrap: wrap;
-    //   //  background: #AB987A;
 
-    //    height: 100%;
-    //    gap:1rem;
-    // }
 
     .section-container{
       display: flex;
@@ -104,9 +93,6 @@
     font-size: 1rem;
   }
 
-  .intro{
-    // padding: 3rem;
-  }
 
   .image_carousel_container{
     padding: 0rem;
