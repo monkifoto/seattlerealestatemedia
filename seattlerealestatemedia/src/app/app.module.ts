@@ -56,6 +56,10 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { UploadProgressComponent } from './components/upload-progress/upload-progress.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { ServicesComponent } from './components/services/services.component';
+import { SubHeroComponent } from './components/sections/sub-hero/sub-hero.component';
+import { PhotosCombinedComponent } from './components/sections/photos-combined/photos-combined.component';
+import { VideoCombinedComponent } from './components/sections/video-combined/video-combined.component';
+import { StagingFloorplanCombinedComponent } from './components/sections/staging-floorplan-combined/staging-floorplan-combined.component';
 
 @NgModule({
   declarations: [
@@ -99,7 +103,11 @@ import { ServicesComponent } from './components/services/services.component';
     UploadListComponent,
     UploadProgressComponent,
     ContactUsComponent,
-    ServicesComponent
+    ServicesComponent,
+    SubHeroComponent,
+    PhotosCombinedComponent,
+    VideoCombinedComponent,
+    StagingFloorplanCombinedComponent
 
   ],
   imports: [

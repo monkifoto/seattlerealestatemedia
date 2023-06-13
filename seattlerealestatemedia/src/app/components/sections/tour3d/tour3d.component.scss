@@ -1,3 +1,6 @@
+  h1{
+    color: hsl(var(--clr-light));
+  }
 
   li {
     color: hsl(var(--clr-light));
@@ -20,7 +23,7 @@
   .section-container{
     display: flex;
     flex-wrap: wrap;
-     background: #0f1626;
+     background:  #171717 ;
   }
 
 .container{
@@ -76,7 +79,7 @@
 
       display: flex;
       flex-wrap: wrap;
-       background: #0f1626;
+       background: #171717 ;
        height: 100%;
        flex-direction: column-reverse;
     }
@@ -107,6 +110,6 @@
     }
 
     .image_carousel_container{
-      padding: 3rem;
+      padding: 0rem;
     }
   }

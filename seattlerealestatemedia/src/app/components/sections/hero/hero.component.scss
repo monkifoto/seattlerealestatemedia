@@ -5,7 +5,7 @@ h1 {
   margin: 0 0 0.25em;
   line-height: 1;
   max-width: 100%;
-  color: hsl(var(--clr-light));
+  color: hsl(var(--clr-dark));
 }
 
 h2 {
@@ -95,14 +95,16 @@ h2 {
 
 .hero-content {
   position: absolute;
-  top: 50%;
+  bottom: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  //transform: translate(-50%, -50%);
   text-align: center;
   color: #000;
   z-index: 1;
-  background-color: hsl( var(--clr-dark)/ 0.40);
-  padding: 2rem;
+  background-color: hsl( var(--clr-dark)/ 0.50);
+  padding: 5rem;
+  width: 65%;
+  border-color: 1px solid red;
 }
 
 .hero-content h1 {

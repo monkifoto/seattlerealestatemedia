@@ -123,10 +123,10 @@ export const aerialImages = [
     url: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgA68q9WS3pZzkbVj3osXREUXe7jUGY9HrNal_jWJMpiNQKvqR0VUg5FMt58_eBNCPX6U6lTCmY4Th7sS5lpAJAeZFPCSlMLzyBuuec_LLvrcx9UycvvKaCkwsHxOm9a8Xr7yuEsG6Nt7sNcC4nwuWThNXEdfqRFjfGMG90hFkMiRAzetNfT0RjrM7OZw/s1024/DJI_0777-Edit.jpg',
     alt: 'Image 1',
   },
-  {
-    url: 'https://firebasestorage.googleapis.com/v0/b/seattlerealestatemedia.appspot.com/o/Aerial%2FHDR_0001_enfuse-Edit.jpg?alt=media&token=7686e295-792c-4214-bbe8-3b4cb73f0e4f',
-    alt: 'Image 3',
-  },
+  // {
+  //   url: 'https://firebasestorage.googleapis.com/v0/b/seattlerealestatemedia.appspot.com/o/Aerial%2FHDR_0001_enfuse-Edit.jpg?alt=media&token=7686e295-792c-4214-bbe8-3b4cb73f0e4f',
+  //   alt: 'Image 3',
+  // },
   {
     url: 'https://1.bp.blogspot.com/-3aNlXhv_oD8/Xz_-IukUN1I/AAAAAAADn0c/GLfj7epw9ksu71P4dqf_KyYa1AVobpCzwCLcBGAsYHQ/s1024/DJI_0693-HDR.jpg',
     alt: 'Image 4',
