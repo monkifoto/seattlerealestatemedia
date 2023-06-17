@@ -221,17 +221,17 @@ a:hover {
     color: hsl(var(--clr-light));
 }
 
-.section-container{
+// .section-container{
 
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0rem auto;
-  margin-inline: auto;
-    // height: 54dvh;
-    // height: 54vh;
-    height: fit-content;
-    gap: 1rem;
-}
+//   display: flex;
+//   flex-wrap: wrap;
+//   padding: 0rem auto;
+//   margin-inline: auto;
+//     // height: 54dvh;
+//     // height: 54vh;
+//     height: fit-content;
+//     gap: 1rem;
+// }
 
 .carousel-container{
   display: grid;
@@ -297,17 +297,17 @@ h1 {
   background-color: white;
 }
 
-@media screen and  (max-width: 35rem)
-{
-  .section-container{
-    padding: 0;
-    margin-inline: 0;
-  }
-  .spacer{
-    height: 5px;
-    background-color: white;
-  }
-}
+// @media screen and  (max-width: 35rem)
+// {
+//   .section-container{
+//     padding: 0;
+//     margin-inline: 0;
+//   }
+//   .spacer{
+//     height: 5px;
+//     background-color: white;
+//   }
+// }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

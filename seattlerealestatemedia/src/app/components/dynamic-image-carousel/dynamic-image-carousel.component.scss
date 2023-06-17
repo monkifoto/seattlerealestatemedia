@@ -1,7 +1,7 @@
 .carousel-container {
     position: relative;
     width: 100%;
-    max-width: 1024px;
+    //max-width: 1024px;
     margin: 0 auto;
     overflow: hidden;
   }
@@ -37,7 +37,7 @@
     padding: 0.5rem 1rem;
     border: none;
     background: transparent;
-    color: white;
+    color: #d9d9d9;
     cursor: pointer;
   }
 
@@ -65,11 +65,52 @@
     height: 10px;
     margin: 0 5px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(235, 235, 235, 0.9);
     cursor: pointer;
   }
   
   .carousel-indicators span.active {
-    background: white;
+    background: #FF533D;
   }
-  
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+  .carousel-container {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+// Large devices (desktops, 992px and up)
+  @media (min-width: 992px) { 
+
+    .carousel-container {
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+   }
+  // X-Large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) { 
+
+    .carousel-container {
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+   }
+// XX-Large devices (larger desktops, 1400px and up)
+  @media (min-width: 1400px) {
+
+    .carousel-container {
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+ 
+  }
