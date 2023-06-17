@@ -57,6 +57,10 @@ html{
     font-family: var(--ff-Montserrat);
     scroll-behavior: smooth;
 }
+.responsive {
+  width: 100%;
+  height: auto;
+}
 
 .italic{
     font-family: var( --ff-source-sans-pro);
@@ -173,8 +177,19 @@ body{
 
 a {
     text-decoration: none;
-    text-transform: uppercase;
+    //text-transform: uppercase;
+    color : #1c8dfd;
+    //font-size: 21px;
+    line-height: 1.381;
+    font-weight: 400;
+    font-family: var( --ff-sans-normal);
+
 }
+
+a:hover {
+  text-decoration: underline;
+}
+
 .content {
     /* your styles for the main content here */
     flex-grow: 1;

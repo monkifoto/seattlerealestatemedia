@@ -41,15 +41,17 @@ color: var(--background);
 
 .image_carousel_container{
 
+  height: 768px;
+  max-height: 768px;
   margin:auto;
   padding: auto;
 }
 
-.responsive {
-  width: 100%;
-  height: auto;
-}
 
+
+a{
+  letter-spacing: 2.7px; ;
+}
 
 @media (max-width: 35rem) {
 
@@ -84,6 +86,14 @@ color: var(--background);
     display: unset ;
     padding: 2rem;
   }
+
+  .image_carousel_container{
+
+    height: 30vh;
+    max-height: 30vh;
+    margin:auto;
+    padding: auto;
+  }
 }
 
 @media screen and (min-width: 48rem) {
@@ -103,6 +113,11 @@ color: var(--background);
 
 
   .image_carousel_container{
-    padding: 0rem;
+
+    height: 30vh;
+    max-height: 30vh;
+    margin:auto;
+    padding: auto;
   }
+
 }

@@ -19,6 +19,7 @@
     flex-wrap: wrap;
     //background: #AB987A;
      background: #fbfbfb;
+     padding-top: 10rem;
   }
 
 .container{
@@ -81,6 +82,15 @@
 
 
 @media screen and (min-width: 48rem) {
+
+
+  .section-container{
+    display: flex;
+    flex-wrap: wrap;
+    //background: #AB987A;
+     background: #fbfbfb;
+     padding: 20rem 0;
+  }
 
   h1 {
     font-size: calc(2rem + 1.5vw);
