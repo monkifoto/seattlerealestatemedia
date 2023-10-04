@@ -60,6 +60,7 @@ import { SubHeroComponent } from './components/sections/sub-hero/sub-hero.compon
 import { PhotosCombinedComponent } from './components/sections/photos-combined/photos-combined.component';
 import { VideoCombinedComponent } from './components/sections/video-combined/video-combined.component';
 import { StagingFloorplanCombinedComponent } from './components/sections/staging-floorplan-combined/staging-floorplan-combined.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -107,7 +108,8 @@ import { StagingFloorplanCombinedComponent } from './components/sections/staging
     SubHeroComponent,
     PhotosCombinedComponent,
     VideoCombinedComponent,
-    StagingFloorplanCombinedComponent
+    StagingFloorplanCombinedComponent,
+    AboutMeComponent
 
   ],
   imports: [
