@@ -10,10 +10,10 @@ export class ProductService {
       'Showcase',
       'Package',
       [
-        '15 - 30 Edited Images',
+        '20 - 40 Edited Images',
         'Blue Skies Exteriors',
-        'Clear Interior Window Views',
-        'Natural Interior Lighting',
+        'Clear Window Views',
+        'Professional Interior Lighting',
         'Manually edited',
         'Virtual Staging**',
       ],
@@ -29,7 +29,7 @@ export class ProductService {
       [
         '15 - 30 Edited Images',
         'Blue Skies Exteriors',
-        'Clear Interior Window Views',
+        'Clear Window Views',
         'Natural Interior Lighting',
         'Manually edited',
         'Virtual Staging**',
