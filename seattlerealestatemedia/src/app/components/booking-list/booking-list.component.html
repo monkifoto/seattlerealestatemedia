@@ -11,6 +11,7 @@
     <th><strong>Property Size</strong></th>
     <th><strong>Media Packages</strong></th>
     <th><strong>Total Cost</strong></th>
+    <th><strong>Closed</strong></th>
     <th><strong>Commands</strong></th>
   </thead>
  <tbody>
@@ -24,6 +25,7 @@
     <td>{{booking['size']}}</td>
     <td>{{booking['mediaPackage']}}</td>
     <td>${{booking['total']}}</td>
+    <td>{{booking['Closed']}}</td>
     <td><button class="btn btn-primary" type="button" (click)="onDelete(booking)">Delete</button></td>
   </tr>
 </tbody>

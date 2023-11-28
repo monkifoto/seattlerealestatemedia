@@ -8,8 +8,9 @@ export class customerRequest {
   size:string;
   mediaPackage:string;
   total:number;
+  Closed:number;
 
-  constructor(id: string, name: string, email: string, address: string, date: string, time:string, size: string, mediaPackage: string, total: number) {
+  constructor(id: string, name: string, email: string, address: string, date: string, time:string, size: string, mediaPackage: string, total: number, Closed:number) {
     this.id = id;
     this.name = name;
     this.email = email;
@@ -19,6 +20,7 @@ export class customerRequest {
     this.size = size;
     this.mediaPackage = mediaPackage;
     this.total = total;
+    this.Closed = Closed;
   }
 
   toString(): string {

@@ -13,7 +13,8 @@ export class BookingListComponent {
   constructor(private db: DatabaseService) {}
   ngOnInit() {
 
-      this.db.getBookingsWithMetaData().subscribe({
+      this.db.getBookingsWithMetaData()
+      .subscribe({
         next: (res) => {
           //console.log('Next getting bookings ');
         this.listOfBookings = res.map((book: any) =>{
@@ -21,7 +22,7 @@ export class BookingListComponent {
           data.id = book.payload.doc.id;
           return data;
 
-        })
+        }).sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime());
         this.count = this.listOfBookings.length;
       },
       error:(err)  => {

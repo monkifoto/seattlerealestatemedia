@@ -48,7 +48,8 @@ export class EstimatorComponent implements OnInit {
     '5pm',
     '2000sqft',
     'showcase',
-    0
+    0,
+    1
   );
 
   today: Date = new Date();
@@ -72,7 +73,7 @@ export class EstimatorComponent implements OnInit {
         return data;
 
       })
-      this.numberOfBookings = this.listOfBookings.length;
+      this.numberOfBookings = this.listOfBookings.length - this.listOfBookings.filter(a => a.Closed ==1).length;
     },
     error:(err)  => {
       console.log('Error getting bookings ' + err);
@@ -128,6 +129,7 @@ export class EstimatorComponent implements OnInit {
       let custDate = this.myForm.controls['date'].value;
       let custTime = this.myForm.controls['time'].value;
       let custSize = this.myForm.controls['size'].value;
+      let Closed = 0;
       let cust = new customerRequest(
         '1',
         custName,
@@ -137,7 +139,8 @@ export class EstimatorComponent implements OnInit {
         custTime,
         custSize,
         listOfPackageNames,
-        this.total
+        this.total,
+        Closed
       );
 
       this.db.addBooking(cust);
