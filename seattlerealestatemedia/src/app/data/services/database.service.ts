@@ -12,9 +12,13 @@ export class DatabaseService {
 
   constructor(private afs: AngularFirestore) {}
 
-    //not working
+
     getBookingsWithMetaData() {
       return this.afs.collection('bookingRequests').snapshotChanges();
+    }
+
+    getProductssWithMetaData() {
+      return this.afs.collection('product').snapshotChanges();
     }
 
   //create booking

@@ -62,7 +62,35 @@ export class EstimatorComponent implements OnInit {
 
   ngOnInit() {
 
+    this.db.getProductssWithMetaData().subscribe({
+      next: (response) => {
+        //console.log('Next getting bookings ');
+      this.listOfProducts = response.map((product: any) =>{
+        const data = product.payload.doc.data();
+        data.fireBaseId = product.payload.doc.id;
+        //console.log("Subscribe Next: "+data);
+        return data;
 
+      }).sort((a,b) => {
+        return a.id < b.id ? -1 : 1;
+     });
+        //this.count = this.listOfBookings.length;
+
+      this.listOfProducts.forEach(product => {
+        console.log('looping : ' + product.id);
+        console.log('looping : ' + product.title);
+      })
+      return this.listOfProducts;
+    },
+    error:(err)  => {
+      console.log('Error getting bookings ' + err);
+      return err;
+      //alert('Error getting bookings ' + err)
+    },
+    complete:() =>{
+      //console.log('Complete getting bookings ');
+    }
+  })
 
     this.db.getBookingsWithMetaData().subscribe({
       next: (res) => {
@@ -97,7 +125,9 @@ export class EstimatorComponent implements OnInit {
     });
 
     this.myForm.get('date')?.patchValue(this.formatDate(tomorrow));
-    this.listOfProducts = this.productSvc.GetAllProducts();
+    // this.listOfProducts = this.productSvc.GetAllProducts();
+   // this.listOfProducts = this.productSvc.getListOfActiveProducts();
+    // console.log(this.listOfProducts);
     const productCards = document.querySelector('.estimator') as HTMLDivElement;
     const cards = Array.from(productCards?.children) as Element[];
   }
