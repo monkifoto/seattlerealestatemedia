@@ -17,10 +17,22 @@ h2 {
   color: hsl(var(--clr-light));
 }
 
-.btn-group {
+.hero_btn_grp {
   margin: 2em 0;
   display: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+
+.hero_btn_grp a {
+  width: 48%; /* Adjust as needed */
+  margin-bottom: 10px; /* Adjust spacing */
+}
+
+
+
 
 .btn {
   padding: 1em 2em;
@@ -136,6 +148,7 @@ h2 {
   cursor: pointer;
 }
 
+
 @media (max-width: 35rem) {  // phones and small tablets
 
   .intro {
@@ -181,6 +194,10 @@ h2 {
   .btn + .btn {
     margin-left: 0;
   }
+
+  .hero_btn_grp a {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 48rem) { //laptops ipads
@@ -215,6 +232,9 @@ h2 {
 
   .btn + .btn {
     margin-left: 0;
+  }
+  .hero_btn_grp a {
+    width: 100%;
   }
 
 }

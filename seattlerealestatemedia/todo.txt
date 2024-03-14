@@ -1,3 +1,4 @@
+Fix the estimator... math not working.,,
 Discounts for addons with photo
 
 Client Gallery,
@@ -5,3 +6,4 @@ Photo Upload for Gallery
 Simplyfy Estimator
 Clean Up Code.
 Booking Confirmation
+Fix Logo - center on mobile

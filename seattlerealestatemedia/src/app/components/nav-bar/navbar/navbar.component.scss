@@ -223,6 +223,7 @@ display: none;
     padding-inline: 0;
     display: flex;
     flex-wrap: wrap;
+    height: 70px;
   }
 
   .primary-header {
@@ -231,9 +232,12 @@ display: none;
   }
 
   .logo {
+    
     all:unset;
-    padding:.5rem;
-    width: 200px;
+    box-sizing: border-box;
+    padding:.25rem;
+    width: 100%;
+    padding-left: 10%;
   }
 
   li {
