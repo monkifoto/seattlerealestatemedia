@@ -76,10 +76,13 @@ export class EstimatorComponent implements OnInit {
      });
         //this.count = this.listOfBookings.length;
 
-      this.listOfProducts.forEach(product => {
-        console.log('looping : ' + product.id);
-        console.log('looping : ' + product.title);
-      })
+      // this.listOfProducts.forEach(product => {
+      //   console.log('Product ID : ' + product.id);
+      //   console.log('Product Title : ' + product.title);
+      //   console.log('Product Price : ' + product.price);
+      //   console.log('Product SqFtPrice : ' + product.sqFtPrice);
+      //   console.log('Product Subtitle : ' + product.subtitle);
+      // });
       return this.listOfProducts;
     },
     error:(err)  => {
@@ -185,6 +188,8 @@ export class EstimatorComponent implements OnInit {
     const productCard = document.getElementById(
       product.id.toString()
     ) as HTMLDivElement;
+      console.log("addToTotal");
+    console.log("Selected Product: " + product.id + " Product Desc: " + product.title + " Product Price: " + product.price + " Product isSelected: " + product.selected)
 
     if (product.selected == false) {
       // if the clicked product is not already selected
@@ -215,9 +220,19 @@ export class EstimatorComponent implements OnInit {
 
   getPriceBySize(product: Product): number{
 
+    console.log("Get Price by size");
     const homeSize = this.myForm.get('size')?.value;
-    const rateMultiplier: number = product.sqFtPrice;
+    let rateMultiplier: number = 0;
+    if(Number.isNaN(product.sqFtPrice)){
+      rateMultiplier = 0;
+    }
+    else{
+      rateMultiplier = product.sqFtPrice;
+    }
+   
     let price = product.price;
+
+    console.log ("Home size: "+ homeSize + " Rate Multiplier " + rateMultiplier + " Price : " + price + " Product sqft Price : " + product.sqFtPrice)
 
     if(product.id == 1 || product.id == 2 || product.id == 4 || product.id ==6 || product.id ==7){
     switch(homeSize){

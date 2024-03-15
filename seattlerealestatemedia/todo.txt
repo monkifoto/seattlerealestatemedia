@@ -1,4 +1,5 @@
-Fix the estimator... math not working.,,
+Fix the estimator... math not working. --- Problem with firebase datatypes
+List Packages highest value first
 Discounts for addons with photo
 
 Client Gallery,
