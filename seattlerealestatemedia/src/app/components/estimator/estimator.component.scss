@@ -29,7 +29,7 @@ h1 {
 
 .estimator_card {
   flex-grow: 1;
-  // max-width: 17rem;
+  // width: 20vw;
   position: relative;
   display: block;
   cursor: pointer;
@@ -76,12 +76,14 @@ form {
   flex-wrap: wrap;
   flex: 1;
   justify-content: space-between;
+  border: 1px solid black;
 }
 
 .notes {
   flex-basis: calc(25% - 1.5rem);
-  padding: 3rem;
+  padding: 1rem;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .estimator_notes {
@@ -97,6 +99,12 @@ form {
   align-content: center;
   width: 100%;
   padding: 5rem;
+}
+
+.estimator_spacer{
+width: 100%;
+border-bottom: 3px solid var(--clr-accent);
+height: 1.5rem;
 }
 
 label {
