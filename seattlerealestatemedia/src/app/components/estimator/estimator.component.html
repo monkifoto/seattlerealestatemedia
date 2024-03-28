@@ -44,8 +44,8 @@
 
   <div class="notes_cart">
     <div class="notes note"> <strong>Please select between Essentials and Showcase Packages.</strong></div>
-    <div class="notes count"><strong>Current bookings: {{numberOfBookings}} / 10</strong></div>
-    <div class="notes count"><strong>Available bookings: {{ 10 - numberOfBookings}}</strong></div>
+    <div class="notes count"><strong>Current bookings: {{numberOfBookings}} / 10</strong><br/>
+    <strong>Available bookings: {{ 10 - numberOfBookings}}</strong></div>
     <div class="notes cart"><div class="estimator_total sticky-item" [ngClass]="{'fixed': isSticky}">Total:  ${{total}} <span style="font-size: .7rem;">+tax</span></div></div>
 
   </div>
@@ -67,10 +67,14 @@
 
 
 
-  <div class="estimator_spacer"><label>A la cart:</label></div>
+  <div class="estimator_spacer">
+    <label>Bundles:</label></div>
+    <app-dynamic-service-card class="estimator_card" *ngFor="let product of listOfProducts | slice:14:16; let i = index" [productObj]="product" (click)="addToTotal(product)"></app-dynamic-service-card>
+    <div class="estimator_spacer"><label>A la cart:</label></div>
     <app-dynamic-service-card class="estimator_card" *ngFor="let product of listOfProducts | slice:0:10; let i = index" [productObj]="product" (click)="addToTotal(product)"></app-dynamic-service-card>
-    <br><div class="estimator_spacer"><label> Addons:</label></div>
-    <app-dynamic-service-card class="estimator_card" *ngFor="let product of listOfProducts | slice:10:20; let i = index" [productObj]="product" (click)="addToTotal(product)"></app-dynamic-service-card>
+    <br><div class="estimator_spacer">
+      <label> Addons:</label></div>
+    <app-dynamic-service-card class="estimator_card" *ngFor="let product of listOfProducts | slice:10:14; let i = index" [productObj]="product" (click)="addToTotal(product)"></app-dynamic-service-card>
   </div>
 
   <div class="estimator_button_group">

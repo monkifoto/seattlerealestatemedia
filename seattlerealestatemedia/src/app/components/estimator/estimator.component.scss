@@ -76,11 +76,11 @@ form {
   flex-wrap: wrap;
   flex: 1;
   justify-content: space-between;
-  border: 1px solid black;
+  // border: 1px solid black;
 }
 
 .notes {
-  flex-basis: calc(25% - 1.5rem);
+  flex-basis: calc(33% - 1.5rem);
   padding: 1rem;
   box-sizing: border-box;
   text-align: center;

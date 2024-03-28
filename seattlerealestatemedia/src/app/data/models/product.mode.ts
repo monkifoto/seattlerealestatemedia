@@ -9,4 +9,5 @@ export class Product {
       public sqFtPrice: number,
       public selected : boolean,
     ) {}
+
   }
