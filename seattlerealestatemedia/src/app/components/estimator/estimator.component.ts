@@ -73,16 +73,10 @@ export class EstimatorComponent implements OnInit {
 
       }).sort((a,b) => {
         return a.id < b.id ? -1 : 1;
-     });
-        //this.count = this.listOfBookings.length;
+     }).filter(p =>p.active ===true);
 
-      // this.listOfProducts.forEach(product => {
-      //   console.log('Product ID : ' + product.id);
-      //   console.log('Product Title : ' + product.title);
-      //   console.log('Product Price : ' + product.price);
-      //   console.log('Product SqFtPrice : ' + product.sqFtPrice);
-      //   console.log('Product Subtitle : ' + product.subtitle);
-      // });
+      // var activeProducts = this.listOfProducts.filter(p => p.active === true);
+      // console.log(activeProducts);
       return this.listOfProducts;
     },
     error:(err)  => {
@@ -202,13 +196,25 @@ export class EstimatorComponent implements OnInit {
       ) {
         this.listOfProducts[1].selected = false; //find essentials and set selected to false
         this.total -= this.getPriceBySize(this.listOfProducts[1]); // subtract the price of the essentials from total
-      } else if (
+      }
+      else if (
         product.id == 2 &&
         this.listOfProducts.find((item) => item.id === 1)?.selected == true
       ) {
         this.listOfProducts[0].selected = false;
         this.total -= this.getPriceBySize(this.listOfProducts[0]);
-      } else {
+      }
+      //handeling bundles. When a bundle is selected, deselect everything else.  Alows to add more to bundle.
+      else if(product.id >= 15){
+        this.listOfProducts.forEach(p => {
+          if(p.selected == true && p.id != product.id)
+          {
+            p.selected = false;
+          }
+          });
+          this.total = this.getPriceBySize(this.listOfProducts[product.id]);
+      }
+      else {
 
       }
     } else {
@@ -229,12 +235,35 @@ export class EstimatorComponent implements OnInit {
     else{
       rateMultiplier = product.sqFtPrice;
     }
-   
+
     let price = product.price;
 
     console.log ("Home size: "+ homeSize + " Rate Multiplier " + rateMultiplier + " Price : " + price + " Product sqft Price : " + product.sqFtPrice)
 
     if(product.id == 1 || product.id == 2 || product.id == 4 || product.id ==6 || product.id ==7){
+    switch(homeSize){
+      case '500 sqft - 2000 sqft':
+        price = price;
+        break;
+      case '2000 sqft - 2500 sqft':
+        price = price + (rateMultiplier * 1);
+        break;
+      case '2500 sqft - 3000 sqft':
+        price = price + (rateMultiplier * 2);
+        break;
+      case '3000 sqft - 3500 sqft':
+        price = price + (rateMultiplier * 3);
+        break;
+      case '3500 sqft - 4000 sqft':
+        price = price + (rateMultiplier * 4);
+        break;
+      case '4000 sqft - 5000 sqft':
+      price = price + (rateMultiplier * 5);
+      break;
+    }
+  }
+
+  else if(product.id == 15 || product.id == 16 || product.id == 17 || product.id ==18 || product.id ==19){
     switch(homeSize){
       case '500 sqft - 2000 sqft':
         price = price;
