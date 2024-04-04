@@ -69,7 +69,7 @@
 
   <div class="estimator_spacer">
     <label>Bundles:</label></div>
-    <app-dynamic-service-card class="estimator_card" *ngFor="let product of listOfProducts | slice:14:16; let i = index" [productObj]="product" (click)="addToTotal(product)"></app-dynamic-service-card>
+    <app-dynamic-service-card class="estimator_card" *ngFor="let product of listOfProducts | slice:14:20; let i = index" [productObj]="product" (click)="addToTotal(product)"></app-dynamic-service-card>
     <div class="estimator_spacer"><label>A la cart:</label></div>
     <app-dynamic-service-card class="estimator_card" *ngFor="let product of listOfProducts | slice:0:10; let i = index" [productObj]="product" (click)="addToTotal(product)"></app-dynamic-service-card>
     <br><div class="estimator_spacer">
