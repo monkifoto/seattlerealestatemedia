@@ -206,12 +206,14 @@ export class EstimatorComponent implements OnInit {
       }
       //handeling bundles. When a bundle is selected, deselect everything else.  Alows to add more to bundle.
       else if(product.id >= 15){
+
         this.listOfProducts.forEach(p => {
           if(p.selected == true && p.id != product.id)
           {
             p.selected = false;
           }
           });
+          this.total = 0;
           this.total = this.getPriceBySize(this.listOfProducts[product.id]);
       }
       else {

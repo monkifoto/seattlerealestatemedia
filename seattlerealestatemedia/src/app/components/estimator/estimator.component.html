@@ -24,11 +24,11 @@
     <textarea id="address" formControlName="address" required></textarea>
   </div>
   <div class="client_info_form_input">
-    <label for="date">Prefered Date:</label>
+    <label for="date">Preferred Date:</label>
     <input type="date" id="date" min ={{today}} formControlName="date" required>
   </div>
   <div class="client_info_form_input">
-    <label for="time">Prefered Time Slot:</label>
+    <label for="time">Preferred Time Slot:</label>
     <select id="time" formControlName="time" required>
       <option *ngFor="let timeSlot of timeSlots" [value]="timeSlot">{{ timeSlot }}</option>
     </select>
