@@ -16,9 +16,15 @@ import { StagingComponent } from './components/sections/staging/staging.componen
 import { AirBnBComponent } from './components/portfolio/air-bn-b/air-bn-b.component';
 import { PropertyManagmentComponent } from './components/portfolio/property-managment/property-managment.component';
 import { RentalComponent } from './components/portfolio/rental/rental.component';
+import { GalleryComponent } from './components/gallery/gallery/gallery.component';
+import { ImageDetailComponent } from './components/gallery/image-detail/image-detail.component';
+import { LoginComponent } from './components/login/login.component';
+import { UploadComponent } from './components/gallery/upload/upload.component';
+// import { AuthenticationGuard} from '../app/data/services/authentication.service'
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
+  {path: 'home', component: MainPageComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'estimate', component: CalculatorComponent},
   {path: 'photography', component: PhotographyComponent},
@@ -32,7 +38,15 @@ const routes: Routes = [
   {path: 'websites', component: WebsitesComponent},
   {path: 'airBnB', component:AirBnBComponent},
   {path: 'landlord', component: RentalComponent},
-  {path: 'propertymanagment', component: PropertyManagmentComponent}
+  {path: 'propertymanagment', component: PropertyManagmentComponent},
+  {path: 'gallery', component: GalleryComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'image/:id', component: ImageDetailComponent},
+  {path: 'upload', component: UploadComponent}
+  // {path: 'gallery', component: GalleryComponent, canActivate: [AuthenticationGuard]},
+  // {path: 'login', component: LoginComponent },
+  // {path: 'image/:id', component: ImageDetailComponent, canActivate: [AuthenticationGuard]},
+  // {path: 'upload', component: UploadComponent, canActivate: [AuthenticationGuard]}
 
 ];
 @NgModule({
