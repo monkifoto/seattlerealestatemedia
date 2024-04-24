@@ -6,8 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./photos-combined.component.scss']
 })
 export class PhotosCombinedComponent {
-  scrollTo(element: any): void {
-    // console.log(element);
-    (document.getElementById(element) as HTMLElement).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-  }
 }

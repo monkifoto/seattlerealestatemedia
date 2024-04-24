@@ -6,8 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./air-bn-b.component.scss']
 })
 export class AirBnBComponent {
-  scrollTo(element: any): void {
-    // console.log(element);
-    (document.getElementById(element) as HTMLElement).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-  }
+
 }

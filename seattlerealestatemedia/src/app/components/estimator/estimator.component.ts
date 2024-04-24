@@ -178,59 +178,56 @@ export class EstimatorComponent implements OnInit {
 
   }
 
-  addToTotal(product: Product) {
-    const productCard = document.getElementById(
-      product.id.toString()
-    ) as HTMLDivElement;
-      console.log("addToTotal");
-    console.log("Selected Product: " + product.id + " Product Desc: " + product.title + " Product Price: " + product.price + " Product isSelected: " + product.selected)
+  addToTotal(selectedProduct: Product) {
+  /// Debugging Messaging
+  //console.log("----------------------------------- Add To Total -----------------------------------" );
+  //this.printOutDebugInfo(selectedProduct);
 
-    if (product.selected == false) {
-      // if the clicked product is not already selected
-      product.selected = true; // set selected property to tue
-      productCard.classList.add('selected'); // add selected class
-      this.total += this.getPriceBySize(product);
-      if (
-        product.id == 1 && //Showcase
-        this.listOfProducts.find((item) => item.id === 2)?.selected == true //and Esentials already selected
-      ) {
-        this.listOfProducts[1].selected = false; //find essentials and set selected to false
-        this.total -= this.getPriceBySize(this.listOfProducts[1]); // subtract the price of the essentials from total
-      }
-      else if (
-        product.id == 2 &&
-        this.listOfProducts.find((item) => item.id === 1)?.selected == true
-      ) {
-        this.listOfProducts[0].selected = false;
-        this.total -= this.getPriceBySize(this.listOfProducts[0]);
-      }
-      //handeling bundles. When a bundle is selected, deselect everything else.  Alows to add more to bundle.
-      else if(product.id >= 15){
-
-        this.listOfProducts.forEach(p => {
-          if(p.selected == true && p.id != product.id)
-          {
-            p.selected = false;
+    if (selectedProduct.selected == false) {  // if the clicked product is not already selected
+      selectedProduct.selected = true; // set selected property to tue
+      this.total += this.getPriceBySize(selectedProduct);
+          if (
+            selectedProduct.id == 1 && //Showcase
+            this.listOfProducts.find((item) => item.id === 2)?.selected == true //and Esentials already selected
+          ) {
+            this.listOfProducts[1].selected = false; //find essentials and set selected to false
+            this.total -= this.getPriceBySize(this.listOfProducts[1]); // subtract the price of the essentials from total
           }
-          });
-          this.total = 0;
-          this.total = this.getPriceBySize(this.listOfProducts[product.id]);
-      }
-      else {
+          else if (
+            selectedProduct.id == 2 && //Essentials
+            this.listOfProducts.find((item) => item.id === 1)?.selected == true //and Showcase is already selected
+          ) {
+            this.listOfProducts[0].selected = false;//find shocase and set selected to false
+            this.total -= this.getPriceBySize(this.listOfProducts[0]);// subtract the price of the showcase from total
+          }
+          //handeling bundles. When a bundle is selected, deselect everything else.  Alows to add more to bundle after selection.
+          else if(selectedProduct.id >= 15){
 
-      }
-    } else {
-      this.total -= this.getPriceBySize(product);
-      product.selected = false;
-      productCard.classList.remove('selected');
+            this.listOfProducts.forEach(p => { // loop through all products
+              if(p.selected == true && p.id != selectedProduct.id) // if there is anything else selected that is not the selected bundle
+              {
+                console.log("Found other selected product that is not the current product bundle. - Selected Product ID: " + p.id + " Actual Product ID:  " + selectedProduct.id );
+                p.selected = false; //deselect the prduct
+                this.total = this.total - this.getPriceBySize(p); // subtract from total the produc that was deselected
+              }
+              });
+          }
+          else {
+
+          }
+
+    } else { // if product is already selected
+      selectedProduct.selected = false; // deselect product
+      this.total -= this.getPriceBySize(selectedProduct);// subtract from total the produc that was deselected
     }
   }
 
   getPriceBySize(product: Product): number{
-
-    console.log("Get Price by size");
-    const homeSize = this.myForm.get('size')?.value;
-    let rateMultiplier: number = 0;
+    /// Debugging Messaging
+    //console.log("++++++++++++++++++++++++++++++++++++ Get Price by size ++++++++++++++++++++++++++++++++++++ ");
+    //this.printOutDebugInfo(product);
+    const homeSize = this.myForm.get('size')?.value; // get selected home size from dropdown
+    let rateMultiplier: number = 0; // initialze multiplier
     if(Number.isNaN(product.sqFtPrice)){
       rateMultiplier = 0;
     }
@@ -242,30 +239,7 @@ export class EstimatorComponent implements OnInit {
 
     console.log ("Home size: "+ homeSize + " Rate Multiplier " + rateMultiplier + " Price : " + price + " Product sqft Price : " + product.sqFtPrice)
 
-    if(product.id == 1 || product.id == 2 || product.id == 4 || product.id ==6 || product.id ==7){
-    switch(homeSize){
-      case '500 sqft - 2000 sqft':
-        price = price;
-        break;
-      case '2000 sqft - 2500 sqft':
-        price = price + (rateMultiplier * 1);
-        break;
-      case '2500 sqft - 3000 sqft':
-        price = price + (rateMultiplier * 2);
-        break;
-      case '3000 sqft - 3500 sqft':
-        price = price + (rateMultiplier * 3);
-        break;
-      case '3500 sqft - 4000 sqft':
-        price = price + (rateMultiplier * 4);
-        break;
-      case '4000 sqft - 5000 sqft':
-      price = price + (rateMultiplier * 5);
-      break;
-    }
-  }
-
-  else if(product.id == 15 || product.id == 16 || product.id == 17 || product.id ==18 || product.id ==19){
+    if(product.id == 1 || product.id == 2 || product.id == 4 || product.id ==6 || product.id ==7|| product.id == 15 || product.id == 16 || product.id == 17 || product.id ==18 || product.id ==19){ // if product uses multiplier
     switch(homeSize){
       case '500 sqft - 2000 sqft':
         price = price;
@@ -304,35 +278,17 @@ export class EstimatorComponent implements OnInit {
    this.total = 0;
   }
 
-  tinyAlert() {
-    Swal.fire('Hey there!');
-  }
   successNotification(name: string) {
     Swal.fire('Hi '+ name , 'Thank you for your booking. We will contact you soon to confirm the appointment.', 'success');
   }
-  alertConfirmation() {
-    Swal.fire({
-      title: 'Are you sure?',
-      text: 'This process is irreversible.',
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonText: 'Yes, go ahead.',
-      cancelButtonText: 'No, let me think',
-    }).then((result) => {
-      if (result.value) {
-        Swal.fire('Removed!', 'Product removed successfully.', 'success');
-      } else if (result.dismiss === Swal.DismissReason.cancel) {
-        Swal.fire('Cancelled', 'Product still in our database.)', 'error');
-      }
-    });
+
+  printOutDebugInfo(product: Product){
+    console.log("Product Title: " + product.title);
+    console.log("Product ID: " + product.id);
+    console.log("Product Price: " + product.price);
+    console.log("Product BasePrice: " + product.basePrice);
+    console.log("Product Sq Ft Price: " + product.sqFtPrice);
+    console.log("Product Selected: " + product.selected);
   }
 
-  // @HostListener('window:scroll', [])
-  // onWindowScroll() {
-  //   const notes_cart = this.elementRef.nativeElement.querySelector('.notes_cart');
-  //   const rect = notes_cart.getBoundingClientRect();
-  //   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-  //   this.isSticky = scrollTop >= rect.top;
-  // }
 }
