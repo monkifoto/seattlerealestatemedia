@@ -16,6 +16,7 @@ import { StagingComponent } from './components/sections/staging/staging.componen
 import { AirBnBComponent } from './components/portfolio/air-bn-b/air-bn-b.component';
 import { PropertyManagmentComponent } from './components/portfolio/property-managment/property-managment.component';
 import { RentalComponent } from './components/portfolio/rental/rental.component';
+import { PolicyComponent } from './components/policy/policy.component';
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
@@ -32,7 +33,8 @@ const routes: Routes = [
   {path: 'websites', component: WebsitesComponent},
   {path: 'airBnB', component:AirBnBComponent},
   {path: 'landlord', component: RentalComponent},
-  {path: 'propertymanagment', component: PropertyManagmentComponent}
+  {path: 'propertymanagment', component: PropertyManagmentComponent},
+  {path: 'policy',component: PolicyComponent}
 
 ];
 @NgModule({

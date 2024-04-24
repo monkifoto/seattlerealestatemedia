@@ -61,6 +61,7 @@ import { PhotosCombinedComponent } from './components/sections/photos-combined/p
 import { VideoCombinedComponent } from './components/sections/video-combined/video-combined.component';
 import { StagingFloorplanCombinedComponent } from './components/sections/staging-floorplan-combined/staging-floorplan-combined.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { PolicyComponent } from './components/policy/policy.component';
 
 @NgModule({
   declarations: [
@@ -109,7 +110,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     PhotosCombinedComponent,
     VideoCombinedComponent,
     StagingFloorplanCombinedComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    PolicyComponent
 
   ],
   imports: [
