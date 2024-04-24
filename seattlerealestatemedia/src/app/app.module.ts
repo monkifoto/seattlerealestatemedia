@@ -61,12 +61,16 @@ import { PhotosCombinedComponent } from './components/sections/photos-combined/p
 import { VideoCombinedComponent } from './components/sections/video-combined/video-combined.component';
 import { StagingFloorplanCombinedComponent } from './components/sections/staging-floorplan-combined/staging-floorplan-combined.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+<<<<<<< HEAD
 import { GalleryComponent } from './components/gallery/gallery/gallery.component';
 import { ImageDetailComponent } from './components/gallery/image-detail/image-detail.component';
 import { UploadComponent } from './components/gallery/upload/upload.component';
 import { PolicyComponent } from './components/policy/policy.component';
 import { TOSComponent } from './components/tos/tos.component';
 import { DownloadInstructionsComponent } from './components/download-instructions/download-instructions.component';
+=======
+import { PolicyComponent } from './components/policy/policy.component';
+>>>>>>> 8d2c6fe (Cancelation Policy)
 
 @NgModule({
   declarations: [
@@ -116,6 +120,7 @@ import { DownloadInstructionsComponent } from './components/download-instruction
     VideoCombinedComponent,
     StagingFloorplanCombinedComponent,
     AboutMeComponent,
+<<<<<<< HEAD
     GalleryComponent,
     ImageDetailComponent,
     UploadComponent,
@@ -123,6 +128,9 @@ import { DownloadInstructionsComponent } from './components/download-instruction
     PolicyComponent,
     TOSComponent,
     DownloadInstructionsComponent
+=======
+    PolicyComponent
+>>>>>>> 8d2c6fe (Cancelation Policy)
 
   ],
   imports: [
