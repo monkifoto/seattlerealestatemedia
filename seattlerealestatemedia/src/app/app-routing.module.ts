@@ -21,6 +21,7 @@ import { ImageDetailComponent } from './components/gallery/image-detail/image-de
 import { LoginComponent } from './components/login/login.component';
 import { UploadComponent } from './components/gallery/upload/upload.component';
 // import { AuthenticationGuard} from '../app/data/services/authentication.service'
+import { PolicyComponent } from './components/policy/policy.component';
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
@@ -47,6 +48,8 @@ const routes: Routes = [
   // {path: 'login', component: LoginComponent },
   // {path: 'image/:id', component: ImageDetailComponent, canActivate: [AuthenticationGuard]},
   // {path: 'upload', component: UploadComponent, canActivate: [AuthenticationGuard]}
+  {path: 'propertymanagment', component: PropertyManagmentComponent},
+  {path: 'policy',component: PolicyComponent}
 
 ];
 @NgModule({
