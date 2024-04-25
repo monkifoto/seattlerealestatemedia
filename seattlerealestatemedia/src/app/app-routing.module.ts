@@ -17,6 +17,7 @@ import { AirBnBComponent } from './components/portfolio/air-bn-b/air-bn-b.compon
 import { PropertyManagmentComponent } from './components/portfolio/property-managment/property-managment.component';
 import { RentalComponent } from './components/portfolio/rental/rental.component';
 import { PolicyComponent } from './components/policy/policy.component';
+import { TOSComponent } from './components/tos/tos.component';
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
@@ -35,6 +36,7 @@ const routes: Routes = [
   {path: 'landlord', component: RentalComponent},
   {path: 'propertymanagment', component: PropertyManagmentComponent},
   {path: 'policy',component: PolicyComponent}
+  {path: 'tos', component: TOSComponent}
 
 ];
 @NgModule({

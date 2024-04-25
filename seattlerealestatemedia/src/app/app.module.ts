@@ -62,6 +62,7 @@ import { VideoCombinedComponent } from './components/sections/video-combined/vid
 import { StagingFloorplanCombinedComponent } from './components/sections/staging-floorplan-combined/staging-floorplan-combined.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { PolicyComponent } from './components/policy/policy.component';
+import { TOSComponent } from './components/tos/tos.component';
 
 @NgModule({
   declarations: [
@@ -111,7 +112,8 @@ import { PolicyComponent } from './components/policy/policy.component';
     VideoCombinedComponent,
     StagingFloorplanCombinedComponent,
     AboutMeComponent,
-    PolicyComponent
+    PolicyComponent,
+    TOSComponent
 
   ],
   imports: [
