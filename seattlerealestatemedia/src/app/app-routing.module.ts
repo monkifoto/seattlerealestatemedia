@@ -22,6 +22,7 @@ import { LoginComponent } from './components/login/login.component';
 import { UploadComponent } from './components/gallery/upload/upload.component';
 // import { AuthenticationGuard} from '../app/data/services/authentication.service'
 import { PolicyComponent } from './components/policy/policy.component';
+import { TOSComponent } from './components/tos/tos.component';
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
@@ -50,6 +51,7 @@ const routes: Routes = [
   // {path: 'upload', component: UploadComponent, canActivate: [AuthenticationGuard]}
   {path: 'propertymanagment', component: PropertyManagmentComponent},
   {path: 'policy',component: PolicyComponent}
+  {path: 'tos', component: TOSComponent}
 
 ];
 @NgModule({
