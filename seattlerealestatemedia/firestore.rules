@@ -5,14 +5,25 @@ service cloud.firestore {
     match /{document=**} {
        allow read, write: if false;
 =======
-
-// Craft rules based on data in your Firestore database
-// allow write: if firestore.get(
-//    /databases/(default)/documents/users/$(request.auth.uid)).data.isAdmin;
-service firebase.storage {
-  match /b/{bucket}/o {
-    match /{allPaths=**} {
-      allow read, write: if request.auth != null;
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+       allow read, write: if false;
+    }
+    match /bookingRequests/{document} {
+      allow read, write: if true;
+    }
+     match /mail/{document} {
+      allow read, write: if true;
+    }
+     match /uploads/{document} {
+      allow read, write: if true;
+    }
+     match /users/{document} {
+      allow read, write: if true;
+    }
+    match /product/{document} {
+      allow read, write: if true;
 >>>>>>> 8d2c6fe (Cancelation Policy)
     }
     match /bookingRequests/{document} {
