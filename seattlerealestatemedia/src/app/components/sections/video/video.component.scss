@@ -21,22 +21,28 @@ h1 {
   color: hsl(var(--clr-dark));
 }
 
+.container{
+  margin: auto;
+}
+
 .info-container{
   padding: 1rem;
+  background-color: hsl(var(--clr-light));
 }
 
 .section-container{
   padding-top: 4rem;
   display: flex;
   flex-wrap: wrap;
-  //background: purple;
-} 
+  background: black;
+  margin: auto;
+}
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .section-container{
     //background: red;
-  } 
+  }
 
   .info-container{
 
@@ -45,10 +51,10 @@ h1 {
 }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
    .section-container{
   //background: orange;
-}  
+}
 .info-container{
 
   padding: 3rem;
@@ -56,11 +62,11 @@ h1 {
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
 
   .section-container{
   //background: yellow;
-} 
+}
 
 .info-container{
   padding: 5rem;
@@ -68,11 +74,11 @@ h1 {
  }
 
 // X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
 
   .section-container{
   //background: green;
-} 
+}
 
 .info-container{
   padding: 5rem 10rem;
@@ -84,7 +90,7 @@ h1 {
 
   .section-container{
     //background: blue;
-  } 
+  }
 
   .info-container{
 
