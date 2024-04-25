@@ -35,7 +35,7 @@ const routes: Routes = [
   {path: 'airBnB', component:AirBnBComponent},
   {path: 'landlord', component: RentalComponent},
   {path: 'propertymanagment', component: PropertyManagmentComponent},
-  {path: 'policy',component: PolicyComponent}
+  {path: 'policy',component: PolicyComponent},
   {path: 'tos', component: TOSComponent}
 
 ];
