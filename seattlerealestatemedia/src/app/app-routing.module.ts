@@ -50,7 +50,7 @@ const routes: Routes = [
   // {path: 'image/:id', component: ImageDetailComponent, canActivate: [AuthenticationGuard]},
   // {path: 'upload', component: UploadComponent, canActivate: [AuthenticationGuard]}
   {path: 'propertymanagment', component: PropertyManagmentComponent},
-  {path: 'policy',component: PolicyComponent}
+  {path: 'policy',component: PolicyComponent},
   {path: 'tos', component: TOSComponent}
 
 ];
