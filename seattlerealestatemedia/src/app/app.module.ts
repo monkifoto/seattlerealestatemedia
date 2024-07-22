@@ -66,6 +66,7 @@ import { ImageDetailComponent } from './components/gallery/image-detail/image-de
 import { UploadComponent } from './components/gallery/upload/upload.component';
 import { PolicyComponent } from './components/policy/policy.component';
 import { TOSComponent } from './components/tos/tos.component';
+import { DownloadInstructionsComponent } from './components/download-instructions/download-instructions.component';
 
 @NgModule({
   declarations: [
@@ -117,10 +118,11 @@ import { TOSComponent } from './components/tos/tos.component';
     AboutMeComponent,
     GalleryComponent,
     ImageDetailComponent,
-    UploadComponent
+    UploadComponent,
     AboutMeComponent,
     PolicyComponent,
-    TOSComponent
+    TOSComponent,
+    DownloadInstructionsComponent
 
   ],
   imports: [

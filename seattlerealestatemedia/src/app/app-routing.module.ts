@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { AdminComponent } from './components/admin/admin.component';
@@ -23,6 +23,7 @@ import { UploadComponent } from './components/gallery/upload/upload.component';
 // import { AuthenticationGuard} from '../app/data/services/authentication.service'
 import { PolicyComponent } from './components/policy/policy.component';
 import { TOSComponent } from './components/tos/tos.component';
+import { DownloadInstructionsComponent } from './components/download-instructions/download-instructions.component';
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
@@ -44,14 +45,15 @@ const routes: Routes = [
   {path: 'gallery', component: GalleryComponent},
   {path: 'login', component: LoginComponent},
   {path: 'image/:id', component: ImageDetailComponent},
-  {path: 'upload', component: UploadComponent}
+  {path: 'upload', component: UploadComponent},
   // {path: 'gallery', component: GalleryComponent, canActivate: [AuthenticationGuard]},
   // {path: 'login', component: LoginComponent },
   // {path: 'image/:id', component: ImageDetailComponent, canActivate: [AuthenticationGuard]},
   // {path: 'upload', component: UploadComponent, canActivate: [AuthenticationGuard]}
   {path: 'propertymanagment', component: PropertyManagmentComponent},
   {path: 'policy',component: PolicyComponent},
-  {path: 'tos', component: TOSComponent}
+  {path: 'tos', component: TOSComponent},
+  {path: 'instructions', component: DownloadInstructionsComponent}
 
 ];
 @NgModule({

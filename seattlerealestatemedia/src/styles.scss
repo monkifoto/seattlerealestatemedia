@@ -14,11 +14,13 @@ app-root{
 
     /* colors */
     --clr-dark: 217 10% 25%; /*#393E46*/
-    --clr-light: 0 0% 97%; /*#F7F7F7*/
+    --clr-light: 0 0% 97%;
+    --clr-light2:#F7F7F7;
     --clr-white: 0 0% 100%;
     --clr-green: 155 17% 51%; /*#6D9886*/
     --clr-tan: 37 53% 89%; /*#F2E7D5*/
     --clr-accent: #FF533D;
+    --clr-accent-dark: #c54534;
 
 
     --foreground:  hsl( var(--clr-dark));
@@ -178,7 +180,7 @@ body{
 a {
     text-decoration: none;
     //text-transform: uppercase;
-    color : #1c8dfd;
+    color : var(--clr-accent);
     //font-size: 21px;
     line-height: 1.381;
     font-weight: 400;
@@ -309,6 +311,27 @@ h1 {
 //   }
 // }
 
+
+.attention-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.25rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  background-color: var(--clr-accent); /* Primary color */
+  border: none;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.attention-button:hover {
+  background-color: var(--clr-accent-dark); /* Darker shade of primary color */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 

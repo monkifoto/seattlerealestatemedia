@@ -1,0 +1,99 @@
+// X-Small devices (portrait phones, less than 576px)
+.intro {
+  display: grid;
+  color: hsl(var(--clr-dark));
+  align-content: center;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: calc(2.5rem + 2vw);
+  font-family: var( --ff-Montserrat);
+  margin: 0 0 0.25em;
+  line-height: 1;
+  max-width: 80%;
+  color: hsl(var(--clr-dark));
+}
+
+.subtitle {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: hsl(var(--clr-dark));
+}
+
+.info-container{
+  padding: 1rem;
+}
+
+.section-container{
+  padding-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  //background: purple;
+}
+
+.step img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .section-container{
+    //background: red;
+  }
+
+  .info-container{
+
+    padding: 2rem;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+   .section-container{
+  //background: orange;
+}
+.info-container{
+
+  padding: 3rem;
+}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+  .section-container{
+  //background: yellow;
+}
+
+.info-container{
+  padding: 5rem;
+}
+ }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+  .section-container{
+  //background: green;
+}
+
+.info-container{
+  padding: 5rem 10rem;
+}
+ }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+
+  .section-container{
+    //background: blue;
+  }
+
+  .info-container{
+
+    padding: 5rem 15rem;
+  }
+}
+

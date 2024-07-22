@@ -21,7 +21,7 @@
     flex: 1;
     align-items: center;
     justify-content: center;
-    background:  #000 ;
+    background:  #212121 ;
     }
 
 
@@ -32,7 +32,11 @@
 
 
   .image_carousel_container{
-
+    min-width:300px;
+    max-width: 1024px;
+    max-height: 683px;
+    overflow: hidden;
+    object-fit: cover;
     margin:auto;
     padding: auto;
   }
@@ -40,7 +44,7 @@
   .subtitle {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: hsl(var(--clr-dark));
+    color: hsl(var(--clr-light));
   }
 
   h1{
@@ -52,8 +56,9 @@
   }
 
   a{
-    letter-spacing: 2.7px; ;
+    letter-spacing: 2px; ;
   }
+
 
 
   @media (max-width: 35rem) {
@@ -64,13 +69,13 @@
       margin: 0 0 0.25em;
       line-height: 1;
       max-width: 80%;
-      color: hsl(var(--clr-dark));
+      color: hsl(var(--clr-light));
     }
 
     .intro {
       height: 100%;
       display: grid;
-      color: hsl(var(--clr-dark));
+      color: hsl(var(--clr-light));
       align-content: center;
     }
 
@@ -99,7 +104,7 @@
     margin: 5rem 0 0.25em;
     line-height: 1;
     max-width: 100%;
-    color: hsl(var(--clr-dark));
+    color: hsl(var(--clr-light));
   }
 
   .subtitle{
