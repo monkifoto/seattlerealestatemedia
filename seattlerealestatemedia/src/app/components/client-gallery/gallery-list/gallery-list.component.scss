@@ -1,0 +1,38 @@
+.section-container {
+  padding-top: 10rem;
+  padding-inline: auto;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  background: #ccc;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery-card {
+  width: 200px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .gallery-thumbnail {
+    width: 100%;
+    height: auto;
+  }
+
+  h3 {
+    text-align: center;
+    padding: 10px 0;
+  }
+}

@@ -1,0 +1,27 @@
+
+
+<div class="section-container">
+<form [formGroup]="galleryForm" (ngSubmit)="createGallery()">
+  <div>
+    <label for="address">Home Address</label>
+    <input id="address" formControlName="address" type="text" />
+  </div>
+  <div>
+    <label for="title">Title</label>
+    <input id="title" formControlName="title" type="text" />
+  </div>
+  <div>
+    <label for="reelUrl">Reel</label>
+    <input id="reelUrl" formControlName="reelUrl" type="text" />
+  </div>
+  <div>
+    <label for="videoUrl">Video</label>
+    <input id="videoUrl" formControlName="videoUrl" type="text" />
+  </div>
+  <div>
+    <label for="tour3DUrl">3D Tour</label>
+    <input id="tour3DUrl" formControlName="tour3DUrl" type="text" />
+  </div>
+  <button type="submit">Create Gallery</button>
+</form>
+</div>

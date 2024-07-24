@@ -1,0 +1,11 @@
+
+
+<div class="section-container">
+<div class="gallery-list">
+  <div *ngFor="let gallery of galleries" class="gallery-card" (click)="navigateToGallery(gallery.id)">
+    <img [src]="gallery.thumbnailUrl" [alt]="gallery.title" class="gallery-thumbnail" />
+    <h3>{{ gallery.title }}</h3>
+  </div>
+</div>
+</div>
+

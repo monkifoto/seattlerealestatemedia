@@ -1,0 +1,92 @@
+
+
+<div class="section-container">
+  <div class="upload-container">
+    <div class="gallery-container" *ngIf="galleryDetails">
+      <h1>{{ galleryDetails.title }}</h1>
+      <h2>{{ galleryDetails.address }}</h2>
+    <h2>Gallery: <a href="/gallery/{{galleryId}}"> {{ galleryId}}</a></h2>
+    </div>
+    <input type="file" id="fileInput" (change)="onFilesSelected($event)" multiple />
+    <button (click)="uploadFiles()" [disabled]="!selectedFiles.length">Upload Selected Files</button>
+    <div class="upload-list" *ngIf="selectedFiles.length">
+      <h3>Selected Files:</h3>
+      <div class="grid-container">
+
+        <div class="grid-item" *ngFor="let fileUpload of existingFiles">
+          <img [src]="fileUpload.url" alt="{{ fileUpload.file.name }}" class="thumbnail">
+        </div>
+
+        <div class="grid-item" *ngFor="let fileUpload of selectedFiles">
+          <ng-container *ngIf="uploadProgress[fileUpload.file.name] < 100; else thumbnail">
+            <div class="progress-bar">
+              <div class="progress" [style.width.%]="uploadProgress[fileUpload.file.name] || 0"></div>
+              <div class="progress-label">{{ fileUpload.file.name }} - {{ uploadProgress[fileUpload.file.name] || 0 }}%</div>
+            </div>
+          </ng-container>
+          <ng-template #thumbnail>
+            <img [src]="fileUpload.url" alt="{{ fileUpload.file.name }}" class="thumbnail">
+          </ng-template>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="section-container">
+  <div class="gallery-container" *ngIf="galleryDetails">
+    <h1>{{ galleryDetails.title }}</h1>
+    <p>{{ galleryDetails.address }}</p>
+    <div class="gallery-grid">
+      <div class="gallery-item" *ngFor="let file of existingFiles">
+        <img [src]="file.url" [alt]="file.name" />
+        <p>{{ file?.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="section-container">
+  <div class="upload-container">
+    <h2>Upload Images for Gallery {{ galleryId }}</h2>
+    <input type="file" id="fileInput" (change)="onFilesSelected($event)" multiple />
+    <button (click)="uploadFiles()" [disabled]="!selectedFiles.length">Upload Selected Files</button>
+    <div class="upload-list" *ngIf="selectedFiles.length">
+      <h3>Selected Files:</h3>
+      <div class="grid-container">
+        <div class="grid-item" *ngFor="let fileUpload of selectedFiles">
+          <ng-container *ngIf="uploadProgress[fileUpload.file.name] < 100; else thumbnail">
+            <div class="progress-bar">
+              <div class="progress" [style.width.%]="uploadProgress[fileUpload.file.name] || 0"></div>
+              <div class="progress-label">{{ fileUpload.file.name }} - {{ uploadProgress[fileUpload.file.name] || 0 }}%</div>
+            </div>
+          </ng-container>
+          <ng-template #thumbnail>
+            <img [src]="fileUpload.url" alt="{{ fileUpload.file.name }}" class="thumbnail">
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ -->
+
+<!-- <div class="section-container">
+  <div class="upload-container">
+    <h2>Upload Images for Gallery {{ galleryId }}</h2>
+    <input type="file" id="fileInput" (change)="onFilesSelected($event)" multiple />
+    <button (click)="uploadFiles()" [disabled]="!selectedFiles.length">Upload Selected Files</button>
+    <div class="upload-list" *ngIf="selectedFiles.length">
+      <h3>Selected Files:</h3>
+      <ul>
+        <li *ngFor="let fileUpload of selectedFiles">
+
+          <div class="progress-bar">
+            <div class="progress" [style.width.%]="uploadProgress[fileUpload.file.name] || 0"></div>
+            <div class="progress-lable">{{ fileUpload.file.name }} - {{ uploadProgress[fileUpload.file.name] || 0 }}%</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> -->

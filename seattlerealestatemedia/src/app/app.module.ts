@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-//import { AppRoutingModule } from './app-routing.module';
+import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './components/nav-bar/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer/footer.component';
 import { HeroComponent } from './components/sections/hero/hero.component';
@@ -61,12 +61,16 @@ import { PhotosCombinedComponent } from './components/sections/photos-combined/p
 import { VideoCombinedComponent } from './components/sections/video-combined/video-combined.component';
 import { StagingFloorplanCombinedComponent } from './components/sections/staging-floorplan-combined/staging-floorplan-combined.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
-import { GalleryComponent } from './components/gallery/gallery/gallery.component';
-import { ImageDetailComponent } from './components/gallery/image-detail/image-detail.component';
-import { UploadComponent } from './components/gallery/upload/upload.component';
+//import { GalleryComponent } from './components/gallery/gallery/gallery.component';
+//import { ImageDetailComponent } from './components/gallery/image-detail/image-detail.component';
+//import { UploadComponent } from './components/gallery/upload/upload.component';
 import { PolicyComponent } from './components/policy/policy.component';
 import { TOSComponent } from './components/tos/tos.component';
 import { DownloadInstructionsComponent } from './components/download-instructions/download-instructions.component';
+import { GalleryFormComponent } from './components/admin/gallery-form/gallery-form.component';
+import { GalleryUploadComponent } from './components/admin/gallery-upload/gallery-upload.component';
+import { GalleryComponent } from './components/client-gallery/gallery/gallery.component';
+import { GalleryListComponent } from './components/client-gallery/gallery-list/gallery-list.component';
 
 @NgModule({
   declarations: [
@@ -116,19 +120,24 @@ import { DownloadInstructionsComponent } from './components/download-instruction
     VideoCombinedComponent,
     StagingFloorplanCombinedComponent,
     AboutMeComponent,
-    GalleryComponent,
-    ImageDetailComponent,
-    UploadComponent,
+    //GalleryComponent,
+   // ImageDetailComponent,
+    //UploadComponent,
     AboutMeComponent,
     PolicyComponent,
     TOSComponent,
-    DownloadInstructionsComponent
+    DownloadInstructionsComponent,
+    GalleryFormComponent,
+    GalleryUploadComponent,
+    GalleryComponent,
+    GalleryListComponent
 
 
   ],
   imports: [
     BrowserModule,
-   // AppRoutingModule,
+    CommonModule,
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     AngularFirestoreModule,

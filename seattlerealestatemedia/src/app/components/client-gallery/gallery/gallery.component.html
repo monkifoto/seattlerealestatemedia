@@ -1,0 +1,25 @@
+<div class="section-container">
+  <div class="gallery-container" *ngIf="galleryDetails">
+    <h1>{{ galleryDetails.title }}</h1>
+    <p>{{ galleryDetails.address }}</p>
+    <div class="gallery-grid">
+      <div class="gallery-item" *ngFor="let file of galleryFiles">
+        <img [src]="file.url" [alt]="file.name" />
+        <p>{{ file?.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-container">
+  <h3>Links</h3>
+  <div>{{galleryDetails?.reelUrl}}</div>
+  <div>{{galleryDetails?.videoUrl}}</div>
+  <div [innerHTML]="galleryDetails?.tour3DUrl"></div>
+</div>
+<div class="section-container">
+<section class="map-section">
+  <h2>Listing Location</h2>
+  <div id="map" class="map-container"></div>
+</section>
+</div>
+<iframe width='853' height='480' src='https://my.matterport.com/show/?m=wbuRvaMCzYB&mls=1' frameborder='0' allowfullscreen allow='xr-spatial-tracking'></iframe>

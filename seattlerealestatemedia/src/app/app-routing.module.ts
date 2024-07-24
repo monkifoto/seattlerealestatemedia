@@ -16,14 +16,19 @@ import { StagingComponent } from './components/sections/staging/staging.componen
 import { AirBnBComponent } from './components/portfolio/air-bn-b/air-bn-b.component';
 import { PropertyManagmentComponent } from './components/portfolio/property-managment/property-managment.component';
 import { RentalComponent } from './components/portfolio/rental/rental.component';
-import { GalleryComponent } from './components/gallery/gallery/gallery.component';
-import { ImageDetailComponent } from './components/gallery/image-detail/image-detail.component';
+//import { GalleryComponent } from './components/gallery/gallery/gallery.component';
+//import { ImageDetailComponent } from './components/gallery/image-detail/image-detail.component';
 import { LoginComponent } from './components/login/login.component';
-import { UploadComponent } from './components/gallery/upload/upload.component';
+//import { UploadComponent } from './components/gallery/upload/upload.component';
 // import { AuthenticationGuard} from '../app/data/services/authentication.service'
 import { PolicyComponent } from './components/policy/policy.component';
 import { TOSComponent } from './components/tos/tos.component';
 import { DownloadInstructionsComponent } from './components/download-instructions/download-instructions.component';
+import { GalleryFormComponent } from './components/admin/gallery-form/gallery-form.component';
+import { GalleryUploadComponent } from './components/admin/gallery-upload/gallery-upload.component';
+import { GalleryComponent } from './components/client-gallery/gallery/gallery.component';
+import { GalleryListComponent } from './components/client-gallery/gallery-list/gallery-list.component';
+
 
 
 const routes: Routes = [
@@ -45,8 +50,8 @@ const routes: Routes = [
   {path: 'propertymanagment', component: PropertyManagmentComponent},
   {path: 'gallery', component: GalleryComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'image/:id', component: ImageDetailComponent},
-  {path: 'upload', component: UploadComponent},
+  //{path: 'image/:id', component: ImageDetailComponent},
+  //{path: 'upload', component: UploadComponent},
   // {path: 'gallery', component: GalleryComponent, canActivate: [AuthenticationGuard]},
   // {path: 'login', component: LoginComponent },
   // {path: 'image/:id', component: ImageDetailComponent, canActivate: [AuthenticationGuard]},
@@ -55,7 +60,12 @@ const routes: Routes = [
   {path: 'policy',component: PolicyComponent},
   {path: 'tos', component: TOSComponent},
   {path: 'instructions', component: DownloadInstructionsComponent},
-  {path: 'policy',component: PolicyComponent}
+  {path: 'policy',component: PolicyComponent},
+  { path: 'gallery-list', component: GalleryListComponent },
+  {path: 'gallery/:galleryId', component: GalleryComponent },
+  //////////////ADMIN/////////////
+  {path: 'admin/gallery-form', component: GalleryFormComponent },
+  {path: 'admin/gallery-upload/:id', component: GalleryUploadComponent },
 
 ];
 @NgModule({

@@ -1,8 +1,8 @@
 export class FileUpload {
-  id: string='';
+  id: string = '';
   key: string = '';
-  name: string= '';
-  url: string='';
+  name: string = '';
+  url: string = '';
   file: File;
 
   constructor(file: File) {
