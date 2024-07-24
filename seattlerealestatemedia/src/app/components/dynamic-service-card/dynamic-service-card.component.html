@@ -1,15 +1,20 @@
 
 <div class="product_container" id="{{product?.id}}" [ngClass]="{'selected':product?.selected == true}">
     <div class="product_id hidden"> {{product?.id}}</div>
+
     <div class="product_header">
-        <div class="product_icon" >
-          <img src="{{product?.icon}}">
-        </div>
-        <div class="product_header_title">
-            <div class="product_title"> {{product?.title}}</div>
-            <div class="product_subtitle"> {{product?.subtitle}}</div>
-        </div>
-    </div>
+      <div class="product_icon">
+        <img src="{{product?.icon}}" alt="Product Icon">
+      </div>
+      <div class="product_price">
+          ${{product?.basePrice}}<small>*</small>
+
+      </div>
+  </div>
+  <div class="product_details">
+      <div class="product_title">{{product?.title}}</div>
+      <div class="product_subtitle">{{product?.subtitle}}</div>
+  </div>
     <div class="product_features">
       <!-- <div>{{product?.features}}</div> -->
       <div [innerHtml]="product?.features "></div>

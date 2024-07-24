@@ -52,15 +52,15 @@
   <div class="estimator">
 
   <div class="estimator_spacer">
-    <label>Bundles:</label>
+    <h2>Bundles:</h2>
   </div>
     <app-dynamic-service-card class="estimator_card" *ngFor="let product of listOfProducts | slice:14:20; let i = index" [productObj]="product" (click)="addToTotal(product)"></app-dynamic-service-card>
     <div class="estimator_spacer">
-      <label>A la cart:</label>
+      <h2>A la carte:</h2>
     </div>
     <app-dynamic-service-card class="estimator_card" *ngFor="let product of listOfProducts | slice:0:10; let i = index" [productObj]="product" (click)="addToTotal(product)"></app-dynamic-service-card>
     <div class="estimator_spacer">
-      <label> Addons:</label>
+      <h2> Addons:</h2>
     </div>
     <app-dynamic-service-card class="estimator_card" *ngFor="let product of listOfProducts | slice:10:14; let i = index" [productObj]="product" (click)="addToTotal(product)"></app-dynamic-service-card>
   </div>
@@ -71,6 +71,7 @@
 
 
   <div class="estimator_notes">
+    <span>* Base prices are for properties 2000 sq ft or less.</span>
   <span>* All images delivered MLS optimized in less than 24 hours, print size by request. Fires in Fireplace and TV reflections removed standard for all packages.</span>
   <span>** Virtual Staging is done by a 3rd party, 24 hour turnaround.</span>
     <span>$2 per mile, travel fee applies to locations that are 20 miles or more one way from my business address with the zip code of 98042 in Kent, WA</span>
