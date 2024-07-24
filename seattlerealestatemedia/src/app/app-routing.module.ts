@@ -16,7 +16,6 @@ import { StagingComponent } from './components/sections/staging/staging.componen
 import { AirBnBComponent } from './components/portfolio/air-bn-b/air-bn-b.component';
 import { PropertyManagmentComponent } from './components/portfolio/property-managment/property-managment.component';
 import { RentalComponent } from './components/portfolio/rental/rental.component';
-<<<<<<< HEAD
 import { GalleryComponent } from './components/gallery/gallery/gallery.component';
 import { ImageDetailComponent } from './components/gallery/image-detail/image-detail.component';
 import { LoginComponent } from './components/login/login.component';
@@ -25,9 +24,7 @@ import { UploadComponent } from './components/gallery/upload/upload.component';
 import { PolicyComponent } from './components/policy/policy.component';
 import { TOSComponent } from './components/tos/tos.component';
 import { DownloadInstructionsComponent } from './components/download-instructions/download-instructions.component';
-=======
-import { PolicyComponent } from './components/policy/policy.component';
->>>>>>> 8d2c6fe (Cancelation Policy)
+
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
@@ -46,7 +43,6 @@ const routes: Routes = [
   {path: 'airBnB', component:AirBnBComponent},
   {path: 'landlord', component: RentalComponent},
   {path: 'propertymanagment', component: PropertyManagmentComponent},
-<<<<<<< HEAD
   {path: 'gallery', component: GalleryComponent},
   {path: 'login', component: LoginComponent},
   {path: 'image/:id', component: ImageDetailComponent},
@@ -58,10 +54,8 @@ const routes: Routes = [
   {path: 'propertymanagment', component: PropertyManagmentComponent},
   {path: 'policy',component: PolicyComponent},
   {path: 'tos', component: TOSComponent},
-  {path: 'instructions', component: DownloadInstructionsComponent}
-=======
+  {path: 'instructions', component: DownloadInstructionsComponent},
   {path: 'policy',component: PolicyComponent}
->>>>>>> 8d2c6fe (Cancelation Policy)
 
 ];
 @NgModule({

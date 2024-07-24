@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+//import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/nav-bar/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer/footer.component';
@@ -61,16 +61,12 @@ import { PhotosCombinedComponent } from './components/sections/photos-combined/p
 import { VideoCombinedComponent } from './components/sections/video-combined/video-combined.component';
 import { StagingFloorplanCombinedComponent } from './components/sections/staging-floorplan-combined/staging-floorplan-combined.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
-<<<<<<< HEAD
 import { GalleryComponent } from './components/gallery/gallery/gallery.component';
 import { ImageDetailComponent } from './components/gallery/image-detail/image-detail.component';
 import { UploadComponent } from './components/gallery/upload/upload.component';
 import { PolicyComponent } from './components/policy/policy.component';
 import { TOSComponent } from './components/tos/tos.component';
 import { DownloadInstructionsComponent } from './components/download-instructions/download-instructions.component';
-=======
-import { PolicyComponent } from './components/policy/policy.component';
->>>>>>> 8d2c6fe (Cancelation Policy)
 
 @NgModule({
   declarations: [
@@ -120,7 +116,6 @@ import { PolicyComponent } from './components/policy/policy.component';
     VideoCombinedComponent,
     StagingFloorplanCombinedComponent,
     AboutMeComponent,
-<<<<<<< HEAD
     GalleryComponent,
     ImageDetailComponent,
     UploadComponent,
@@ -128,14 +123,12 @@ import { PolicyComponent } from './components/policy/policy.component';
     PolicyComponent,
     TOSComponent,
     DownloadInstructionsComponent
-=======
-    PolicyComponent
->>>>>>> 8d2c6fe (Cancelation Policy)
+
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+   // AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     AngularFirestoreModule,
