@@ -28,6 +28,7 @@ import { GalleryFormComponent } from './components/admin/gallery-form/gallery-fo
 import { GalleryUploadComponent } from './components/admin/gallery-upload/gallery-upload.component';
 import { GalleryComponent } from './components/client-gallery/gallery/gallery.component';
 import { GalleryListComponent } from './components/client-gallery/gallery-list/gallery-list.component';
+import { WorkComponent } from './components/work/work.component';
 
 
 
@@ -66,6 +67,7 @@ const routes: Routes = [
   //////////////ADMIN/////////////
   {path: 'admin/gallery-form', component: GalleryFormComponent },
   {path: 'admin/gallery-upload/:id', component: GalleryUploadComponent },
+  {path: 'work', component: WorkComponent}
 
 ];
 @NgModule({

@@ -1,0 +1,15 @@
+<div class="section-container">
+  <div class="container carousel-container">
+    <div class="image_carousel_container">
+
+    </div>
+  </div>
+
+<div class="gallery-container">
+  <div class="gallery">
+    <div class="gallery-item" *ngFor="let photo of photos">
+      <img [src]="photo.url" [alt]="photo.alt" class="gallery-image" />
+    </div>
+  </div>
+</div>
+</div>
