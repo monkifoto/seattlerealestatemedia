@@ -6,6 +6,8 @@ import { Gallery } from 'src/app/data/models/gallery.model';
 import { FileUpload } from 'src/app/data/models/FileUpload';
 
 
+declare var google: any;
+
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
@@ -40,24 +42,24 @@ export class GalleryComponent implements OnInit {
   }
 
   initMap(): void {
-    if (this.galleryDetails?.address) {
-      const geocoder = new google.maps.Geocoder();
-      geocoder.geocode({ 'address': this.galleryDetails.address }, (results: any, status: any) => {
-        if (status === 'OK') {
-          const map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
-            zoom: 15,
-            center: results[0].geometry.location
-          });
-          new google.maps.Marker({
-            map: map,
-            position: results[0].geometry.location
-          });
-        } else {
-          console.error('Geocode was not successful for the following reason: ' + status);
-        }
-      });
-    }
+    // if (this.galleryDetails?.address) {
+    //   const geocoder = new google.maps.Geocoder();
+    //   geocoder.geocode({ 'address': this.galleryDetails.address }, (results: any, status: any) => {
+    //     if (status === 'OK') {
+    //       const map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
+    //         zoom: 15,
+    //         center: results[0].geometry.location
+    //       });
+    //       new google.maps.Marker({
+    //         map: map,
+    //         position: results[0].geometry.location
+    //       });
+    //     } else {
+    //       console.error('Geocode was not successful for the following reason: ' + status);
+    //     }
+    //   });
+    // }
   }
 
-  
+
 }

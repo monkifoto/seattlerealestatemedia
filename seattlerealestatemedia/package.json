@@ -1,6 +1,6 @@
 {
   "name": "seattlerealestatemedia",
-  "version": "0.0.0",
+  "version": "5.15.25",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
